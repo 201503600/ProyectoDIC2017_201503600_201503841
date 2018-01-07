@@ -1,0 +1,820 @@
+<archivo>
+    <usuarios>
+        <usuario>
+            <nombre>marco</nombre>
+            <pass>123</pass>
+        </usuario>
+        <usuario>
+            <nombre>jose</nombre>
+            <pass>1234</pass>
+        </usuario>
+        <usuario>
+            <nombre>elmer</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>vivian</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>zussette</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>renato</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>jose</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>rolando</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>matilde</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>david</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>mike</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>max</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>dean</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>edgar</nombre>
+            <pass>1232</pass>
+        </usuario>
+    </usuarios>
+    <artistas>
+        <artista>
+            <nombre>50 cent feat. eminem &amp; adam levine</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, january 2013</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>my life</nombre>
+                            <path>C:\cancionesEDD\50 Cent\Unknown Album\50 Cent - My Life ft Eminem Adam Levine-[www.youtube-para-mp3.com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>brian tuey</nombre>
+            <albumes>
+                <album>
+                    <nombre>call of duty: black ops ii soundtrack</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shadows (outer club solar)</nombre>
+                            <path>C:\cancionesEDD\Brian Tuey\CALL OF DUTY  BLACK OPS II\Shadows (Outer Club Solar).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>double</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shit on you</nombre>
+                            <path>C:\cancionesEDD\Eminem\Double - Disk 2\shit on you.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the singles boxset</nombre>
+                    <genero>rap</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stimulate</nombre>
+                            <path>C:\cancionesEDD\Eminem\Unknown Album\Eminem - Stimulate (official song w_lyrics)-[www_flvto_com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>foster the people</nombre>
+            <albumes>
+                <album>
+                    <nombre>pumped up kicks</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pumped up kicks</nombre>
+                            <path>C:\cancionesEDD\Foster The People\Torches\Foster_The_People_-_Pumped_Up_Kicks.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>houdini</nombre>
+                    <genero>rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>houdini</nombre>
+                            <path>C:\cancionesEDD\Foster The People\Unknown Album\foster_the_people_-_houdin.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>gwen stefani feat. eve</nombre>
+            <albumes>
+                <album>
+                    <nombre>r&amp;b clubland</nombre>
+                    <genero>rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rich girl</nombre>
+                            <path>C:\cancionesEDD\Gwen Stefani\Unknown Album\Gwen_Stefani_-_Rich_Girl_ft__Eve.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>heart</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1980</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>barracuda</nombre>
+                            <path>C:\cancionesEDD\Heart\Greatest Hits\Barracuda-_Heart.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jack wall</nombre>
+            <albumes>
+                <album>
+                    <nombre>call of duty: black ops ii soundtrack</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>adrenaline</nombre>
+                            <path>C:\cancionesEDD\Jack Wall\CALL OF DUTY  BLACK OPS II\Adrenaline.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>joan jett and the blackhearts</nombre>
+            <albumes>
+                <album>
+                    <nombre>fit to be tied: great hits by joan jett and the blackhearts</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1997</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>i love rock 'n' roll</nombre>
+                            <path>C:\cancionesEDD\Joan Jett &amp; the Blackhearts\Fit to Be Tied  Great Hits by Joan Jett and the Blackhearts\I Love Rock and Roll.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>led zeppelin</nombre>
+            <albumes>
+                <album>
+                    <nombre>the complete studio recordings</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1993</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>kashmir</nombre>
+                            <path>C:\cancionesEDD\Led Zeppelin\Unknown Album\Kashmir_-_Led_Zeppelin.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>linkin park</nombre>
+            <albumes>
+                <album>
+                    <nombre>dsp</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>breaking the habit</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Breaking_The_Habit.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>faint</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Faint.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>given up</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Given Up.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>in my remains</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\In My Remains.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>burn it down</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - Burn It Down Arena Ciudad de Mexico - 14Septiembre2012-[www.youtube-para.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>lies greed misery</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - Lies Greed Misery Arena Ciudad de Mexico - 14Septiembre2012-[www.youtube.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>loatr sotd iridescent</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - LOATRSOTDIridescent Arena Ciudad de Mexico - 14Septiembre2012-[www.youtu.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>numb</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - Numb Arena Ciudad de Mexico - 14Septiembre2012-[www.youtube-para-mp3.com.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>one step closer</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - One Step Closer Arena Ciudad de Mexico - 14Septiembre2012-[www.youtube-p.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>the catalyst</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - The Catalyst Arena Ciudad de Mexico - 14Septiembre2012-[www.youtube-para.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>waiting for the end</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park - Waiting For The End Arena Ciudad de Mexico - 14Septiembre2012-[www.youtu.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>bleed it out / sabotage</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin Park bleed it out.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>in the end</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin_Park_-_In_The_End_[Arena_Ciudad_de_Mexico_-_14_Septiembre_2012].mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>lost in the echo</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin_Park_-_Lost_In_The_Echo_[Arena_Ciudad_de_Mexico_-_14_Septiembre_2012].mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>what i've done</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Linkin_Park_-_What_I've_Done_[Arena_Ciudad_de_Mexico_-_14_Septiembre_2012].mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>new divide</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\New Divide.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>papercut</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Papercut.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>points of authority</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Points Of Authority.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>somewhere i belong</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Somewhere I Belong.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>tinfoil</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Tinfoil.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>victimized</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\Victimized.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>with you</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\DSP\With You.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>x-ecutioners</nombre>
+            <albumes>
+                <album>
+                    <nombre>it's goin' down</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>it's goin' down</nombre>
+                            <path>C:\cancionesEDD\Linkin Park\Unknown Album\Linkin_Park_-_It's_Going_Down.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>madonna</nombre>
+            <albumes>
+                <album>
+                    <nombre>celebration</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>4 minutes</nombre>
+                            <path>C:\cancionesEDD\Madonna\Unknown Album\Madonna_-_4_minutes_(Official_Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>maroon 5</nombre>
+            <albumes>
+                <album>
+                    <nombre>overexposed</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>one more night</nombre>
+                            <path>C:\cancionesEDD\Maroon 5\Overexposed\Maroon_5_-_One_More_Night.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>mountain</nombre>
+            <albumes>
+                <album>
+                    <nombre>the best of mountain</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1973</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>mississippi queen</nombre>
+                            <path>C:\cancionesEDD\Mountain\The Best Of Mountain\Mountain_-_Mississippi_Queen.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>muse</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits</nombre>
+                    <genero>rap</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>madness</nombre>
+                            <path>C:\cancionesEDD\Muse\Unknown Album\Muse_-_Madness_(Lyric_Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>antenna farm / main</nombre>
+            <albumes>
+                <album>
+                    <nombre>brombron 01: af_m</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>2</nombre>
+                            <path>C:\cancionesEDD\No Doubt\Push and Shove\No_Doubt_-_Settle_Down.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>no doubt</nombre>
+            <albumes>
+                <album>
+                    <nombre>tragic kingdom</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>just a girl</nombre>
+                            <path>C:\cancionesEDD\No Doubt\Tragic Kingdom\No_Doubt_-_Just_A_Girl.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the singles 1992-2003</nombre>
+                    <genero>rap</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>hella good</nombre>
+                            <path>C:\cancionesEDD\No Doubt\Unknown Album\No_Doubt_-_Hella_Good.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>no doubt feat. bounty killer</nombre>
+            <albumes>
+                <album>
+                    <nombre>hey baby</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>hey baby</nombre>
+                            <path>C:\cancionesEDD\No Doubt\Unknown Album\No_Doubt_-_Hey_Baby.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>50 cent</nombre>
+            <albumes>
+                <album>
+                    <nombre>window shopper cdm</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>window shopper</nombre>
+                            <path>C:\cancionesEDD\Original Soundtrack\Window Shopper CDM\window shopper.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>p!nk feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>the truth about love</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>here comes the weekend</nombre>
+                            <path>C:\cancionesEDD\Pink\Unknown Album\p_nk_-_here_comes_the_weekend_official_lyric_video.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the creatures</nombre>
+            <albumes>
+                <album>
+                    <nombre>zulu</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>right now</nombre>
+                            <path>C:\cancionesEDD\PSY\Unknown Album\PSY - RIGHT NOW MV-[www.youtube-para-mp3.com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ramones</nombre>
+            <albumes>
+                <album>
+                    <nombre>loud, fast ramones: their toughest hits</nombre>
+                    <genero>rock/pop</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>i wanna be sedated</nombre>
+                            <path>C:\cancionesEDD\Ramones\Loud, Fast Ramones  Their Toughest Hits\12-i-wanna-be-sedated.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>nba2k16</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>blitzkrieg bop</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\Ramones-Blitzkrieg_Bop.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>skrillex</nombre>
+            <albumes>
+                <album>
+                    <nombre>triple vinyl box set</nombre>
+                    <genero>(189)dubstep</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>first of the year (equinox)</nombre>
+                            <path>C:\cancionesEDD\Skrillex\Unknown Album\skrillex year.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>skrillex feat. sirah</nombre>
+            <albumes>
+                <album>
+                    <nombre>triple vinyl box set</nombre>
+                    <genero>rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>bangarang</nombre>
+                            <path>C:\cancionesEDD\Skrillex\Unknown Album\SKRILLEX_-_Bangarang_feat__Sirah_[Official_Music_Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>skylar grey feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, february 2013</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>c'mon let's ride</nombre>
+                            <path>C:\cancionesEDD\Skylar Grey\Unknown Album\C'mon_Let_Me_Ride_Lyric_Video_(featuring_Eminem).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the police</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1992</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>roxanne</nombre>
+                            <path>C:\cancionesEDD\The Police\Greatest Hits\The Police - Roxanne-[www_flvto_com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the rasmus</nombre>
+            <albumes>
+                <album>
+                    <nombre>dead letters</nombre>
+                    <genero>world</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>guilty</nombre>
+                            <path>C:\cancionesEDD\The Rasmus\Dead Letters\The_Rasmus_-_Guilty__Official_Video.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>trip lee feat. flame &amp; json</nombre>
+            <albumes>
+                <album>
+                    <nombre>if they only knew</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>who you rollin' wit'</nombre>
+                            <path>C:\cancionesEDD\Trip Lee\If Only They Knew\Who You Rollin Wit - Trip Lee feat Flame and JSon Rap-a-long-[www.youtube-para-mp3.com.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>planet asia feat. kurupt</nombre>
+            <albumes>
+                <album>
+                    <nombre>be cool</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>g's and soldiers</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Be Cool Soundtrack\Gs and Soldiers Be Cool Sound Track-[www.youtube-para-mp3.com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>deadmau5 feat. cypress hill</nombre>
+            <albumes>
+                <album>
+                    <nombre>fast &amp; furious 6: original motion picture soundtrack</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>failbait</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\deadmau5 - Failbait ft. Cypress Hill.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sam adams</nombre>
+            <albumes>
+                <album>
+                    <nombre>boston's boy</nombre>
+                    <genero>rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>driving me crazy</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\Driving Me Crazy- Sam Adams.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>fatboy slim</nombre>
+            <albumes>
+                <album>
+                    <nombre></nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>slash dot dash</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\Fatboy Slim - Slash Dot Dash-[www.youtube-para-mp3.com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the ting tings</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, november 2010</nombre>
+                    <genero>rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>hands</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\FIFA 12 - The Ting Tings - Hands.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>hang it up</nombre>
+                    <genero>rap</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>hang it up</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\The Ting Tings - Hang It Up (Audio).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>simon viklund</nombre>
+            <albumes>
+                <album>
+                    <nombre>payday - the game soundtrack</nombre>
+                    <genero>rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>see you at the safe house (heist successful)</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\PAYDAY - The Game Soundtrack - 10. See You at the .mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rescate</nombre>
+            <albumes>
+                <album>
+                    <nombre>quitamancha</nombre>
+                    <genero>rap</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>quitamancha</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\Rescate - Quitamancha - Videoclip Oficial.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>t.i. feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>no mercy</nombre>
+                    <genero>rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>that's all she wrote</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\That's_All_She_Wrote~T_I__ft__Eminem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>t.i. vs. t.i.p.</nombre>
+                    <genero>rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>touchdown</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\Touchdown- T.I Ft Eminem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sean paul</nombre>
+            <albumes>
+                <album>
+                    <nombre>rnb superclub, volume 6.0</nombre>
+                    <genero>rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>we be burini'</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\We Be Burning - Sean Paul (Official Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>bob marley</nombre>
+            <albumes>
+                <album>
+                    <nombre></nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no woman don't cry</nombre>
+                            <path>C:\cancionesEDD\Unknown Artist\Unknown Album\youtube_86Ghv_FO2H0.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+    </artistas>
+</archivo>
