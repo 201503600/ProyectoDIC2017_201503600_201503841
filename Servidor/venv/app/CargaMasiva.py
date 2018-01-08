@@ -104,5 +104,10 @@ class CargaMasiva:
     def getEncabezadoGeneros(self):
         return self.generos
 
-# arch = CargaMasiva()
-# arch.analizarXML("C:\\Users\\Javier\\Desktop\\EDD - Cil\\ProyectoDIC2017_201503600_201503841\\ProyectoDIC2017_201503600_201503841\\Servidor\\venv\\app\\entradaEDD2.xml")
+def main():
+    arch = CargaMasiva()
+    arch.analizarXML("C:\\Users\\Javier\\Desktop\\entradaEDD2.xml")
+    #Reporte.reporteAlbumes(arch.getMatriz(), '1995', '(12)other', 'bob marley')
+
+if __name__ == '__main__':
+    main()

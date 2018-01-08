@@ -34,9 +34,11 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         jButton2.addActionListener(this);
         jButton3.addActionListener(this);
         jButton4.addActionListener(this);
-                
+       
+       
         PlaceHolder holderUsername = new PlaceHolder(jTextField2, "Username");
         PlaceHolder holderPass = new PlaceHolder(jTextField1, "Password");
+        
         
     }
 
@@ -54,6 +56,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                 this.hide();
             }
             
+            
         }else if (e.getSource() == jButton2){
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setFileFilter(new FileNameExtensionFilter("*.xml", "xml"));
@@ -68,6 +71,14 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
            // Object response = Conexion.loginOAuth();
             //JOptionPane.showMessageDialog(this, response.toString());
         }
+    }
+    
+    public void limpiar(){
+        PlaceHolder holderUsername = new PlaceHolder(jTextField2, "Username");
+        PlaceHolder holderPass = new PlaceHolder(jTextField1, "Password");
+        
+        jTextField1.setText("");
+        jTextField2.setText("");
     }
     /**
      * This method is called from within the constructor to initialize the form.
