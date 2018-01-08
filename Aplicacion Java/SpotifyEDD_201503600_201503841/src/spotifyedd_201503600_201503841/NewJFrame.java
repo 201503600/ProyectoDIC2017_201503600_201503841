@@ -5,11 +5,19 @@
  */
 package spotifyedd_201503600_201503841;
 
+
+import java.io.IOException;
+import org.scribe.builder.ServiceBuilder;
+import org.scribe.builder.api.GoogleApi;
+import static org.scribe.model.OAuthConstants.SCOPE;
+import org.scribe.oauth.OAuthService;
+
 /**
  *
  * @author Suseth
  */
 public class NewJFrame extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form NewJFrame
@@ -201,7 +209,18 @@ public class NewJFrame extends javax.swing.JFrame {
          Principal llamar = new Principal();
          llamar.show();
          this.hide();
-//        
+         
+         //pruebaaaaa--------------+
+//         
+//         OAuthService service = new ServiceBuilder() 
+//                                   .provider(GoogleApi.class)
+//                                   .apiKey("anonymous") 
+//                                  .apiSecret("anonymous")
+//                                  .scope(SCOPE)
+//                                  .build();  
+//         final  OAuth1RequestToken requestToken = servicio . getRequestToken ();
+//         
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

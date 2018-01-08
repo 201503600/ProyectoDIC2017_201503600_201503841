@@ -18,6 +18,8 @@ public class SpotifyEDD_201503600_201503841 {
         // TODO code application logic here
         NewJFrame Login = new NewJFrame();
         Login.show();
+        
+        
 //        Principal llamar = new Principal();
 //        llamar.show();
 //        
