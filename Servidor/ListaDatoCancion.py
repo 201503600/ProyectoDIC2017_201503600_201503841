@@ -1,8 +1,7 @@
-from NodoReporte import NodoReporte
+from NodoDatoCancion import NodoDato
 
 
-class ListaReporte:
-    """docstring for ListaReporte"""
+class ListaDato:
 
     def __init__(self):
         self.primero = None
@@ -12,7 +11,7 @@ class ListaReporte:
         return self.size == 0
 
     def insert(self, cancion, artista, album, genero, anio):
-        nuevo = NodoReporte(cancion, artista, album, genero, anio)
+        nuevo = NodoDato(cancion, artista, album, genero, anio)
         nuevo.setSiguiente(self.primero)
         self.primero = nuevo
         self.size += 1

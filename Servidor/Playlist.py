@@ -1,11 +1,11 @@
+from NodoCola import NodoCola
 import sys
 import os
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin'
 from graphviz import Digraph
-from NodoCola import Nodo_Cola
 
 
-class ColaCanciones:
+class Playlist:
 
     def __init__(self):
         self.primero = None
@@ -17,7 +17,7 @@ class ColaCanciones:
         return self.size == 0
 
     def queue(self, nodo):
-        nuevo = Nodo_Cola(nodo)
+        nuevo = NodoCola(nodo)
         if self.isEmpty():
             self.primero = nuevo
             self.ultimo = nuevo

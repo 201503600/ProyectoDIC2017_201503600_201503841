@@ -1,7 +1,7 @@
-from ABB import ABB
+from ArbolBB import ArbolAlbum
 
 
-class Artista:
+class NodoArtista:
 
     def __init__(self, nombre, albumes):
         self.nombre = nombre

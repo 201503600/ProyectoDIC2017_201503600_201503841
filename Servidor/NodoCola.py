@@ -1,4 +1,4 @@
-class Nodo_Cola:
+class NodoCola:
 
     def __init__(self, nodoCancion):
         self.nodo = nodoCancion

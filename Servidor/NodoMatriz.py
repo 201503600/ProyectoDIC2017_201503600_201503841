@@ -1,11 +1,11 @@
-from ArbolB import ArbolB
+from ArbolB import ArbolArtista
 
 
 class NodoMatriz:
 
     def __init__(self, dato):
         self.dato = dato
-        self.artistas = ArbolB()
+        self.artistas = ArbolArtista()
         self.siguiente = None
         self.anterior = None
         self.abajo = None

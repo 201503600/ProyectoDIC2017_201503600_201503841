@@ -1,7 +1,7 @@
-from Artista import Artista
+from Artista import NodoArtista
 
 
-class Rama:
+class Pagina:
 
     def __init__(self):
         self.size = 0

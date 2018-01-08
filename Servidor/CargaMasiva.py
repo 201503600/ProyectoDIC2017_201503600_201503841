@@ -4,9 +4,9 @@ from xml.etree import ElementTree
 
 from ListaUsuarios import ListaUsuarios
 from ListaCanciones import ListaCanciones
-from ListaReporte import ListaReporte
-from MatrizBidimensional import MatrizBidimensional
-from ABB import ABB
+from ListaDatoCancion import ListaDato
+from MatrizDispersa import Matriz
+from ArbolBB import ArbolAlbum
 
 
 class CargaMasiva:
@@ -14,7 +14,7 @@ class CargaMasiva:
     def __init__(self):
         self.usuarios = ListaUsuarios()
         self.matriz = None
-        self.listaReporte = ListaReporte()
+        self.listaReporte = ListaDato()
 
     def cargarUsuarios(self, root):
         coleccionUsuarios = root.findall('usuarios')
@@ -44,7 +44,7 @@ class CargaMasiva:
         anchura = len(generos)
         anios.sort()
         generos.sort()
-        self.matriz = MatrizBidimensional(altura, anchura)
+        self.matriz = Matriz(altura, anchura)
         for x in xrange(0, altura):
             self.matriz.setDato(anios[x], x, 0)
         for y in xrange(0, anchura):
@@ -56,7 +56,7 @@ class CargaMasiva:
             coleccionArtista = artistas.findall('artista')
             for artista in coleccionArtista:
                 nombreArtista = artista.find('nombre').text
-                abbAlbumes = ABB()
+                abbAlbumes = ArbolAlbum()
                 coleccionAlbumes = artista.findall('albumes')
                 for albumes in coleccionAlbumes:
                     coleccionAlbum = albumes.findall('album')

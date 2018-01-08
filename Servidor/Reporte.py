@@ -1,4 +1,4 @@
-from MatrizBidimensional import MatrizBidimensional
+from MatrizDispersa import Matriz
 import os
 
 

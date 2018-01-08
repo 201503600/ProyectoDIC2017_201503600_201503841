@@ -1,8 +1,8 @@
-from Artista import Artista
-from Rama import Rama
+from Artista import NodoArtista
+from PaginaArbolB import Pagina
 
 
-class ArbolB:
+class ArbolArtista:
 
     def __init__(self):
         self.raiz = None
@@ -12,14 +12,14 @@ class ArbolB:
         return self.raiz == None
 
     def add(self, nombre, albumes):
-        nuevo = Artista(nombre, albumes)
+        nuevo = NodoArtista(nombre, albumes)
         if self.isEmpty():
-            self.raiz = Rama()
+            self.raiz = Pagina()
             self.raiz.add(nuevo)
         else:
             obj = self.inserta(nuevo, self.raiz)
             if isinstance(obj, Artista):
-                self.raiz = Rama()
+                self.raiz = Pagina()
                 obj.getDerecha().setPadre(self.raiz)
                 obj.getIzquierda().setPadre(self.raiz)
                 self.raiz.add(obj)
@@ -61,13 +61,13 @@ class ArbolB:
         return rama
 
     def partir(self, rama):
-        derecha = Rama()
-        izquierda = Rama()
+        derecha = Pagina()
+        izquierda = Pagina()
         medio = None
         aux = rama.getPrimero()
         i = 1
         while i < 6:
-            nodo = Artista(aux.getNombre())
+            nodo = NodoArtista(aux.getNombre())
             nodo.setIzquierda(aux.getIzquierda())
             nodo.setDerecha(aux.getDerecha())
             if (nodo.getDerecha() != None and nodo.getIzquierda() != None):

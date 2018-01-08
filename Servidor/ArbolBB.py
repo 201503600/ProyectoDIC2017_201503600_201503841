@@ -1,7 +1,7 @@
-from Album import Album
+from NodoAlbum import NodoAlbum
 
 
-class ABB:
+class ArbolAlbum:
     """docstring for ABB"""
 
     def __init__(self):
@@ -9,7 +9,7 @@ class ABB:
 
     def add(self, nombre, listaCanciones):
         if self.raiz == None:
-            self.raiz = Album(nombre, listaCanciones)
+            self.raiz = NodoAlbum(nombre, listaCanciones)
         else:
             self.raiz.addAlbum(nombre, listaCanciones)
 

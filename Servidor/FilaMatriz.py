@@ -1,7 +1,7 @@
 from NodoMatriz import NodoMatriz
 
 
-class ListaMatrizBidimensional:
+class ListaFilaMatriz:
 
     def __init__(self, anchura):
         self.primero = None

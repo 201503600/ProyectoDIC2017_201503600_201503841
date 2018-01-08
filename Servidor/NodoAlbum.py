@@ -5,7 +5,7 @@ from graphviz import Digraph
 import os
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin'
 
-class Album:
+class NodoAlbum:
     """docstring for Album"""
     correlativo = 1
 
@@ -35,28 +35,28 @@ class Album:
     def addAlbum(self, nombre, canciones):
         if nombre < self.nombre:
             if self.izquierdo == None:
-                self.izquierdo = Album(nombre, canciones)
+                self.izquierdo = NodoAlbum(nombre, canciones)
             else:
                 self.izquierdo.addAlbum(nombre, canciones)
         elif nombre > self.nombre:
             if self.derecho == None:
-                self.derecho = Album(nombre, canciones)
+                self.derecho = NodoAlbum(nombre, canciones)
             else:
                 self.derecho.addAlbum(nombre, canciones)
         else:
             print 'No se permiten valores duplicados'
 
     def getDot(self):
-        return 'digraph arbolABB{\nrankdir=TB;\nnode [shape = record, style=filled, fillcolor=seashell2];\n' + self.getCodigoInterno() + '}\n'
+        return 'digraph arbolABB{\nrankdir=TB;\nnode [shape = record, style=filled, fillcolor=seashell2];\n' + self.getDotNodo() + '}\n'
 
-    def getCodigoInterno(self):
+    def getDotNodo(self):
         etiqueta = ''
         if self.izquierdo == None and self.derecho == None:
             etiqueta = 'Album' + str(self.id) + ' [ label =\"' + self.nombre + '\"];\n'
         else:
             etiqueta = 'Album' + str(self.id) + ' [ label =\"<C0>|' + self.nombre + '<C1>\"];\n'
         if self.izquierdo != None:
-            etiqueta += self.izquierdo.getCodigoInterno() + 'Album' + str(self.id) + ':C0->Album' + str(self.izquierdo.id) + '\n'
+            etiqueta += self.izquierdo.getDotNodo() + 'Album' + str(self.id) + ':C0->Album' + str(self.izquierdo.id) + '\n'
         if self.derecho != None:
-            etiqueta += self.derecho.getCodigoInterno() + 'Album' + str(self.id) + ':C1->Album' + str(self.derecho.id) + '\n'
+            etiqueta += self.derecho.getDotNodo() + 'Album' + str(self.id) + ':C1->Album' + str(self.derecho.id) + '\n'
         return etiqueta

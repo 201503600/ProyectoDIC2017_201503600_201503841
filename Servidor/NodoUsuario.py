@@ -1,4 +1,4 @@
-from ColaCanciones import ColaCanciones
+from Playlist import Playlist
 
 class NodoUsuario:
 
@@ -7,7 +7,7 @@ class NodoUsuario:
         self.contrasenia = contrasenia
         self.siguiente = None
         self.anterior = None
-        self.canciones = ColaCanciones()
+        self.canciones = Playlist()
 
     def getColaCanciones(self):
         return self.canciones

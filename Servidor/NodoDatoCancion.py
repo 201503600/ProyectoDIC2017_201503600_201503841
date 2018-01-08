@@ -1,5 +1,4 @@
-class NodoReporte:
-	"""docstring for ClassName"""
+class NodoDato:
 	def __init__(self, cancion, artista, album, genero, anio):
 		self.cancion = cancion
 		self.artista = artista

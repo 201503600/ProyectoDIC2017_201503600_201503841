@@ -1,7 +1,7 @@
-from ListaMatrizBidimensional import ListaMatrizBidimensional
+from FilaMatriz import ListaFilaMatriz
 
 
-class MatrizBidimensional:
+class Matriz:
 
     def __init__(self, altura, anchura):
         self.ultima = None
@@ -9,9 +9,9 @@ class MatrizBidimensional:
         self.anchura = anchura
 
         if anchura > 0 and altura > 0:
-            self.ultima = ListaMatrizBidimensional(anchura)
+            self.ultima = ListaFilaMatriz(anchura)
             for i in xrange(1, altura):
-                aux = ListaMatrizBidimensional(anchura)
+                aux = ListaFilaMatriz(anchura)
                 recorrerAux = aux.getPrimero()
                 recorrerUltima = self.ultima.getPrimero()
                 while recorrerAux != None and recorrerUltima != None:
