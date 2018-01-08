@@ -33,6 +33,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         jButton1.addActionListener(this);
         jButton2.addActionListener(this);
         jButton3.addActionListener(this);
+        jButton4.addActionListener(this);
                 
         PlaceHolder holderUsername = new PlaceHolder(jTextField2, "Username");
         PlaceHolder holderPass = new PlaceHolder(jTextField1, "Password");
@@ -63,6 +64,9 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                 String response = Conexion.postCargaArchivo(pathArchivo);
                 
             }
+        }else if (e.getSource() == jButton4){
+           // Object response = Conexion.loginOAuth();
+            //JOptionPane.showMessageDialog(this, response.toString());
         }
     }
     /**
@@ -81,6 +85,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -117,6 +122,10 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/botonguardar.JPG"))); // NOI18N
         jLabel3.setText("jLabel3");
 
+        jButton4.setText("Login With Google");
+        jButton4.setEnabled(false);
+        jButton4.setName(""); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -137,8 +146,13 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(171, 171, 171))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(251, 251, 251)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(238, 238, 238)
+                        .addComponent(jButton4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -156,7 +170,9 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 51));
@@ -267,6 +283,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

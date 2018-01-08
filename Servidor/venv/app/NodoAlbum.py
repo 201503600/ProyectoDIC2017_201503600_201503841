@@ -33,12 +33,12 @@ class NodoAlbum:
         return self.id
 
     def addAlbum(self, nombre, canciones):
-        if nombre < self.nombre:
+        if nombre.lower() < self.nombre.lower():
             if self.izquierdo == None:
                 self.izquierdo = NodoAlbum(nombre, canciones)
             else:
                 self.izquierdo.addAlbum(nombre, canciones)
-        elif nombre > self.nombre:
+        elif nombre.lower() > self.nombre.lower():
             if self.derecho == None:
                 self.derecho = NodoAlbum(nombre, canciones)
             else:
@@ -47,7 +47,9 @@ class NodoAlbum:
             print 'No se permiten valores duplicados'
 
     def getDot(self):
-        return 'digraph arbolABB{\nrankdir=TB;\nnode [shape = record, style=filled, fillcolor=seashell2];\n' + self.getDotNodo() + '}\n'
+        dot = 'digraph arbolABB{\nrankdir=TB;\nnode [shape = record, style=filled, fillcolor=seashell2];\n' + self.getDotNodo() + '}\n'
+        print dot
+        return dot
 
     def getDotNodo(self):
         etiqueta = ''

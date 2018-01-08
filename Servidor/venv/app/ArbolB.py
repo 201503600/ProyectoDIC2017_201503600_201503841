@@ -43,6 +43,7 @@ class ArbolArtista:
                         obj.getDerecha().setPadre(rama)
                         obj.getIzquierda().setPadre(rama)
                         rama.add(obj)
+                        rama.setHoja(False)
                         if rama.getSize() == 5:
                             return self.partir(rama)
                     return rama
@@ -52,6 +53,7 @@ class ArbolArtista:
                         obj.getDerecha().setPadre(rama)
                         obj.getIzquierda().setPadre(rama)
                         rama.add(obj)
+                        rama.setHoja(False)
                         if (rama.getSize() == 5):
                             return self.partir(rama)
                     return rama
@@ -95,7 +97,7 @@ class ArbolArtista:
     def getGrafNodos(self, raiz):
         if raiz == None:
             return
-        self.dot += raiz.getGraphNodo()
+        self.dot += raiz.getGraphPagina()
         aux = raiz.getPrimero()
         while aux != None:
             self.getGrafNodos(aux.getIzquierda())
@@ -114,6 +116,7 @@ class ArbolArtista:
     def look(self, nombre, rama):
         nodo = rama.getPrimero()
         while nodo != None:
+            print nodo.getNombre()
             if nombre.lower() < nodo.getNombre().lower():
                 if rama.isHoja():
                     return None

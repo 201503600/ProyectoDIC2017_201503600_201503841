@@ -25,13 +25,11 @@ def reporteArtistas(matriz, anio, genero):
     generarImagen('artista', dot)
 
 def reporteAlbumes(matriz, anio, genero, nombreArtista):
-    dot = matriz.getArtistas(anio, genero).busqueda(
-        nombreArtista).getAlbumes().graph()
+    dot = matriz.getArtistas('2002', 'rock/pop').search('ramones').getAlbumes().graph()
     generarImagen('albumes', dot)
 
 def reporteListaCanciones(matriz, anio, genero, nombreArtista, nombreAlbum):
-    matriz.getArtistas(anio, genero).busqueda(nombreArtista).getAlbumes(
-    ).getAlbum(nombreAlbum).getCanciones().graph()
+    matriz.getArtistas(anio, genero).search(nombreArtista).getAlbumes().getAlbum(nombreAlbum).getCanciones().graph()
 
 def reporteUsuarios(listaUsuarios):
     listaUsuarios.graph()

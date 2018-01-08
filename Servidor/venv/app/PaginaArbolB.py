@@ -3,12 +3,16 @@ from Artista import NodoArtista
 
 class Pagina:
 
+    correlativo = 1
+
     def __init__(self):
         self.size = 0
         self.hoja = True
         self.padre = None
         self.primero = None
         self.dot = ''
+        self.id = Pagina.correlativo
+        Pagina.correlativo += 1
 
     def add(self, nuevo):
         if self.isEmpty():
@@ -53,13 +57,13 @@ class Pagina:
 
     def getGraphPagina(self):
         self.dot = ''
-        temp = 'nodo' + self.primero.getNombre() + ' [ label =\"'
+        temp = 'nodo' + str(self.id) + ' [ label =\"'
         tempRecorre = self.primero
         i = 0
         while i < self.size:
             temp += '<C' + str(i) + '>|<D' + str(i) + '>Nombre Artista: ' + tempRecorre.getNombre() + '|'
             if tempRecorre.getIzquierda() != None:
-                self.dot += 'nodo' + self.primero.getNombre() + ':C' + str(i) + '->nodo' + tempRecorre.getIzquierda().primero.getNombre() + '\n'
+                self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getIzquierda().id) + '\n'
             tempRecorre = tempRecorre.getSiguiente()
             i += 1
         temp += '<C' + str(i) + '>\" fillcolor=\"#58FAD0\"]\n'
@@ -67,7 +71,7 @@ class Pagina:
         while tempRecorre.getSiguiente() != None:
             tempRecorre = tempRecorre.getSiguiente()
         if tempRecorre.getDerecha() != None:
-            self.dot += 'nodo' + self.primero.getNombre() + ':C' + str(i) + '->nodo' + tempRecorre.getDerecha().primero.getNombre() + '\n'
+            self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getDerecha().id) + '\n'
         temp += self.dot
         return temp
 

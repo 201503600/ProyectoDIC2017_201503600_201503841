@@ -22,9 +22,9 @@ class ArbolAlbum:
     def getAlbumAux(self, actual, nombre):
         if actual == None:
             return None
-        if actual.getNombre() == nombre:
+        if actual.getNombre().lower() == nombre.lower():
             return actual
-        if actual.getNombre() < nombre:
+        if actual.getNombre().lower() < nombre.lower():
             return self.getAlbumAux(actual.getHijoDer(), nombre)
         else:
             return self.getAlbumAux(actual.getHijoIzq(), nombre)

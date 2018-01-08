@@ -58,10 +58,17 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         jButton3.addActionListener(this);
         jButton4.addActionListener(this);
         jButton5.addActionListener(this);
+        
         jMenu1.addMouseListener(this);
-        jMenu2.addActionListener(this);
+        jMenu2.addMouseListener(this);
         //jMenu3.addActionListener(this);  Icono de la aplicacion
-        jMenu5.addActionListener(this);
+        jMenu5.addMouseListener(this);
+        jMenuItem2.addActionListener(this);
+        jMenuItem3.addActionListener(this);
+        jMenuItem4.addActionListener(this);
+        jMenuItem5.addActionListener(this);
+        jMenuItem6.addActionListener(this);
+        jMenuItem7.addActionListener(this);
         
     }
     
@@ -138,7 +145,42 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                     break;
             }
             
-        }else if (e.getSource() == jMenu1){
+        }else if (e.getSource() == jMenuItem2){
+            // Reporte Matriz Dispersa
+            
+            Conexion.postReportMatriz();
+            
+        }else if (e.getSource() == jMenuItem3){
+            // Reporte Arbol B
+            
+            Conexion.postReportArtistas("2010", "rap");
+            
+        }else if (e.getSource() == jMenuItem4){
+            // Reporte ABB
+            
+            Conexion.postReportAlbums("2002", "rock/pop", "ramones");
+            
+        }else if (e.getSource() == jMenuItem5){
+            // Reporte Lista Canciones
+            
+            Conexion.postReportListSongs("1995", "(17)rock", "linkin park", "dsp");
+            
+        }else if (e.getSource() == jMenuItem6){
+            // Reporte Usuarios
+            
+            Conexion.postReportUsers();
+            
+        }else if (e.getSource() == jMenuItem7){
+            // Reporte Cola Playlist
+            
+            Conexion.postReportQueueUser(userLogged);
+            
+        }
+    }
+    
+     @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == jMenu1){
             // Cerrar Sesion
             
             Conexion.logout();
@@ -146,23 +188,16 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             this.referencia.show();
             
         }else if (e.getSource() == jMenu2){
-            // Eliminar Cuenta
+            // Eliminar cuenta
             
             
             
         }else if (e.getSource() == jMenu5){
             // Help
             
-            
+            //JOptionPane.showMessageDialog(this, "");
             
         }
-    }
-    
-     @Override
-    public void mouseClicked(MouseEvent e) {
-        Conexion.logout();
-            this.hide();
-            this.referencia.show();
     }
 
     @Override
@@ -220,6 +255,12 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         jMenu2 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spotify - USAC");
@@ -417,6 +458,25 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         jMenu5.setForeground(new java.awt.Color(255, 255, 255));
         jMenu5.setText("Help");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jMenuItem2.setText("Reporte Matriz Dispersa");
+        jMenu5.add(jMenuItem2);
+
+        jMenuItem3.setText("Reporte Artistas (Arbol B)");
+        jMenu5.add(jMenuItem3);
+
+        jMenuItem4.setText("Reporte Albums (ABB)");
+        jMenu5.add(jMenuItem4);
+
+        jMenuItem5.setText("Reporte Canciones");
+        jMenu5.add(jMenuItem5);
+
+        jMenuItem6.setText("Reporte Usuarios");
+        jMenu5.add(jMenuItem6);
+
+        jMenuItem7.setText("Reporte Playlist");
+        jMenu5.add(jMenuItem7);
+
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -480,6 +540,12 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

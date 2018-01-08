@@ -72,10 +72,11 @@ class CargaMasiva:
                                 can = cancion.find('nombre').text
                                 path = cancion.find('path').text
                                 listaCanciones.add(can, path)
-                                print can + ' - ' + path
+                                #print can + ' - ' + path
                                 self.datos.insert(can, nombreArtista, nombreAlbum, gen, anio)
                         abbAlbumes.add(nombreAlbum, listaCanciones)
                 #self.datos.insertar("", "", "", "", "")
+                print 'Anio\t' + str(anio) + '\Genero\t' + str(gen) + '\tArtista\t' + nombreArtista
                 self.matriz.addArtista(anio, gen, nombreArtista, abbAlbumes)
 
     def analizarXML(self, cadena):

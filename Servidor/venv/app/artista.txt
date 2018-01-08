@@ -1,0 +1,5 @@
+digraph arbolB{
+	node [shape = record, style=filled];
+	splines=line;
+	nodo5 [ label ="<C0>|<D0>Nombre Artista: gwen stefani feat. eve|<C1>|<D1>Nombre Artista: sam adams|<C2>" fillcolor="#58FAD0"]
+}
