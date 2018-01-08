@@ -1,4 +1,5 @@
 from MatrizDispersa import Matriz
+from CargaMasiva import CargaMasiva
 import os
 
 
@@ -16,27 +17,36 @@ def generarImagen(nombre, dot):
     os.system(fileOutputPath)
 
 def reporteMatriz(matriz):
-    dot = matriz.graficar()
-    generarImagen(dot)
+    dot = matriz.graph()
+    generarImagen('matriz', dot)
 
 def reporteArtistas(matriz, anio, genero):
     dot = matriz.getArtistas(anio, genero).getDot()
-    generarImagen(dot)
+    generarImagen('artista', dot)
 
 def reporteAlbumes(matriz, anio, genero, nombreArtista):
     dot = matriz.getArtistas(anio, genero).busqueda(
-        nombreArtista).getAlbumes().graficar()
-    generarImagen(dot)
+        nombreArtista).getAlbumes().graph()
+    generarImagen('albumes', dot)
 
 def reporteListaCanciones(matriz, anio, genero, nombreArtista, nombreAlbum):
     matriz.getArtistas(anio, genero).busqueda(nombreArtista).getAlbumes(
-    ).getAlbum(nombreAlbum).getCanciones().graficar()
+    ).getAlbum(nombreAlbum).getCanciones().graph()
 
 def reporteUsuarios(listaUsuarios):
-    listaUsuarios.graficar()
+    listaUsuarios.graph()
 
 def reporteGeneral(matriz):
     print "ya valimos xD"
 
 def reporteCola(listaUsuarios, nombre):
-    listaUsuarios.getCola(nombre).graficar()
+    listaUsuarios.getCola(nombre).graph()
+
+
+# def main():
+#     arch = CargaMasiva()
+#     arch.analizarXML("C:\\Users\\Javier\\Desktop\\entradaEDD2.xml")
+#     reporteMatriz(arch.getMatriz())
+
+# if __name__ == '__main__':
+#     main()

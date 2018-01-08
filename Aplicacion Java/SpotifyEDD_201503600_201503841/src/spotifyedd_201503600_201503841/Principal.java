@@ -5,7 +5,13 @@
  */
 package spotifyedd_201503600_201503841;
 
+import com.google.gson.JsonParser;
 import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -16,37 +22,169 @@ import javazoom.jlgui.basicplayer.BasicPlayer;
  *
  * @author Suseth
  */
-public class Principal extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame implements ActionListener, MouseListener{
 
     /**
      * Creates new form Principal
      */
-    private BasicPlayer player = new BasicPlayer();
-    Musica bocina = new Musica();
-    int contador=0;
+    private JsonParser parser;
+    private NewJFrame referencia;
+    private Musica bocina;
+    private String userLogged;
     
-    
-    public Principal() {
+    public Principal(NewJFrame referencia, String jsonUser) {
         initComponents();
+        
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/Imagenes/logo - spot.png")));
+        
         jTable1.setOpaque(false);
         ((DefaultTableCellRenderer)jTable1.getDefaultRenderer(Object.class)).setOpaque(false);
+        jTable1.setShowVerticalLines(false);
+        
         jScrollPane1.setOpaque(false);
         jScrollPane1.getViewport().setOpaque(false);
         jScrollPane1.setBorder(null);
-        jTable1.setShowVerticalLines(false);
         
-        
-        // para list
         jList1.setOpaque(false);
         jList1.setSelectedIndex(0);
         
+        this.referencia = referencia;
+        parser = new JsonParser();
+        userLogged = parser.parse(jsonUser).getAsJsonObject().get("nombre").getAsString();
+        state = false;
         
-//        ImageIcon imagen = new ImageIcon("C:\\Users\\Suseth\\Documents\\GitHub\\ProyectoDIC2017_201503600_201503841\\Aplicacion Java\\SpotifyEDD_201503600_201503841\\logotipo.png");
-//        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(jLabel1.getWidth(),jLabel1.getHeight(),Image.SCALE_DEFAULT));
-//        jLabel1.setIcon(icono);
-//        this.repaint();
+        jButton1.addActionListener(this);
+        jButton2.addActionListener(this);
+        jButton3.addActionListener(this);
+        jButton4.addActionListener(this);
+        jButton5.addActionListener(this);
+        jMenu1.addMouseListener(this);
+        jMenu2.addActionListener(this);
+        //jMenu3.addActionListener(this);  Icono de la aplicacion
+        jMenu5.addActionListener(this);
+        
+    }
+    
+    private boolean state;
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == jButton1){
+            // Boton search
+            
+            switch(jList1.getSelectedIndex()){
+                case 0:
+                    
+                    break;
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+            }
+            
+        }else if (e.getSource() == jButton2){
+            // Boton play - pause de reproductor
+            
+            ImageIcon icono;
+            if (state){
+                icono = new ImageIcon(this.getClass().getResource("/Imagenes/pausa.jpg"));
+                jButton2.setIcon(icono);
+                try{
+                    bocina.pausar();
+                }catch (Exception ex){}
+            }else{
+                icono = new ImageIcon(this.getClass().getResource("/Imagenes/play.jpg"));
+                jButton2.setIcon(icono);
+                try {
+                    bocina.AbrirArchivo("C:/Users/Suseth/Music/Camila   Solo Para Ti (Alt. Version).mp3");
+                    if (bocina.player.getStatus() == 1)
+                        bocina.continuar();
+                    else
+                        bocina.Play();
+                } catch (Exception ex){}
+            }
+            jButton2.repaint();
+            
+        }else if (e.getSource() == jButton3){
+            // Boton siguiente playlist
+            
+            
+            
+        }else if (e.getSource() == jButton4){
+            // Boton anterior playlist
+            
+            
+            
+        }else if (e.getSource() == jButton5){
+            // Boton eliminar
+            
+            switch(jList1.getSelectedIndex()){
+                case 0:
+                    String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre de la cancion");
+                    break;
+                case 1:
+                    String artista = JOptionPane.showInputDialog(null, "Escribe el nombre del artista");
+                    break;
+                case 2:
+                    String album = JOptionPane.showInputDialog(null,"Escribe el nombre del album");
+                    String anio= JOptionPane.showInputDialog(null,"Escribe el año del album");
+                    break;
+                case 3:
+                    String cola= JOptionPane.showInputDialog(null,"Escribe el nombre de la playlist");
+                    break;
+            }
+            
+        }else if (e.getSource() == jMenu1){
+            // Cerrar Sesion
+            
+            Conexion.logout();
+            this.hide();
+            this.referencia.show();
+            
+        }else if (e.getSource() == jMenu2){
+            // Eliminar Cuenta
+            
+            
+            
+        }else if (e.getSource() == jMenu5){
+            // Help
+            
+            
+            
+        }
+    }
+    
+     @Override
+    public void mouseClicked(MouseEvent e) {
+        Conexion.logout();
+            this.hide();
+            this.referencia.show();
     }
 
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -84,6 +222,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Spotify - USAC");
         setBackground(java.awt.SystemColor.windowText);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -151,12 +290,6 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Search");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SpotifyBlanco.JPG"))); // NOI18N
 
         jList1.setBackground(new java.awt.Color(0, 0, 0));
@@ -171,56 +304,54 @@ public class Principal extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupita.JPG"))); // NOI18N
         jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jButton1.setName(""); // NOI18N
 
         jButton5.setBackground(new java.awt.Color(0, 204, 51));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Eliminar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5)
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(2, 2, 2)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(4, 4, 4)
-                        .addComponent(jButton1)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                                .addGap(42, 42, 42)
+                                .addComponent(jButton5))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addGap(13, 13, 13)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 370));
@@ -229,27 +360,12 @@ public class Principal extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/next.JPG"))); // NOI18N
         jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/play.JPG"))); // NOI18N
         jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.JPG"))); // NOI18N
         jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -288,29 +404,14 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu2.setText("Eliminar Usuario");
+        jMenu2.setText("Eliminar Cuenta");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu2MouseClicked(evt);
-            }
-        });
         jMenuBar1.add(jMenu2);
 
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("Cerrar Sesión");
         jMenu1.setFocusable(false);
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
-            }
-        });
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
-            }
-        });
         jMenuBar1.add(jMenu1);
 
         jMenu5.setForeground(new java.awt.Color(255, 255, 255));
@@ -322,103 +423,6 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         //aca entra cuando esta en pausa
-         contador=contador+1;
-       if (contador % 2 == 0){
-           
-           ImageIcon icono = new ImageIcon(this.getClass().getResource("/Imagenes/play.jpg"));
-           jButton2.setIcon(icono);
-           try{
-               bocina.pausar();
-           }catch (Exception ex){
-           
-       }
-           
-           
-           
-          // aca entra cuando esta en play
-       }else {
-           ImageIcon icono = new ImageIcon(this.getClass().getResource("/Imagenes/pausa.jpg"));
-           jButton2.setIcon(icono);
-           
-            try {
-             bocina.AbrirArchivo("C:/Users/Suseth/Music/Camila   Solo Para Ti (Alt. Version).mp3");
-             if (bocina.player.getStatus() == 1)
-                 bocina.continuar();
-             else
-                 bocina.Play();
-             } catch (Exception e) {
-        }
-            
-        
-        }
-       jButton2.repaint();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenu1ActionPerformed
-
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-        // TODO add your handling code here:
-        NewJFrame regreso = new NewJFrame();
-        regreso.show();
-        this.hide();
-    }//GEN-LAST:event_jMenu1MouseClicked
-
-    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        // TODO add your handling code here:
-    int resp = JOptionPane.showConfirmDialog(null, "¿Esta seguro de eliminar usuario?", "Alerta!", JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE);
-    if (resp==JOptionPane.YES_OPTION){
-        //espacio para eliminar usuario;
-        NewJFrame regreso = new NewJFrame();
-        regreso.show();
-        this.hide();
-        
-    }else {
-        //cierra sesion
-        
-        
-    }
-        
-    }//GEN-LAST:event_jMenu2MouseClicked
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        if (jList1.getSelectedIndex()==0){
-            String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre de la cancion");
-        } if (jList1.getSelectedIndex()==1){
-           String artista = JOptionPane.showInputDialog(null, "Escribe el nombre del artista");
-        } if (jList1.getSelectedIndex()==2){
-           String album = JOptionPane.showInputDialog(null,"Escribe el nombre del album");
-           String anio= JOptionPane.showInputDialog(null,"Escribe el año del album");
-        } if(jList1.getSelectedIndex()==3){
-           String cola= JOptionPane.showInputDialog(null,"Escribe el nombre de la playlist");
-        }
-        
-        
-        
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -450,7 +454,7 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                //new Principal("").setVisible(true);
             }
         });
     }
@@ -483,4 +487,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+   
+
+    
 }

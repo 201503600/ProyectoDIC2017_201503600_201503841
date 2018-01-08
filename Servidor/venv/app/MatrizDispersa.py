@@ -60,6 +60,7 @@ class Matriz:
             cabeza = cabeza.getAbajo()
         for x in xrange(0, self.getIndexGenero(genero)):
             cabeza = cabeza.getSiguiente()
+        cabeza.setDato(anio + ' - ' + genero)
         cabeza.getArtistas().add(nombre, albumes)
 
     def getIndexAnio(self, anio):
@@ -84,7 +85,7 @@ class Matriz:
         return self.ultima
 
     def graph(self):
-        dot = 'digraph matriz{\n\trankdir = TB;\n\tnode [shape = record];\n\t'
+        dot = 'digraph matriz{\n\trankdir = TB;\n\tnode [shape = record, width = 25];\n\t'
         dot += 'Matriz[shape = record,label=\"{'
         for i in xrange(0, self.altura - 1):
             dot += '{'

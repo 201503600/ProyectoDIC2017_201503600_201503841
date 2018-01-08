@@ -23,7 +23,7 @@ public class Conexion {
      public static OkHttpClient webClient = new OkHttpClient();
 
     
-    public static String getString(String metodo, RequestBody formBody) {
+    private static String getString(String metodo, RequestBody formBody) {
 
         try {
             URL url = new URL("http://localhost:5000/" + metodo);
@@ -39,18 +39,40 @@ public class Conexion {
         return null;
     }
     
-     public static String metodoPost(String parametroJava) {
+     public static String postCargaArchivo(String parametroJava) {
         RequestBody formBody = new FormEncodingBuilder()
-                .add("x", parametroJava)
-                .build();
-        String r = getString("metodos", formBody);
-        System.out.println("respuesta:" + r);
-        return r;
+                                        .add("path", parametroJava)
+                                        .build();
+        return getString("carga_archivo", formBody);
     }
-
-    
-    public static void main(String[] args) {
-        metodoPost("secreto");
-    }
+     
+     public static String login(String username, String pass){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .add("password", pass)
+                                        .build();
+         return getString("login", formBody);
+     }
+     
+     public static String logout(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("", "")
+                                        .build();
+         return getString("logout", formBody);
+     }
+     
+     public static String postEncabezadoAnios(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("", "")
+                                        .build();
+         return getString("encabezadoAnio", formBody);
+     }
+     
+     public static String postEncabezadoGeneros(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("", "")
+                                        .build();
+         return getString("encabezadoGenero", formBody);
+     }
     
 }

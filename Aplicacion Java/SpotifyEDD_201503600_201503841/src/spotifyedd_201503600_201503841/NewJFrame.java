@@ -6,7 +6,13 @@
 package spotifyedd_201503600_201503841;
 
 
+import com.placeholder.PlaceHolder;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.builder.api.GoogleApi;
 import static org.scribe.model.OAuthConstants.SCOPE;
@@ -16,16 +22,49 @@ import org.scribe.oauth.OAuthService;
  *
  * @author Suseth
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class NewJFrame extends javax.swing.JFrame implements ActionListener{
     
-
     /**
      * Creates new form NewJFrame
      */
     public NewJFrame() {
         initComponents();
+        
+        jButton1.addActionListener(this);
+        jButton2.addActionListener(this);
+        jButton3.addActionListener(this);
+                
+        PlaceHolder holderUsername = new PlaceHolder(jTextField2, "Username");
+        PlaceHolder holderPass = new PlaceHolder(jTextField1, "Password");
+        
     }
 
+    private String pathArchivo = "";
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == jButton1){
+            String username = jTextField2.getText();
+            String pass = jTextField1.getText();
+            
+            String jsonUser = Conexion.login(username, pass);
+            if (!jsonUser.equals("{}\n")){
+                Principal llamar = new Principal(this, jsonUser);
+                llamar.show();
+                this.hide();
+            }
+            
+        }else if (e.getSource() == jButton2){
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setFileFilter(new FileNameExtensionFilter("*.xml", "xml"));
+            if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+                pathArchivo = fileChooser.getSelectedFile().getAbsolutePath();
+        }else if (e.getSource() == jButton3){
+            if (!pathArchivo.equals("")){
+                String response = Conexion.postCargaArchivo(pathArchivo);
+                
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,29 +91,23 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login.JPG"))); // NOI18N
 
-        jTextField1.setBackground(new java.awt.Color(102, 102, 102));
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField1.setText("Password");
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jTextField2.setBackground(new java.awt.Color(102, 102, 102));
         jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField2.setText("Email o Usuario");
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jButton1.setBackground(new java.awt.Color(0, 204, 51));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("LOGIN IN");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -129,26 +162,21 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 204, 51));
 
         jButton2.setBackground(new java.awt.Color(204, 255, 204));
-        jButton2.setText("Cargar Archivo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        jButton2.setText("Seleccionar Archivo");
 
         jButton3.setBackground(new java.awt.Color(204, 255, 204));
-        jButton3.setText("Generar Archivos");
+        jButton3.setText("Subir archivo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,29 +227,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         Principal llamar = new Principal();
-         llamar.show();
-         this.hide();
-         
-         //pruebaaaaa--------------+
-//         
-//         OAuthService service = new ServiceBuilder() 
-//                                   .provider(GoogleApi.class)
-//                                   .apiKey("anonymous") 
-//                                  .apiSecret("anonymous")
-//                                  .scope(SCOPE)
-//                                  .build();  
-//         final  OAuth1RequestToken requestToken = servicio . getRequestToken ();
-//         
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -275,4 +280,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    
 }

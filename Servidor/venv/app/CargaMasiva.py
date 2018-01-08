@@ -1,6 +1,5 @@
 import os
 import codecs
-import json
 from xml.etree import ElementTree
 
 from ListaUsuarios import ListaUsuarios
@@ -13,8 +12,10 @@ class CargaMasiva:
 
     def __init__(self):
         self.usuarios = ListaUsuarios()
-        self.matriz = None
         self.datos = ListaDato()
+        self.matriz = None
+        self.generos = None
+        self.anios = None
 
     def cargarUsuarios(self, root):
         coleccionUsuarios = root.findall('usuarios')
@@ -24,8 +25,8 @@ class CargaMasiva:
                 self.usuarios.queueUsuario(usuario.find('nombre').text, usuario.find('pass').text)
 
     def crearMatriz(self, root):
-        generos = ['--- Matriz ---']
-        anios = ['--- Matriz ---']
+        self.generos = ['--- Matriz ---']
+        self.anios = ['--- Matriz ---']
         coleccionArtistas = root.findall('artistas')
         for artistas in coleccionArtistas:
             coleccionArtista = artistas.findall('artista')
@@ -36,19 +37,18 @@ class CargaMasiva:
                     for album in coleccionAlbum:
                         gen = album.find('genero').text
                         anio = album.find('anio').text
-                        if not(gen in generos):
-                            generos.append(gen)
-                        if not(anio in anios):
-                            anios.append(anio)
-        altura = len(anios)
-        anchura = len(generos)
-        anios.sort()
-        generos.sort()
+                        if not(gen in self.generos):
+                            self.generos.append(gen)
+                        if not(anio in self.anios):
+                            self.anios.append(anio)
+        altura = len(self.anios)
+        anchura = len(self.generos)
+        self.anios.sort()
         self.matriz = Matriz(altura, anchura)
         for x in xrange(0, altura):
-            self.matriz.setDato(anios[x], x, 0)
+            self.matriz.setDato(self.anios[x], x, 0)
         for y in xrange(0, anchura):
-            self.matriz.setDato(generos[y], 0, y)
+            self.matriz.setDato(self.generos[y], 0, y)
 
     def llenarMatriz(self, root):
         coleccionArtistas = root.findall('artistas')
@@ -72,6 +72,7 @@ class CargaMasiva:
                                 can = cancion.find('nombre').text
                                 path = cancion.find('path').text
                                 listaCanciones.add(can, path)
+                                print can + ' - ' + path
                                 self.datos.insert(can, nombreArtista, nombreAlbum, gen, anio)
                         abbAlbumes.add(nombreAlbum, listaCanciones)
                 #self.datos.insertar("", "", "", "", "")
@@ -96,5 +97,11 @@ class CargaMasiva:
     def getDatos(self):
         return self.datos
 
-arch = CargaMasiva()
-arch.analizarXML("entradaEDD2.xml")
+    def getEncabezadoAnios(self):
+        return self.anios
+
+    def getEncabezadoGeneros(self):
+        return self.generos
+
+# arch = CargaMasiva()
+# arch.analizarXML("C:\\Users\\Javier\\Desktop\\EDD - Cil\\ProyectoDIC2017_201503600_201503841\\ProyectoDIC2017_201503600_201503841\\Servidor\\venv\\app\\entradaEDD2.xml")

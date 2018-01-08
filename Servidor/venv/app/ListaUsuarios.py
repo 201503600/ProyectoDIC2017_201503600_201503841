@@ -29,18 +29,18 @@ class ListaUsuarios:
     def login(self, nombre, contrasenia):
         aux = self.inicio
         while aux.getSiguiente() != None:
-            if aux.getNombre() == Nombre and aux.getPass() == contrasenia:
+            if aux.getNombre() == nombre and aux.getPass() == contrasenia:
                 return aux
             aux = aux.getSiguiente()
         return None
 
-    # def getCola(self, nombre):
-    #     aux = self.Inicio
-    #     while aux.getSiguiente() != None:
-    #         if aux.getNombreUsuario() == Nombre:
-    #             return aux.getColaCanciones()
-    #         aux = aux.getSiguiente()
-    #     return None
+    def getCola(self, nombre):
+        aux = self.inicio
+        while aux.getSiguiente() != None:
+            if aux.getNombre() == nombre:
+                return aux.getColaCanciones()
+            aux = aux.getSiguiente()
+        return None
 
     def graph(self):
         dot = Digraph(comment='Lista de Usuarios')
