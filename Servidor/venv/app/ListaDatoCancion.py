@@ -10,8 +10,8 @@ class ListaDato:
     def isEmpty(self):
         return self.size == 0
 
-    def insert(self, cancion, artista, album, genero, anio):
-        nuevo = NodoDato(cancion, artista, album, genero, anio)
+    def insert(self, cancion, artista, album, genero, anio, path):
+        nuevo = NodoDato(cancion, artista, album, genero, anio, path)
         nuevo.setSiguiente(self.primero)
         self.primero = nuevo
         self.size += 1

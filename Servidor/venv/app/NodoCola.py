@@ -1,12 +1,16 @@
 class NodoCola:
 
-    def __init__(self, nodoCancion):
+    def __init__(self, nodoCancion, nodoDato):
         self.nodo = nodoCancion
+        self.datos = nodoDato
         self.siguiente = None
         self.anterior = None
 
     def getNodo(self):
         return self.nodo
+
+    def getDatos(self):
+        return self.datos
 
     def getSiguiente(self):
         return self.siguiente

@@ -144,5 +144,52 @@ public class Conexion {
                                         .build();
          return getString("reporteQueueUser", formBody);
      }
+     
+     public static String postListSongs(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", "")
+                                        .build();
+         return getString("canciones", formBody);
+     }
+     
+     public static String postAddCola(String username, String anio, String genero, String artista,
+                                        String album, String cancion){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .add("anio", anio)
+                                        .add("genero", genero)
+                                        .add("artista", artista)
+                                        .add("album", album)
+                                        .add("cancion", cancion)
+                                        .build();
+         return getString("agregarCola", formBody); 
+    }
+     
+     public static String postReproducir(String username, String anio, String genero, String artista,
+                                        String album, String cancion){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .add("anio", anio)
+                                        .add("genero", genero)
+                                        .add("artista", artista)
+                                        .add("album", album)
+                                        .add("cancion", cancion)
+                                        .build();
+         return getString("agregarCola", formBody); 
+     }
+     
+     public static String postAfterSong(String username){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .build();
+         return getString("afterSong", formBody);
+     }
+     
+     public static String postBeforeSong(String username){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .build();
+         return getString("beforeSong", formBody);
+     }
     
 }

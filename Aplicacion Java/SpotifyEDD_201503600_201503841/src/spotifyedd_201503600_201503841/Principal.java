@@ -5,6 +5,8 @@
  */
 package spotifyedd_201503600_201503841;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -16,6 +18,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 
 /**
@@ -31,12 +34,28 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
     private NewJFrame referencia;
     private Musica bocina;
     private String userLogged;
+    private ListaCancion canciones;
+    private Cancion actual;
     
     public Principal(NewJFrame referencia, String jsonUser) {
         initComponents();
         
         //setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/Imagenes/logo - spot.png")));
         
+        this.referencia = referencia;
+        parser = new JsonParser();
+        userLogged = parser.parse(jsonUser).getAsJsonObject().get("nombre").getAsString();
+        actual = null;
+        
+        JsonArray array = parser.parse(Conexion.postEncabezadoAnios()).getAsJsonArray();
+        for (int pos = 0; pos < array.size(); pos++)
+            jComboBox1.addItem(array.get(pos).getAsJsonObject().get("anio").getAsString());
+        array = parser.parse(Conexion.postEncabezadoGeneros()).getAsJsonArray();
+        for (int pos = 0; pos < array.size(); pos++)
+            jComboBox2.addItem(array.get(pos).getAsJsonObject().get("genero").getAsString());
+        
+        canciones = new Gson().fromJson(Conexion.postListSongs(), ListaCancion.class);
+        jTable1.setModel(new ModeloTablaCancion(canciones));
         jTable1.setOpaque(false);
         ((DefaultTableCellRenderer)jTable1.getDefaultRenderer(Object.class)).setOpaque(false);
         jTable1.setShowVerticalLines(false);
@@ -47,10 +66,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         
         jList1.setOpaque(false);
         jList1.setSelectedIndex(0);
-        
-        this.referencia = referencia;
-        parser = new JsonParser();
-        userLogged = parser.parse(jsonUser).getAsJsonObject().get("nombre").getAsString();
+                
         bocina = new Musica();
         state = false;
         
@@ -95,8 +111,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             }
             
         }else if (e.getSource() == jButton2){
-            // Boton play - pause de reproductor
-            
+            // Boton play - pause de reproductor            
             ImageIcon icono;
             if (state){
                 icono = new ImageIcon(this.getClass().getResource("/Imagenes/play.jpg"));
@@ -112,7 +127,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                 jButton2.setIcon(icono);
                 try {
                     bocina.AbrirArchivo("C:/Users/Suseth/Music/Camila   Solo Para Ti (Alt. Version).mp3");
-                    if (bocina.player.getStatus() == 1)
+                    if (actual != null)
                         bocina.continuar();
                     else
                         bocina.Play();
@@ -121,21 +136,29 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                 }
                 state = true;
             }
-            jButton2.repaint();
-            
+            jButton2.repaint();            
         }else if (e.getSource() == jButton3){
-            // Boton siguiente playlist
-            
-            
-            
+            // Boton siguiente playlist           
+            //reproducir
+            try {
+                    actual = new Gson().fromJson(Conexion.postAfterSong(userLogged), Cancion.class);
+                    bocina.AbrirArchivo(actual.getPath());
+                    bocina.Play();
+                } catch (Exception ex){
+                    JOptionPane.showMessageDialog(this, ex.toString());
+                }
         }else if (e.getSource() == jButton4){
-            // Boton anterior playlist
-            
-            
-            
+            // Boton anterior playlist           
+            //reproducir
+            try {
+                actual = new Gson().fromJson(Conexion.postBeforeSong(userLogged), Cancion.class);
+                    bocina.AbrirArchivo(actual.getPath());
+                    bocina.Play();
+                } catch (Exception ex){
+                    JOptionPane.showMessageDialog(this, ex.toString());
+                }
         }else if (e.getSource() == jButton5){
-            // Boton eliminar
-            
+            // Boton eliminar            
             switch(jList1.getSelectedIndex()){
                 case 0:
                     String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre de la cancion");
@@ -150,38 +173,30 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                 case 3:
                     String cola= JOptionPane.showInputDialog(null,"Escribe el nombre de la playlist");
                     break;
-            }
-            
+            }            
         }else if (e.getSource() == jMenuItem2){
-            // Reporte Matriz Dispersa
-            
-            Conexion.postReportMatriz();
-            
+            // Reporte Matriz Dispersa            
+            Conexion.postReportMatriz();            
         }else if (e.getSource() == jMenuItem3){
-            // Reporte Arbol B
-            
-            Conexion.postReportArtistas("2010", "rap");
-            
+            // Reporte Arbol B            
+            Conexion.postReportArtistas(jComboBox1.getSelectedItem().toString(), jComboBox2.getSelectedItem().toString());            
         }else if (e.getSource() == jMenuItem4){
-            // Reporte ABB
-            
-            Conexion.postReportAlbums("2002", "rock/pop", "ramones");
-            
+            // Reporte ABB            
+            Conexion.postReportAlbums(jComboBox1.getSelectedItem().toString(), 
+                                        jComboBox2.getSelectedItem().toString(), 
+                                        jTextField1.getText());            
         }else if (e.getSource() == jMenuItem5){
-            // Reporte Lista Canciones
-            
-            Conexion.postReportListSongs("1995", "(17)rock", "linkin park", "dsp");
-            
+            // Reporte Lista Canciones            
+            Conexion.postReportListSongs(jComboBox1.getSelectedItem().toString(), 
+                                            jComboBox2.getSelectedItem().toString(), 
+                                            jTextField1.getText(), 
+                                            JOptionPane.showInputDialog(this, "Ingrese el album a verificar"));            
         }else if (e.getSource() == jMenuItem6){
-            // Reporte Usuarios
-            
-            Conexion.postReportUsers();
-            
+            // Reporte Usuarios            
+            Conexion.postReportUsers();            
         }else if (e.getSource() == jMenuItem7){
-            // Reporte Cola Playlist
-            
-            Conexion.postReportQueueUser(userLogged);
-            
+            // Reporte Cola Playlist            
+            Conexion.postReportQueueUser(userLogged);            
         }
     }
     
@@ -197,14 +212,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             
         }else if (e.getSource() == jMenu2){
             // Eliminar cuenta
-            
-            
+                        
             
         }else if (e.getSource() == jMenu5){
-            // Help
-            
-            //JOptionPane.showMessageDialog(this, "");
-            
+            // Help            
+            //JOptionPane.showMessageDialog(this, "");            
         }
     }
 
@@ -237,19 +249,18 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -272,17 +283,33 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
 
+        jMenuItem1.setText("Añadir a cola ...");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenuItem1);
+        jPopupMenu1.add(jSeparator1);
+
+        jMenuItem8.setText("Reproducir");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenuItem8);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spotify - USAC");
         setBackground(java.awt.SystemColor.windowText);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setBackground(new java.awt.Color(0, 0, 0));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "TITULO", "GENERO", "ARTISTA", "ALBUM", "AÑO"
@@ -296,6 +323,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setComponentPopupMenu(jPopupMenu1);
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
@@ -305,49 +333,31 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             jTable1.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 430, 110));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 430, 200));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
+        jComboBox1.setBackground(new java.awt.Color(0, 0, 0));
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 100, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, -1));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Artista:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
+        jComboBox2.setBackground(new java.awt.Color(0, 0, 0));
+        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 100, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Año:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
+        jLabel4.setText("Año");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Genero:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Album:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, -1, -1));
+        jLabel5.setText("Genero");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 510, 370));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Search");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SpotifyBlanco.JPG"))); // NOI18N
 
@@ -358,6 +368,8 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jList1.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jList1.setSelectionForeground(new java.awt.Color(0, 153, 255));
         jScrollPane2.setViewportView(jList1);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -384,12 +396,9 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
                                 .addComponent(jButton5))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -400,9 +409,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(77, 77, 77)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
@@ -502,6 +509,52 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        int index = jTable1.getSelectedRow();
+        
+        //anadir a cola
+        if (actual == null){
+            //reproducir
+            try {
+            actual = new Gson().fromJson(Conexion.postAddCola(userLogged, 
+                                                                String.valueOf(canciones.getCanciones().get(index).getAnio()), 
+                                                                canciones.getCanciones().get(index).getGenero(), 
+                                                                canciones.getCanciones().get(index).getArtista(), 
+                                                                canciones.getCanciones().get(index).getAlbum(), 
+                                                                canciones.getCanciones().get(index).getCancion()), Cancion.class);
+            
+                    bocina.AbrirArchivo(actual.getPath());
+                    bocina.Play();
+                } catch (Exception ex){
+                    JOptionPane.showMessageDialog(this, ex.toString());
+                }
+        }else
+            Conexion.postAddCola(userLogged, String.valueOf(canciones.getCanciones().get(index).getAnio()), 
+                                    canciones.getCanciones().get(index).getGenero(), 
+                                    canciones.getCanciones().get(index).getArtista(), 
+                                    canciones.getCanciones().get(index).getAlbum(), 
+                                    canciones.getCanciones().get(index).getCancion());
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        int index = jTable1.getSelectedRow();
+         //reproducir
+            try {
+        //reproducir
+        actual = new Gson().fromJson(Conexion.postAddCola(userLogged, 
+                                                            String.valueOf(canciones.getCanciones().get(index).getAnio()), 
+                                                            canciones.getCanciones().get(index).getGenero(), 
+                                                            canciones.getCanciones().get(index).getArtista(), 
+                                                            canciones.getCanciones().get(index).getAlbum(), 
+                                                            canciones.getCanciones().get(index).getCancion()), Cancion.class);
+           
+                    bocina.AbrirArchivo(actual.getPath());
+                    bocina.Play();
+                } catch (Exception ex){
+                    JOptionPane.showMessageDialog(this, ex.toString());
+                }
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -545,31 +598,30 @@ public class Principal extends javax.swing.JFrame implements ActionListener, Mou
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

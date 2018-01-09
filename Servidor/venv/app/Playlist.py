@@ -16,8 +16,8 @@ class Playlist:
     def isEmpty(self):
         return self.size == 0
 
-    def queue(self, nodo):
-        nuevo = NodoCola(nodo)
+    def queue(self, nodo, datos):
+        nuevo = NodoCola(nodo, datos)
         if self.isEmpty():
             self.primero = nuevo
             self.ultimo = nuevo
@@ -28,6 +28,7 @@ class Playlist:
             self.primero.setAnterior(nuevo)
             self.ultimo = nuevo
         self.size += 1
+        return nuevo
 
     def peekAfter(self):
         if self.isEmpty():

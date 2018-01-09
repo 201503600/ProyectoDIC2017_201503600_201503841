@@ -1,11 +1,12 @@
 import os
-#from urllib2 import urlopen, urlparse, Request, URLError
+from urllib2 import urlopen, urlparse, Request, URLError
 from flask import Flask, session, request, json, jsonify, redirect, url_for
 from flask_oauth import OAuth
 from CargaMasiva import CargaMasiva
 from Reporte import generarImagen, reporteAlbumes, reporteArtistas, reporteCola, reporteGeneral, reporteMatriz, reporteUsuarios, reporteListaCanciones
 from Codificador import JsonEncoder
 from NodoUsuario import NodoUsuario
+from NodoDatoCancion import NodoDato
 
 # You must configure these 3 values from Google APIs console
 # https://code.google.com/apis/console
@@ -58,8 +59,8 @@ def loginOAuth():
             session.pop('access_token', None)
             return redirect(url_for('loginGoo'))
         return res.read()
-    obJson = res.read().encode()
-    return obJson['email']
+    obJson = res.read()
+    return obJson
 
 @app.route('/loginGoo')
 def loginGoo():
@@ -109,13 +110,13 @@ def logout():
         session.pop('username', None)
     return jsonify({})
 
-@app.route('/encabezadoAnio', methods=['POST'])
+@app.route('/encabezadoAnio', methods=['POST', 'GET'])
 def getEncabezadoAnios():
-    return jsonify(carga.getEncabezadoAnios)
+    return jsonify(carga.getEncabezadoAnios())
 
-@app.route('/encabezadoGenero', methods=['POST'])
+@app.route('/encabezadoGenero', methods=['POST', 'GET'])
 def getEncabezadoGeneros():
-    return jsonify(carga.getEncabezadoGeneros)
+    return jsonify(carga.getEncabezadoGeneros())
 
 @app.route('/reporteMatriz', methods=['POST'])
 def getReportMatriz():
@@ -126,7 +127,10 @@ def getReportMatriz():
 def getReportArtist():
     anio = request.form['anio']
     genero = request.form['genero']
-    reporteArtistas(carga.getMatriz(), anio, genero)
+    try:
+        reporteArtistas(carga.getMatriz(), anio, genero)
+    except:
+        print 'Ocurrio un error'#, sys.exec_info()[0]
     return jsonify({})
 
 @app.route('/reporteAlbumes', methods=['POST'])
@@ -134,8 +138,11 @@ def getReportAlbums():
     anio = request.form['anio']
     genero = request.form['genero']
     artista = request.form['artista']
-    print 'Anio\t' + str(anio) + '\tGenero\t' + str(genero) + '\tartista\t' + str(artista)
-    reporteAlbumes(carga.getMatriz(), anio, genero, artista)
+    #print 'Anio\t' + str(anio) + '\tGenero\t' + str(genero) + '\tartista\t' + str(artista)
+    try:
+        reporteAlbumes(carga.getMatriz(), anio, genero, artista)
+    except:
+        print 'Ocurrio un error'#, sys.exec_info()[0]
     return jsonify({})
 
 @app.route('/reporteListaCanciones', methods=['POST'])
@@ -144,7 +151,10 @@ def getReportListSongs():
     genero = request.form['genero']
     artista = request.form['artista']
     album = request.form['album']
-    reporteListaCanciones(carga.getMatriz(), anio, genero, artista, album)
+    try:
+        reporteListaCanciones(carga.getMatriz(), anio, genero, artista, album)
+    except:
+        print 'Ocurrio un error'#, sys.exec_info()[0]
     return jsonify({})
 
 @app.route('/reporteUsuarios', methods=['POST'])
@@ -157,6 +167,36 @@ def getReportQueueUser():
     username = request.form['username']
     reporteCola(carga.getUsuario(), username)
     return jsonify({})
+
+@app.route('/canciones', methods=['POST', 'GET'])
+def getListSongs():
+    return jsonify(carga.getDatos())
+
+@app.route('/agregarCola', methods=['POST'])
+def addCola():
+    anio = request.form['anio']
+    genero = request.form['genero']
+    artista = request.form['artista']
+    album = request.form['album']
+    cancion = request.form['cancion']
+    username = request.form['username']
+    try:
+        nodoCancion = carga.getMatriz().getArtistas(anio, genero).search(artista).getAlbumes().getAlbum(album).getCanciones().find(cancion)
+        nodo = carga.getUsuario().getCola(username).getColaCanciones().queue(nodoCancion, NodoDato(cancion, artista, album, genero, anio, nodoCancion.getPath()))
+    except:
+        print 'Ocurrio un error'#, sys.exec_info()[0]
+        return jsonify({})
+    return jsonify(nodo)
+
+@app.route('/afterSong', methods=['POST'])
+def afterSong():
+    username = request.form['username']
+    return jsonify(carga.getUsuario().getCola(username).peekAfter())
+
+@app.route('/beforeSong', methods=['POST'])
+def beforeSong():
+    username = request.form['POST']
+    return jsonify(carga.getUsuario().getCola(username).peekBefore())
 
 if __name__ == '__main__':
     app.run(debug=True)
