@@ -1,0 +1,5 @@
+digraph arbolABB{
+rankdir=TB;
+node [shape = record, style=filled, fillcolor=seashell2];
+Album1 [ label ="Mientes"];
+}

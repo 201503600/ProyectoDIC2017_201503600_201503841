@@ -19,5 +19,5 @@ class JsonEncoder(JSONEncoder):
 					canciones.append(self.default(obj.getAt(pos)))
 			return {'canciones':canciones}
 		elif isinstance(obj, NodoCola):
-			return self.default(obj.getDatos)
+			return self.default(obj.getDatos())
 		return super(JsonEncoder, self).default(obj)

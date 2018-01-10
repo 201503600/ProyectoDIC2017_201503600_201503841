@@ -189,7 +189,48 @@ public class Conexion {
          RequestBody formBody = new FormEncodingBuilder()
                                         .add("username", username)
                                         .build();
-         return getString("beforeSong", formBody);
+         String before = getString("beforeSong", formBody);
+         return before;
+     }
+     
+     public static String postSongsByArtist(String artista){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("artista", artista)
+                                        .build();
+         String before = getString("getSongsByArtist", formBody);
+         return before;
+     }
+     
+     public static String postSongsByAlbum(String album){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("album", album)
+                                        .build();
+         String before = getString("getSongsByAlbum", formBody);
+         return before;
+     }
+     
+     public static String postSongsByGender(String gender){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("genero", gender)
+                                        .build();
+         String before = getString("getSongsByGender", formBody);
+         return before;
+     }
+     
+     public static String postSongsByYear(String anio){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("anio", anio)
+                                        .build();
+         String before = getString("getSongsByYear", formBody);
+         return before;
+     }
+     
+     public static String postSongShuffle(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("", "")
+                                        .build();
+         String before = getString("getSongShuffle", formBody);
+         return before;
      }
     
 }

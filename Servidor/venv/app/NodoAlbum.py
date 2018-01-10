@@ -9,13 +9,20 @@ class NodoAlbum:
     """docstring for Album"""
     correlativo = 1
 
-    def __init__(self, nombre, canciones):
+    def __init__(self, nombre):
         self.nombre = nombre
-        self.canciones = canciones
+        self.canciones = ListaCanciones()
         self.izquierdo = None
         self.derecho = None
+        self.padre = None
         self.id = NodoAlbum.correlativo
         NodoAlbum.correlativo += 1
+
+    def getPadre(self):
+        return self.padre
+
+    def setPadre(self, padre):
+        self.padre = padre
 
     def getCanciones(self):
         return self.canciones
@@ -32,17 +39,19 @@ class NodoAlbum:
     def getCorrelativo(self):
         return self.id
 
-    def addAlbum(self, nombre, canciones):
+    def addAlbum(self, nombre):
         if nombre.lower() < self.nombre.lower():
             if self.izquierdo == None:
-                self.izquierdo = NodoAlbum(nombre, canciones)
+                self.izquierdo = NodoAlbum(nombre)
+                self.izquierdo.padre = self
             else:
-                self.izquierdo.addAlbum(nombre, canciones)
+                self.izquierdo.addAlbum(nombre)
         elif nombre.lower() > self.nombre.lower():
             if self.derecho == None:
-                self.derecho = NodoAlbum(nombre, canciones)
+                self.derecho = NodoAlbum(nombre)
+                self.derecho.padre = self
             else:
-                self.derecho.addAlbum(nombre, canciones)
+                self.derecho.addAlbum(nombre)
         else:
             print 'No se permiten valores duplicados'
 
@@ -62,3 +71,11 @@ class NodoAlbum:
         if self.derecho != None:
             etiqueta += self.derecho.getDotNodo() + 'Album' + str(self.id) + ':C1->Album' + str(self.derecho.id) + '\n'
         return etiqueta
+
+    def printAlbum(self, nodo):
+        print nodo.getNombre()
+        print nodo.getCanciones().printCancion()
+        if nodo.getHijoIzq() != None:
+            self.printAlbum(nodo.getHijoIzq())
+        if nodo.getHijoDer() != None:
+            self.printAlbum(nodo.getHijoDer())

@@ -1,5 +1,5 @@
 digraph arbolB{
 	node [shape = record, style=filled];
 	splines=line;
-	nodo23 [ label ="<C0>|<D0>Nombre Artista: the police|<C1>" fillcolor="#58FAD0"]
+	nodo72 [ label ="<C0>|<D0>Nombre Artista: sean paul|<C1>|<D1>Nombre Artista: t.i. feat. eminem|<C2>" fillcolor="#58FAD0"]
 }

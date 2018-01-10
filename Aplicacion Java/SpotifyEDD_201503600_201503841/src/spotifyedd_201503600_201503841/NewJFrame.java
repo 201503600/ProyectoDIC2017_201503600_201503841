@@ -53,6 +53,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
             
             String jsonUser = Conexion.login(username, pass);
             if (!jsonUser.equals("{}\n")){
+                
                 Principal llamar = new Principal(this, jsonUser);
                 llamar.show();
                 this.hide();
@@ -105,11 +106,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -190,7 +186,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 51));
@@ -221,28 +217,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
                 .addComponent(jButton3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jMenuBar1.setBackground(java.awt.SystemColor.windowText);
-
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SpotifyBlanco.JPG"))); // NOI18N
-        jMenuBar1.add(jMenu3);
-
-        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setText("File");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu2.setText("Edit");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenuBar1.add(jMenu2);
-
-        jMenu6.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu6.setText("View");
-        jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenuBar1.add(jMenu6);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -305,11 +279,6 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;

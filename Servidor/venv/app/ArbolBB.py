@@ -7,11 +7,11 @@ class ArbolAlbum:
     def __init__(self):
         self.raiz = None
 
-    def add(self, nombre, listaCanciones):
+    def add(self, nombre):
         if self.raiz == None:
-            self.raiz = NodoAlbum(nombre, listaCanciones)
+            self.raiz = NodoAlbum(nombre)
         else:
-            self.raiz.addAlbum(nombre, listaCanciones)
+            self.raiz.addAlbum(nombre)
 
     def graph(self):
         return self.raiz.getDot()
@@ -28,3 +28,6 @@ class ArbolAlbum:
             return self.getAlbumAux(actual.getHijoDer(), nombre)
         else:
             return self.getAlbumAux(actual.getHijoIzq(), nombre)
+
+    def getRaiz(self):
+        return self.raiz

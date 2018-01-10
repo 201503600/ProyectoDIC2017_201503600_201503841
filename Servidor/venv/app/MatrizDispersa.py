@@ -50,9 +50,10 @@ class Matriz:
             cabeza = cabeza.getAbajo()
         for x in xrange(0, self.getIndexGenero(genero)):
             cabeza = cabeza.getSiguiente()
+        #print cabeza.getDato()
         return cabeza.getArtistas()
 
-    def addArtista(self, anio, genero, nombre, albumes):
+    def addArtista(self, anio, genero, nombre):
         cabeza = self.ultima.getPrimero()
         while cabeza.getArriba() != None:
             cabeza = cabeza.getArriba()
@@ -61,7 +62,7 @@ class Matriz:
         for x in xrange(0, self.getIndexGenero(genero)):
             cabeza = cabeza.getSiguiente()
         cabeza.setDato(anio + ' - ' + genero)
-        cabeza.getArtistas().add(nombre, albumes)
+        cabeza.getArtistas().add(nombre)
 
     def getIndexAnio(self, anio):
         for x in xrange(0, self.altura):
@@ -101,3 +102,9 @@ class Matriz:
         dot += '}\"]; \n'
         dot += '}'
         return dot
+
+    def getRaiz(self):
+        cabeza = self.ultima.getPrimero()
+        while cabeza.getArriba() != None:
+            cabeza = cabeza.getArriba()
+        return cabeza

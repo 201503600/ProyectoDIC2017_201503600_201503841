@@ -3,9 +3,9 @@ from ArbolBB import ArbolAlbum
 
 class NodoArtista:
 
-    def __init__(self, nombre, albumes):
+    def __init__(self, nombre):
         self.nombre = nombre
-        self.albumes = albumes
+        self.albumes = ArbolAlbum()
         self.anterior = None
         self.siguiente = None
         self.derecha = None

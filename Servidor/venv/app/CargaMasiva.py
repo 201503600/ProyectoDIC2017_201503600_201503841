@@ -48,6 +48,8 @@ class CargaMasiva:
         altura = len(anios)
         anchura = len(generos)
         anios.sort()
+        self.engeneros.sort()
+        self.enanios.sort()
         self.matriz = Matriz(altura, anchura)
         for x in xrange(0, altura):
             self.matriz.setDato(anios[x], x, 0)
@@ -60,7 +62,7 @@ class CargaMasiva:
             coleccionArtista = artistas.findall('artista')
             for artista in coleccionArtista:
                 nombreArtista = artista.find('nombre').text
-                abbAlbumes = ArbolAlbum()
+                #abbAlbumes = ArbolAlbum()
                 coleccionAlbumes = artista.findall('albumes')
                 for albumes in coleccionAlbumes:
                     coleccionAlbum = albumes.findall('album')
@@ -68,30 +70,31 @@ class CargaMasiva:
                         nombreAlbum = album.find('nombre').text
                         gen = album.find('genero').text
                         anio = album.find('anio').text
-                        listaCanciones = ListaCanciones()
+                        self.matriz.addArtista(anio, gen, nombreArtista)
+                        self.matriz.getArtistas(anio, gen).search(nombreArtista).getAlbumes().add(nombreAlbum)
+                        #listaCanciones = ListaCanciones()
                         coleccionCanciones = album.findall('canciones')
                         for canciones in coleccionCanciones:
                             coleccionCancion = canciones.findall('cancion')
                             for cancion in coleccionCancion:
                                 can = cancion.find('nombre').text
                                 path = cancion.find('path').text
-                                listaCanciones.add(can, path)
-                                #print can + ' - ' + path
+                                self.matriz.getArtistas(anio, gen).search(nombreArtista).getAlbumes().getAlbum(nombreAlbum).getCanciones().add(can, path)
+                                #listaCanciones.add(can, path)
                                 self.datos.insert(can, nombreArtista, nombreAlbum, gen, anio, path)
-                        abbAlbumes.add(nombreAlbum, listaCanciones)
+                        #abbAlbumes.add(nombreAlbum, listaCanciones)
                 #self.datos.insertar("", "", "", "", "")
-                #print 'Anio\t' + str(anio) + '\Genero\t' + str(gen) + '\tArtista\t' + nombreArtista
-                self.matriz.addArtista(anio, gen, nombreArtista, abbAlbumes)
+                #self.matriz.addArtista(anio, gen, nombreArtista, abbAlbumes)
+                #self.matriz.getArtistas(anio, gen).printArtista(self.matriz.getArtistas(anio, gen).search(nombreArtista))
 
     def analizarXML(self, cadena):
         full_file = os.path.abspath(cadena)
-        with codecs.open(full_file, "r", encoding='utf-8', errors='ignore') as fdata:
+        with codecs.open(full_file, "r", errors='ignore') as fdata:
             contenido = fdata.read().replace('\n', '')
         root = ElementTree.fromstring(contenido)
         self.cargarUsuarios(root)
         self.crearMatriz(root)
         self.llenarMatriz(root)
-        #print "Exito!"
 
     def getUsuario(self):
         return self.usuarios
@@ -108,10 +111,133 @@ class CargaMasiva:
     def getEncabezadoGeneros(self):
         return self.engeneros
 
+class Buscador:
+
+    def __init__(self, matriz):
+        self.canciones = ListaDato()
+        self.matriz = matriz
+
+    def getByArtist(self, nombreArtista):
+        self.canciones = ListaDato()
+        auxFila = self.matriz.getRaiz().getAbajo()
+        auxCol = auxFila.getArriba().getSiguiente()
+        for i in xrange(1, self.matriz.getAltura()):
+            auxG = auxCol
+            aux = auxFila.getSiguiente()
+            for j in xrange(1, self.matriz.getAnchura()):
+                artista = aux.getArtistas().search(nombreArtista)
+                if artista != None and aux.getDato() != 0:
+                    anio = auxFila.getDato()
+                    genero = auxG.getDato()
+                    self.roamABBArtista(genero, anio, nombreArtista, artista.getAlbumes().getRaiz())
+                auxG = auxG.getSiguiente()
+                aux = aux.getSiguiente()
+            auxFila = auxFila.getAbajo()
+
+    def roamABBArtista(self, genero, anio, artista, nodo):
+        cancion = nodo.getCanciones().head
+        while True:
+            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+            cancion = cancion.getSiguiente()
+            if cancion == nodo.getCanciones().head:
+                break
+        if nodo.getHijoIzq() != None:
+            self.roamABBArtista(genero, anio, artista, nodo.getHijoIzq())
+        if nodo.getHijoDer() != None:
+            self.roamABBArtista(genero, anio, artista, nodo.getHijoDer())
+
+    def getByAlbum(self, nombreAlbum):
+        self.canciones = ListaDato()
+        auxFila = self.matriz.getRaiz().getAbajo()
+        auxCol = auxFila.getArriba().getSiguiente()
+        for i in xrange(1, self.matriz.getAltura()):
+            auxG = auxCol
+            aux = auxFila.getSiguiente()
+            for j in xrange(1, self.matriz.getAnchura()):
+                if aux.getDato() != 0:
+                    anio = auxFila.getDato()
+                    genero = auxG.getDato()
+                    self.roamABAlbum(genero, anio, aux.getArtistas().getRaiz().getPrimero(), nombreAlbum)
+                auxG = auxG.getSiguiente()
+                aux = aux.getSiguiente()
+            auxFila = auxFila.getAbajo()
+
+    def roamABAlbum(self, genero, anio, nodo, album):
+        if nodo.getIzquierda() != None:
+            self.roamABAlbum(genero, anio, nodo.getIzquierda().getPrimero(), album)
+        nodoAlbum = nodo.getAlbumes().getAlbum(album)
+        if nodoAlbum != None:
+            cancion = nodoAlbum.getCanciones().head
+            while True:
+                self.canciones.insert(cancion.getNombre(), nodo.getNombre(), nodoAlbum.getNombre(), genero, anio, cancion.getPath())
+                cancion = cancion.getSiguiente()
+                if cancion == nodoAlbum.getCanciones().head:
+                    break
+        if nodo.getSiguiente() != None:
+            self.roamABAlbum(genero, anio, nodo.getSiguiente(), album)
+        elif nodo.getDerecha() != None:
+            self.roamABAlbum(genero, anio, nodo.getDerecha().getPrimero(), album)
+
+    def getByGender(self, genero):
+        self.canciones = ListaDato()
+        aux = self.matriz.getRaiz().getSiguiente()
+        auxF = aux.getAnterior().getAbajo()
+        while aux != None:
+            if aux.getDato() == genero:
+                aux = aux.getAbajo()
+                for fila in xrange(1, self.matriz.getAltura()):
+                    if aux.getDato() != 0:
+                        anio = auxF.getDato()
+                        self.roamAB(genero, anio, aux.getArtistas().getRaiz().getPrimero())
+                    aux = aux.getAbajo()
+                    auxF = auxF.getAbajo()
+            if aux != None:
+                aux = aux.getSiguiente()
+
+    def getByYear(self, anio):
+        self.canciones = ListaDato()
+        aux = self.matriz.getRaiz().getAbajo()
+        auxC = aux.getArriba().getSiguiente()
+        while aux != None:
+            if aux.getDato() == anio:
+                aux = aux.getSiguiente()
+                for col in xrange(1, self.matriz.getAnchura()):
+                    if aux.getDato() != 0:
+                        genero = auxC.getDato()
+                        self.roamAB(genero, anio, aux.getArtistas().getRaiz().getPrimero())
+                    aux = aux.getSiguiente()
+                    auxC = auxC.getSiguiente()
+            if aux != None:
+                aux = aux.getAbajo()
+
+    def roamAB(self, genero, anio, nodo):
+        if nodo.getIzquierda() != None:
+            self.roamABA(genero, anio, nodo.getIzquierda().getPrimero())
+        self.roamABB(genero, anio, nodo.getNombre(), nodo.getAlbumes().getRaiz())
+        if nodo.getSiguiente() != None:
+            self.roamAB(genero, anio, nodo.getSiguiente())
+        elif nodo.getDerecha() != None:
+            self.roamAB(genero, anio, nodo.getDerecha().getPrimero())
+
+    def roamABB(self, genero, anio, artista, nodo):
+        cancion = nodo.getCanciones().head
+        while True:
+            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+            cancion = cancion.getSiguiente()
+            if cancion == nodo.getCanciones().head:
+                break
+        if nodo.getHijoIzq() != None:
+            self.roamABB(genero, anio, artista, nodo.getHijoIzq())
+        if nodo.getHijoDer() != None:
+            self.roamABB(genero, anio, artista, nodo.getHijoDer())
+
+    def getCanciones(self):
+        return self.canciones
+
 def main():
     arch = CargaMasiva()
     arch.analizarXML("C:\\Users\\Javier\\Desktop\\entradaEDD2.xml")
-    print type(arch.getEncabezadoAnios())
+    #print type(arch.getEncabezadoAnios())
     #Reporte.reporteAlbumes(arch.getMatriz(), '1995', '(12)other', 'bob marley')
 
 if __name__ == '__main__':

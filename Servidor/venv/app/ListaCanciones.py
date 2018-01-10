@@ -70,3 +70,8 @@ class ListaCanciones:
         dot.edge(str(0), str(i - 1), constraint='false')
         dot.render(filename="listaCanciones", directory="C:\\Graphs\\", view=True, cleanup=True)
 
+    def printCancion(self):
+        aux = self.head
+        for pos in xrange(0, self.size):
+            print aux.getNombre() + ' - ' + aux.getPath()
+            aux = aux.getSiguiente()

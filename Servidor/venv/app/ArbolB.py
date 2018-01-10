@@ -11,8 +11,8 @@ class ArbolArtista:
     def isEmpty(self):
         return self.raiz == None
 
-    def add(self, nombre, albumes):
-        nuevo = NodoArtista(nombre, albumes)
+    def add(self, nombre):
+        nuevo = NodoArtista(nombre)
         if self.isEmpty():
             self.raiz = Pagina()
             self.raiz.add(nuevo)
@@ -24,6 +24,11 @@ class ArbolArtista:
                 obj.getIzquierda().setPadre(self.raiz)
                 self.raiz.add(obj)
                 self.raiz.setHoja(False)
+
+    def printArtista(self, artista):
+        if artista != None:
+            print artista.getNombre()
+            artista.getAlbumes().raiz.printAlbum(artista.getAlbumes().raiz)
 
     def inserta(self, nodo, rama):
         if rama.isHoja():
@@ -131,3 +136,6 @@ class ArbolArtista:
                     return self.look(nombre, nodo.getDerecha())
             nodo = nodo.getSiguiente()
         return None
+
+    def getRaiz(self):
+        return self.raiz
