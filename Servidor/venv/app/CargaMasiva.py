@@ -117,6 +117,53 @@ class Buscador:
         self.canciones = ListaDato()
         self.matriz = matriz
 
+    def getByArtistAlbumSong(self, name):
+        self.canciones = ListaDato()
+        auxFila = self.matriz.getRaiz().getAbajo()
+        auxCol = auxFila.getArriba().getSiguiente()
+        for i in xrange(1, self.matriz.getAltura()):
+            auxG = auxCol
+            aux = auxFila.getSiguiente()
+            for j in xrange(1, self.matriz.getAnchura()):
+                anio = auxFila.getDato()
+                genero = auxG.getDato()
+                artista = aux.getArtistas().search(name)
+                if aux.getDato() != 0:
+                    if artista != None:
+                        self.roamABBArtista(genero, anio, name, artista.getAlbumes().getRaiz())
+                    else:
+                        self.roamBT(genero, anio, aux.getArtistas().getRaiz().getPrimero(), name)                
+                auxG = auxG.getSiguiente()
+                aux = aux.getSiguiente()
+            auxFila = auxFila.getAbajo()
+
+    def roamBT(self, genero, anio, nodo, nombre):
+        if nodo.getIzquierda() != None:
+            self.roamBT(genero, anio, nodo.getIzquierda().getPrimero(), nombre)
+        nodoAlbum = nodo.getAlbumes().getAlbum(nombre)
+        if nodoAlbum != None:
+            cancion = nodoAlbum.getCanciones().head
+            while True:
+                self.canciones.insert(cancion.getNombre(), nodo.getNombre(), nodoAlbum.getNombre(), genero, anio, cancion.getPath())
+                cancion = cancion.getSiguiente()
+                if cancion == nodoAlbum.getCanciones().head:
+                    break
+        else:
+            self.roamBBT(genero, anio, nodo.getNombre(), nodo.getAlbumes().getRaiz(), nombre)
+        if nodo.getSiguiente() != None:
+            self.roamBT(genero, anio, nodo.getSiguiente(), nombre)
+        elif nodo.getDerecha() != None:
+            self.roamBT(genero, anio, nodo.getDerecha().getPrimero(), nombre)
+
+    def roamBBT(self, genero, anio, artista, nodo, nombre):
+        cancion = nodo.getCanciones().find(nombre)
+        if cancion != None:
+            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+        if nodo.getHijoIzq() != None:
+            self.roamBBT(genero, anio, artista, nodo.getHijoIzq(), nombre)
+        if nodo.getHijoDer() != None:
+            self.roamBBT(genero, anio, artista, nodo.getHijoDer(), nombre)
+
     def getByArtist(self, nombreArtista):
         self.canciones = ListaDato()
         auxFila = self.matriz.getRaiz().getAbajo()

@@ -111,19 +111,10 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == jButton1) {
             // Boton search            
-            switch (jList1.getSelectedIndex()) {
-                case 0:
-
-                    break;
-                case 1:
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
+            String search = jTextField1.getText();
+            if (!search.equals("")){
+                canciones = new Gson().fromJson(Conexion.postSearch(search), ListaCancion.class);
+                jTable1.setModel(new ModeloTablaCancion(canciones));
             }
         } else if (e.getSource() == jButton2) {
             // Boton play - pause de reproductor
@@ -202,7 +193,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             String artista = JOptionPane.showInputDialog(null, "Escribe el nombre del artista");
             if (!artista.equals("")) {
                 alterna = new Gson().fromJson(Conexion.postSongsByArtist(artista), ListaCancion.class);
-                actual = alterna.getCanciones().get(0);
+                try{
+                    actual = alterna.getCanciones().get(0);
+                }catch(Exception ex){
+                    
+                }
                 reproducir();
             }
         } else if (e.getSource() == jMenuItem10) {
@@ -211,7 +206,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre del album");
             if (!cancion.equals("")) {
                 alterna = new Gson().fromJson(Conexion.postSongsByAlbum(cancion), ListaCancion.class);
-                actual = alterna.getCanciones().get(0);
+                try{
+                    actual = alterna.getCanciones().get(0);
+                }catch(Exception ex){
+                    
+                }
                 reproducir();
             }
         } else if (e.getSource() == jMenuItem11) {
@@ -220,7 +219,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre del genero");
             if (!cancion.equals("")) {
                 alterna = new Gson().fromJson(Conexion.postSongsByGender(cancion), ListaCancion.class);
-                actual = alterna.getCanciones().get(0);
+                try{
+                    actual = alterna.getCanciones().get(0);
+                }catch(Exception ex){
+                    
+                }
                 reproducir();
             }
         } else if (e.getSource() == jMenuItem12) {
@@ -229,7 +232,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             String cancion = JOptionPane.showInputDialog(null, "Escribe el anio");
             if (!cancion.equals("")) {
                 alterna = new Gson().fromJson(Conexion.postSongsByYear(cancion), ListaCancion.class);
-                actual = alterna.getCanciones().get(0);
+                try{
+                    actual = alterna.getCanciones().get(0);
+                }catch(Exception ex){
+                    
+                }
                 reproducir();
             }
         } else if (e.getSource() == jMenuItem13) {

@@ -232,5 +232,13 @@ public class Conexion {
          String before = getString("getSongShuffle", formBody);
          return before;
      }
+     
+     public static String postSearch(String cadena){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("cadena", cadena)
+                                        .build();
+         String before = getString("search", formBody);
+         return before;
+     }
     
 }

@@ -239,5 +239,12 @@ def getSongsByYear():
 def getSongShuffle():
     return jsonify(carga.getDatos().getAt(random.randint(-1, carga.getDatos().getSize() - 1)))
 
+@app.route('/search', methods=['POST'])
+def search():
+    cadena = request.form['cadena']
+    buscador = Buscador(carga.getMatriz())
+    buscador.getByArtistAlbumSong(cadena)
+    return jsonify(buscador.getCanciones())
+
 if __name__ == '__main__':
     app.run(debug=True)

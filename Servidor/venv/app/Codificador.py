@@ -14,7 +14,7 @@ class JsonEncoder(JSONEncoder):
 			return {'cancion':obj.getCancion(), 'artista':obj.getArtista(), 'album':obj.getAlbum(), 'genero':obj.getGenero(), 'anio':obj.getAnio(), 'path':obj.getPath()}
 		elif isinstance(obj, ListaDato):
 			canciones = []
-			for pos in xrange(0,obj.getSize()):
+			for pos in xrange(0,obj.getSize() + 1):
 				if obj.getAt(pos) != None:
 					canciones.append(self.default(obj.getAt(pos)))
 			return {'canciones':canciones}
