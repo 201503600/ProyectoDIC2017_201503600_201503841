@@ -240,5 +240,13 @@ public class Conexion {
          String before = getString("search", formBody);
          return before;
      }
+     
+     public static String verifyUserOAuth(){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("", "")
+                                        .build();
+         String before = getString("verifyUserOAuth", formBody);
+         return before;
+     }
     
 }

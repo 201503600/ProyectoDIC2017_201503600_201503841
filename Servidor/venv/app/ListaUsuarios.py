@@ -15,28 +15,60 @@ class ListaUsuarios:
     def isEmpty(self):
         return self.inicio == None
 
-    def queueUsuario(self, nombre, contrasenia):
+    def pushUsuario(self, nombre, contrasenia):
         nuevo = NodoUsuario(nombre, contrasenia)
         if self.isEmpty():
             self.inicio = nuevo
             self.fin = nuevo
         else:
-            nuevo.setAnterior(self.fin)
-            self.fin.setSiguiente(nuevo)
-            self.fin = nuevo
+            nuevo.setSiguiente(self.inicio)
+            self.inicio.setAnterior(nuevo)
+            self.inicio = nuevo
         self.size += 1
+
+    def deleteUsuario(self, nombre):
+        if self.size == 1 and self.inicio.getNombre() == nombre:
+            self.inicio = None
+            self.fin = None
+            self.size = 0
+        else:
+            aux = self.inicio
+            while aux != None:
+                if aux.getNombre() == nombre:
+                    if aux == self.inicio:
+                        self.inicio = aux.getSiguiente()
+                        self.inicio.setAnterior(None)
+                        aux.setSiguiente(None)
+                    elif aux == self.fin:
+                        self.fin = aux.getAnterior()
+                        self.fin.setSiguiente(None)
+                        aux.setAnterior(None)
+                    else:
+                        aux.getAnterior().setSiguiente(aux.getSiguiente())
+                        aux.getSiguiente().setAnterior(aux.getAnterior())
+                    self.size -= 1
+                    break
+                aux = aux.getSiguiente()
 
     def login(self, nombre, contrasenia):
         aux = self.inicio
-        while aux.getSiguiente() != None:
+        while aux != None:
             if aux.getNombre() == nombre and aux.getPass() == contrasenia:
+                return aux
+            aux = aux.getSiguiente()
+        return None
+
+    def find(self, nombre):
+        aux = self.inicio
+        while aux != None:
+            if aux.getNombre() == nombre:
                 return aux
             aux = aux.getSiguiente()
         return None
 
     def getCola(self, nombre):
         aux = self.inicio
-        while aux.getSiguiente() != None:
+        while aux != None:
             if aux.getNombre() == nombre:
                 return aux.getColaCanciones()
             aux = aux.getSiguiente()

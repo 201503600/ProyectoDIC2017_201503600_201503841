@@ -14,6 +14,9 @@ class NodoArtista:
     def getAlbumes(self):
         return self.albumes
 
+    def setAlbumes(self, albumes):
+        self.albumes = albumes
+
     def getNombre(self):
         return self.nombre
 

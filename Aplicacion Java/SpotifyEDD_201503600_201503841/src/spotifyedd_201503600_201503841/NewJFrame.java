@@ -43,6 +43,16 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         
         
     }
+    
+    public void login(String username, String pass){
+        String jsonUser = Conexion.login(username, pass);
+            if (!jsonUser.equals("{}\n")){
+                
+                Principal llamar = new Principal(this, jsonUser);
+                llamar.show();
+                this.hide();
+            }
+    }
 
     private String pathArchivo = "";
     @Override
@@ -51,14 +61,7 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
             String username = jTextField2.getText();
             String pass = jPasswordField1.getText();
             
-            String jsonUser = Conexion.login(username, pass);
-            if (!jsonUser.equals("{}\n")){
-                
-                Principal llamar = new Principal(this, jsonUser);
-                llamar.show();
-                this.hide();
-            }
-            
+            login(username, pass); 
             
         }else if (e.getSource() == jButton2){
             JFileChooser fileChooser = new JFileChooser();
@@ -73,10 +76,48 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
         }else if (e.getSource() == jButton5){
             try{
                 Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome http://127.0.0.1:5000/loginOAuth"});
+                Proceso loginOAuth = new Proceso(this);
+                loginOAuth.setPriority(Thread.MAX_PRIORITY);
+                loginOAuth.start();
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(this, ex.toString());
             }
         }
+    }
+    
+    public class Proceso extends Thread{
+        private NewJFrame instancia;
+        private int temporizador;
+        
+        public Proceso(NewJFrame instancia){
+            this.instancia = instancia;
+            temporizador = 10;
+        }
+        
+        @Override
+        public void run(){
+            while (true){
+                String oauth = Conexion.verifyUserOAuth();
+                System.out.println(oauth);
+                if (oauth.equals("Error"))
+                    this.stop();
+                else if (oauth.equals("False")){}
+                else{
+                    instancia.login(oauth, "google");
+                    this.stop();
+                }
+                if (temporizador >= 0){
+                    try {
+                        Thread.sleep(3000);
+                        temporizador--;
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }else
+                    this.stop();
+            }                        
+        }
+        
     }
     
     public void limpiar(){

@@ -106,6 +106,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jMenuItem16.addActionListener(this);
 
     }
+    
+    public void setLabelSong(){
+        jLabel1.setText(actual.getArtista());
+        jLabel6.setText(actual.getAlbum() + " - " + actual.getCancion());
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -143,10 +148,12 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         } else if (e.getSource() == jButton3) {
             // Boton siguiente playlist           
             beforeSong();
+            setLabelSong();
         } else if (e.getSource() == jButton4) {
             // Boton anterior playlist           
             //reproducir
             afterSong();
+            setLabelSong();
         } else if (e.getSource() == jButton5) {
             // Boton eliminar            
             switch (jList1.getSelectedIndex()) {
@@ -199,6 +206,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                     
                 }
                 reproducir();
+                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem10) {
             // reproduccion por album
@@ -212,6 +220,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                     
                 }
                 reproducir();
+                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem11) {
             // reproduccion por genero
@@ -225,6 +234,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                     
                 }
                 reproducir();
+                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem12) {
             // reproduccion por a;o
@@ -238,16 +248,19 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                     
                 }
                 reproducir();
+                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem13) {
             // reproduccion playlist
             stateReproductor = 0;
             reproducir();
+            setLabelSong();
         } else if (e.getSource() == jMenuItem14) {
             // reproduccion shuffle
             stateReproductor = 1;
             actual = new Gson().fromJson(Conexion.postSongShuffle(), Cancion.class);
             reproducir();
+            setLabelSong();
         } else if (e.getSource() == jMenuItem15) {
             // Cerrar sesion            
             Conexion.logout();
@@ -270,6 +283,8 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             bocina.Play();
             state = true;
             jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/pause.jpg")));
+            jButton2.repaint();
+            setLabelSong();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, ex.toString());
         }
@@ -310,6 +325,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                 }
                 break;
         }
+        setLabelSong();
     }
 
     private void beforeSong() {
@@ -340,6 +356,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                 }
                 break;
         }
+        setLabelSong();
     }
 
     /**
@@ -373,6 +390,8 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -544,13 +563,26 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.JPG"))); // NOI18N
         jButton4.setBorder(null);
 
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(297, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -562,14 +594,19 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jButton3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton4)))
+                        .addComponent(jButton4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -721,10 +758,12 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;

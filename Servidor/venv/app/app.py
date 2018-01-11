@@ -27,6 +27,7 @@ app.json_encoder = JsonEncoder
 app.secret_key = SECRET_KEY
 oauth = OAuth()
 carga = CargaMasiva()
+loginoauth = 'None'
 
 google = oauth.remote_app('google',
                           base_url='https://www.google.com/accounts/',
@@ -45,6 +46,7 @@ google = oauth.remote_app('google',
 ######### metodos para OAuth
 @app.route('/loginOAuth')
 def loginOAuth():
+    global loginoauth
     access_token = session.get('access_token')
     if access_token is None:
         return redirect(url_for('loginGoo'))
@@ -64,7 +66,15 @@ def loginOAuth():
             return redirect(url_for('loginGoo'))
         return res.read()
     obJson = res.read()
-    return obJson
+    nombre = str(obJson).split(',')[1].split(':')[1].replace('\"', '', 2)
+    carga.getUsuario().pushUsuario(nombre, 'google')
+    if carga.getUsuario().find(nombre):
+        session['loginoauth'] = nombre
+        loginoauth = nombre
+        return 'Usuario registrado'
+    loginoaut = 'Error'
+    session['loginoauth'] = 'Error'
+    return 'Ocurrio un error'
 
 @app.route('/loginGoo')
 def loginGoo():
@@ -89,6 +99,24 @@ def main():
    # prueba = NodoUsuario('carlos', '1234')
 
     return jsonify({})
+
+@app.route('/verifyUserOAuth', methods=['POST'])
+def verifyUserOAuth():
+    global loginoauth
+    if loginoauth == 'None':
+        return 'False'
+    elif loginoauth == 'Error':
+        return 'Error'
+    else:
+        return loginoauth
+    # if 'loginoauth' in session:
+    #     loginoauth = session['loginoauth']
+    #     session.pop('loginoauth', None)
+    #     if loginoauth == 'Error':
+    #         return 'Error'
+    #     else:
+    #         return loginoauth
+    # return 'False'
 
 @app.route('/carga_archivo', methods=['POST'])
 def cargar():

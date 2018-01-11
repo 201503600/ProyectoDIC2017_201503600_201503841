@@ -3,6 +3,8 @@ from ArbolB import ArbolArtista
 
 class NodoMatriz:
 
+    correlativo = 1
+
     def __init__(self, dato):
         self.dato = dato
         self.artistas = ArbolArtista()
@@ -10,9 +12,14 @@ class NodoMatriz:
         self.anterior = None
         self.abajo = None
         self.arriba = None
+        self.id = NodoMatriz.correlativo
+        NodoMatriz.correlativo += 1
 
     def getArtistas(self):
         return self.artistas
+
+    def getCorrelativo(self):
+        return self.id
 
     def getDato(self):
         return self.dato

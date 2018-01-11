@@ -1,5 +1,5 @@
 from FilaMatriz import ListaFilaMatriz
-
+from ArbolB import ArbolArtista
 
 class Matriz:
 
@@ -7,6 +7,7 @@ class Matriz:
         self.ultima = None
         self.altura = altura
         self.anchura = anchura
+        self.dot = ''
 
         if anchura > 0 and altura > 0:
             self.ultima = ListaFilaMatriz(anchura)
@@ -20,6 +21,17 @@ class Matriz:
                     recorrerUltima = recorrerUltima.getSiguiente()
                     recorrerAux = recorrerAux.getSiguiente()
                 self.ultima = aux
+
+    def deleteDato(self, fila, columna):
+        cabeza = self.ultima.getPrimero()
+        while cabeza.getArriba() != None:
+            cabeza = cabeza.getArriba()
+        for x in xrange(0, fila):
+            cabeza = cabeza.getAbajo()
+        for x in xrange(0, columna):
+            cabeza = cabeza.getSiguiente()
+        cabeza.setDato(0)
+        cabeza.setArtista(ArbolArtista())
 
     def setDato(self, dato, fila, columna):
         if fila < self.altura and columna < self.anchura:
@@ -102,6 +114,92 @@ class Matriz:
         dot += '}\"]; \n'
         dot += '}'
         return dot
+
+    def graphManual(self):
+        self.dot = 'digraph matriz{\n\trankdir=UD;\n\tnode[shape=box];\n\t'
+        print 'Generando encabezado generos'
+        self.graphHeaderGender()
+        print 'Generando encabezado anios'
+        nodoFila = self.getRaiz().getAbajo()
+        while nodoFila.getAbajo() != None:
+            self.graphRow(nodoFila)
+            nodoFila = nodoFila.getAbajo()
+        print 'Generando ultimo encabezado anio'
+        self.dot += '{\n\t\trank=max;\n\t\t'
+        while nodoFila.getSiguiente() != None:
+            if nodoFila.getDato() != 0:
+                self.dot += 'nodo' + str(nodoFila.getCorrelativo()) + '[label=\"' + str(nodoFila.getDato()) + '\"];\n\t\t'
+            nodoFila = nodoFila.getSiguiente()
+        if nodoFila.getDato() != 0:
+            self.dot += 'nodo' + str(nodoFila.getCorrelativo()) + '[label=\"' + str(nodoFila.getDato()) + '\"];\n\t}\n\t'
+        else:
+            self.dot += '}'
+        print 'Generando enlaces en encabezados'
+        self.graphEdgeHeader()
+        print 'Generando enlaces en nodos'
+        nodoFila = self.getRaiz().getAbajo()
+        for i in xrange(1, self.altura):
+            nodoCol = nodoFila.getArriba().getSiguiente()
+            auxDatoIzq = nodoFila
+            auxDatoUp = nodoCol
+            aux = nodoFila.getSiguiente()
+            for j in xrange(1, self.anchura):
+                auxIzq = auxDatoIzq
+                auxUp = auxDatoUp
+                if aux.getDato() != 0:
+                    while auxIzq.getDato() == 0:
+                        auxIzq = auxIzq.getAnterior()
+                    while auxUp.getDato() == 0:
+                        auxUp = auxUp.getArriba()
+                    #if auxIzq == nodoFila:
+                    self.dot += 'nodo' + str(auxUp.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + ';\n\t'
+                    self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxUp.getCorrelativo()) + ';\n\t'
+                    self.dot += 'nodo' + str(auxIzq.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + '[constraint=false];\n\t'
+                    self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxIzq.getCorrelativo()) + '[constraint=false];\n\t'
+                auxDatoIzq = auxDatoIzq.getSiguiente()
+                auxDatoUp = auxDatoUp.getSiguiente()
+                aux = aux.getSiguiente()
+            nodoFila = nodoFila.getAbajo()
+        self.dot += '}'
+        return self.dot
+
+    def graphHeaderGender(self):
+        self.dot += '{\n\t\trank=min;\n\t\t'
+        aux = self.getRaiz().getSiguiente()
+        self.dot += 'm[label = \"Matriz Dispersa\"];\n\t\t'
+        while aux.getSiguiente() != None:
+            self.dot += 'nodo' + str(aux.getCorrelativo()) + '[label=\"' + str(aux.getDato()) + '\", rankdir = LR];\n\t\t'
+            aux = aux.getSiguiente()
+        self.dot += 'nodo' + str(aux.getCorrelativo()) + '[label=\"' + str(aux.getDato()) + '\", rankdir = LR];\n\t}\n\t'
+
+    def graphRow(self, nodoFila):
+        self.dot += '{\n\t\trank=same;\n\t\t'
+        while nodoFila.getSiguiente() != None:
+            if nodoFila.getDato() != 0:
+                self.dot += 'nodo' + str(nodoFila.getCorrelativo()) + '[label=\"' + str(nodoFila.getDato()) + '\"];\n\t\t'
+            nodoFila = nodoFila.getSiguiente()
+        if nodoFila.getDato() != 0:
+            self.dot += 'nodo' + str(nodoFila.getCorrelativo()) + '[label=\"' + str(nodoFila.getDato()) + '\"];\n\t}\n\t'
+        else:
+            self.dot += '}'
+
+    def graphEdgeHeader(self):
+        self.dot += 'm'
+        aux = self.getRaiz().getSiguiente()
+        while aux.getSiguiente() != None:
+            self.dot += '->nodo' + str(aux.getCorrelativo())
+            aux = aux.getSiguiente()
+        while aux.getAnterior() != self.getRaiz():
+            self.dot += '->nodo' + str(aux.getCorrelativo())
+            aux = aux.getAnterior()
+        self.dot += '->nodo' + str(aux.getCorrelativo())
+        aux = self.getRaiz().getAbajo()
+        self.dot += ';\n\tm->nodo' + str(aux.getCorrelativo()) + ';\n\t'
+        aux = aux.getAbajo()
+        while aux != None:
+            self.dot += 'nodo' + str(aux.getArriba().getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + ' [rankdir=UD];\n\t'
+            self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(aux.getArriba().getCorrelativo()) + ';\n\t'
+            aux = aux.getAbajo()
 
     def getRaiz(self):
         cabeza = self.ultima.getPrimero()

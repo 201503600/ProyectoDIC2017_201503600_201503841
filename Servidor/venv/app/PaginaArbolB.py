@@ -52,6 +52,30 @@ class Pagina:
                 if aux == None:
                     break
 
+    def deleteArtista(self, nombre):
+        aux = self.primero
+        while True:
+            if nombre.lower() == aux.getNombre().lower():
+                self.size -= 1
+                if self.size == 0:
+                    self.primero = None
+                elif aux == self.primero:
+                    aux.getSiguiente().setIzquierda(aux.getIzquierda())
+                    self.primero = aux.getSiguiente()
+                    self.primero.setAnterior(None)
+                    aux = None
+                elif aux.getSiguiente() == None:
+                    aux.getAnterior().setDerecha(aux.getDerecha())
+                    aux.getAnterior().setSiguiente(None)
+                    aux = None
+                else:
+                    aux.getSiguiente().setIzquierda(aux.getIzquierda())
+                    aux.getAnterior().setSiguiente(aux.getSiguiente())
+                    aux.getSiguiente().setAnterior(aux.getAnterior())
+                    aux = None
+                break
+            aux = aux.getSiguiente()
+            
     def isEmpty(self):
         return self.primero == None
 

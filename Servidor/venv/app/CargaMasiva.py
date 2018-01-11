@@ -22,7 +22,7 @@ class CargaMasiva:
         for usuarios in coleccionUsuarios:
             coleccionUsuario = usuarios.findall('usuario')
             for usuario in coleccionUsuario:
-                self.usuarios.queueUsuario(usuario.find('nombre').text, usuario.find('pass').text)
+                self.usuarios.pushUsuario(usuario.find('nombre').text, usuario.find('pass').text)
 
     def crearMatriz(self, root):
         self.engeneros = []
@@ -158,6 +158,7 @@ class Buscador:
     def roamBBT(self, genero, anio, artista, nodo, nombre):
         cancion = nodo.getCanciones().find(nombre)
         if cancion != None:
+            print cancion.getNombre()
             self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
         if nodo.getHijoIzq() != None:
             self.roamBBT(genero, anio, artista, nodo.getHijoIzq(), nombre)
@@ -283,7 +284,8 @@ class Buscador:
 
 def main():
     arch = CargaMasiva()
-    arch.analizarXML("C:\\Users\\Javier\\Desktop\\entradaEDD2.xml")
+    arch.analizarXML("C:\\Users\\Javier\\Desktop\\pruebaMasiva.xml")
+    print arch.getMatriz().graphManual()
     #print type(arch.getEncabezadoAnios())
     #Reporte.reporteAlbumes(arch.getMatriz(), '1995', '(12)other', 'bob marley')
 
