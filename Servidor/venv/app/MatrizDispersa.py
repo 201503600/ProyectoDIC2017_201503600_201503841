@@ -136,30 +136,55 @@ class Matriz:
             self.dot += '}'
         print 'Generando enlaces en encabezados'
         self.graphEdgeHeader()
-        print 'Generando enlaces en nodos'
+        print 'Generando enlaces en nodos verticalmente'
+        nodoFila = self.getRaiz().getSiguiente()
+        for i in xrange(1, self.anchura):
+            auxDatoCol = nodoFila
+            aux = auxDatoCol.getAbajo()
+            caminoRegreso = 'nodo' + str(auxDatoCol.getCorrelativo()) + ';'
+            self.dot += 'nodo' + str(auxDatoCol.getCorrelativo())
+            for j in xrange(1, self.altura):
+                if aux.getDato() != 0:
+                    auxDatoCol = aux
+                    caminoRegreso = 'nodo' + str(aux.getCorrelativo()) + '->' + caminoRegreso
+                    self.dot += '->nodo' + str(aux.getCorrelativo())
+                aux = aux.getAbajo()
+            self.dot += ';\n' + caminoRegreso + '\n'
+            nodoFila = nodoFila.getSiguiente()
+        print 'Generando enlaces en nodos horizontalmente'
         nodoFila = self.getRaiz().getAbajo()
         for i in xrange(1, self.altura):
-            nodoCol = nodoFila.getArriba().getSiguiente()
-            auxDatoIzq = nodoFila
-            auxDatoUp = nodoCol
-            aux = nodoFila.getSiguiente()
+            auxDato = nodoFila
+            aux = auxDato.getSiguiente()
             for j in xrange(1, self.anchura):
-                auxIzq = auxDatoIzq
-                auxUp = auxDatoUp
-                if aux.getDato() != 0:
-                    while auxIzq.getDato() == 0:
-                        auxIzq = auxIzq.getAnterior()
-                    while auxUp.getDato() == 0:
-                        auxUp = auxUp.getArriba()
-                    #if auxIzq == nodoFila:
-                    self.dot += 'nodo' + str(auxUp.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + ';\n\t'
-                    self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxUp.getCorrelativo()) + ';\n\t'
-                    self.dot += 'nodo' + str(auxIzq.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + '[constraint=false];\n\t'
-                    self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxIzq.getCorrelativo()) + '[constraint=false];\n\t'
-                auxDatoIzq = auxDatoIzq.getSiguiente()
-                auxDatoUp = auxDatoUp.getSiguiente()
+                if aux.getDato() != 0 and auxDato != self.getRaiz().getAbajo():
+                    self.dot += 'nodo' + str(auxDato.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + '[constraint=false];\n'
+                    self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxDato.getCorrelativo()) + '[constraint=false];\n'
+                    auxDato = aux
                 aux = aux.getSiguiente()
             nodoFila = nodoFila.getAbajo()
+        # for i in xrange(1, self.altura):
+        #     nodoCol = nodoFila.getArriba().getSiguiente()
+        #     auxDatoIzq = nodoFila
+        #     auxDatoUp = nodoCol
+        #     aux = nodoFila.getSiguiente()
+        #     for j in xrange(1, self.anchura):
+        #         auxIzq = auxDatoIzq
+        #         auxUp = auxDatoUp
+        #         if aux.getDato() != 0:
+        #             while auxIzq.getDato() == 0:
+        #                 auxIzq = auxIzq.getAnterior()
+        #             while auxUp.getDato() == 0:
+        #                 auxUp = auxUp.getArriba()
+        #             #if auxIzq == nodoFila:
+        #             self.dot += 'nodo' + str(auxUp.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + ';\n\t'
+        #             self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxUp.getCorrelativo()) + ';\n\t'
+        #             self.dot += 'nodo' + str(auxIzq.getCorrelativo()) + '->nodo' + str(aux.getCorrelativo()) + '[constraint=false];\n\t'
+        #             self.dot += 'nodo' + str(aux.getCorrelativo()) + '->nodo' + str(auxIzq.getCorrelativo()) + '[constraint=false];\n\t'
+        #         auxDatoIzq = auxDatoIzq.getSiguiente()
+        #         auxDatoUp = auxDatoUp.getSiguiente()
+        #         aux = aux.getSiguiente()
+        #     nodoFila = nodoFila.getAbajo()
         self.dot += '}'
         return self.dot
 

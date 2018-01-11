@@ -1,7 +1,6 @@
 import os
 import codecs
 from xml.etree import ElementTree
-
 from ListaUsuarios import ListaUsuarios
 from ListaCanciones import ListaCanciones
 from ListaDatoCancion import ListaDato
@@ -284,8 +283,8 @@ class Buscador:
 
 def main():
     arch = CargaMasiva()
-    arch.analizarXML("C:\\Users\\Javier\\Desktop\\pruebaMasiva.xml")
-    print arch.getMatriz().graphManual()
+    arch.analizarXML("C:\\Users\\Javier\\Desktop\\entradaEDD2.xml")
+    Reporte.reporteMatriz(arch.getMatriz())
     #print type(arch.getEncabezadoAnios())
     #Reporte.reporteAlbumes(arch.getMatriz(), '1995', '(12)other', 'bob marley')
 

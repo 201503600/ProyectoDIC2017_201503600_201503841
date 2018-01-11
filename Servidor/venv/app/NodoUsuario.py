@@ -1,5 +1,6 @@
 from Playlist import Playlist
-
+from ListaDatoCancion import ListaDato
+from NodoCancion import NodoCancion
 class NodoUsuario:
 
     def __init__(self, nombre, contrasenia):
@@ -11,6 +12,15 @@ class NodoUsuario:
 
     def getColaCanciones(self):
         return self.canciones
+
+    def setColaCanciones(self, canciones):
+        if isinstance(canciones, ListaDato):
+            aux = canciones.getAt(0)
+            while aux != None:
+                self.canciones.queue(NodoCancion(aux.getCancion(), aux.getPath()), aux)
+                aux = aux.getSiguiente()
+        else:
+            self.canciones = canciones
         
     def getNombre(self):
         return  self.nombre

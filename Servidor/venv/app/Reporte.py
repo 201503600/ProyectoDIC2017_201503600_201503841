@@ -17,7 +17,7 @@ def generarImagen(nombre, dot):
     os.system(fileOutputPath)
 
 def reporteMatriz(matriz):
-    dot = matriz.graph()
+    dot = matriz.graphManual()
     generarImagen('matriz', dot)
 
 def reporteArtistas(matriz, anio, genero):

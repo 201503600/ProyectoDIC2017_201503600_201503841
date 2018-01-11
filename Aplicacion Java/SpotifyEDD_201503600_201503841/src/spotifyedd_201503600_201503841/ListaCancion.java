@@ -5,6 +5,7 @@
  */
 package spotifyedd_201503600_201503841;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,6 +15,10 @@ import java.util.List;
 public class ListaCancion {
     
     private List<Cancion> canciones;
+    
+    public ListaCancion(){
+        canciones = new ArrayList<Cancion>();
+    }
 
     /**
      * @return the canciones

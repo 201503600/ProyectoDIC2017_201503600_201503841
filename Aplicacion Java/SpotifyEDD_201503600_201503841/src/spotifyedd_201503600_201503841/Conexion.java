@@ -193,33 +193,37 @@ public class Conexion {
          return before;
      }
      
-     public static String postSongsByArtist(String artista){
+     public static String postSongsByArtist(String artista, String username){
          RequestBody formBody = new FormEncodingBuilder()
                                         .add("artista", artista)
+                                        .add("username", username)
                                         .build();
          String before = getString("getSongsByArtist", formBody);
          return before;
      }
      
-     public static String postSongsByAlbum(String album){
+     public static String postSongsByAlbum(String album, String username){
          RequestBody formBody = new FormEncodingBuilder()
                                         .add("album", album)
+                                        .add("username", username)
                                         .build();
          String before = getString("getSongsByAlbum", formBody);
          return before;
      }
      
-     public static String postSongsByGender(String gender){
+     public static String postSongsByGender(String gender, String username){
          RequestBody formBody = new FormEncodingBuilder()
                                         .add("genero", gender)
+                                        .add("username", username)
                                         .build();
          String before = getString("getSongsByGender", formBody);
          return before;
      }
      
-     public static String postSongsByYear(String anio){
+     public static String postSongsByYear(String anio, String username){
          RequestBody formBody = new FormEncodingBuilder()
                                         .add("anio", anio)
+                                        .add("username", username)
                                         .build();
          String before = getString("getSongsByYear", formBody);
          return before;

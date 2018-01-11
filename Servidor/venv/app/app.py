@@ -238,6 +238,8 @@ def getSongsByArtist():
     nombreArtista = request.form['artista']
     buscador = Buscador(carga.getMatriz())
     buscador.getByArtist(nombreArtista)
+    username = request.form['username']
+    carga.getUsuario().find(username).setColaCanciones(buscador.getCanciones())
     #reproductor.setListaArtista(buscador.getCanciones())
     return jsonify(buscador.getCanciones())
 
@@ -246,6 +248,8 @@ def getSongsByAlbum():
     nombreAlbum = request.form['album']
     buscador = Buscador(carga.getMatriz())
     buscador.getByAlbum(nombreAlbum)
+    username = request.form['username']
+    carga.getUsuario().find(username).setColaCanciones(buscador.getCanciones())
     #reproductor.setListaAlbum(buscador.getCanciones())
     return jsonify(buscador.getCanciones())
 
@@ -254,6 +258,8 @@ def getSongsByGender():
     genero = request.form['genero']
     buscador = Buscador(carga.getMatriz())
     buscador.getByGender(genero)
+    username = request.form['username']
+    carga.getUsuario().find(username).setColaCanciones(buscador.getCanciones())
     return jsonify(buscador.getCanciones())
 
 @app.route('/getSongsByYear', methods=['POST'])
@@ -261,6 +267,8 @@ def getSongsByYear():
     anio = request.form['anio']
     buscador = Buscador(carga.getMatriz())
     buscador.getByYear(anio)
+    username = request.form['username']
+    carga.getUsuario().find(username).setColaCanciones(buscador.getCanciones())
     return jsonify(buscador.getCanciones())
 
 @app.route('/getSongShuffle', methods=['POST'])

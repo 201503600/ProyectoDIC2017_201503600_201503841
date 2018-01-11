@@ -19,6 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 
 /**
@@ -32,9 +33,10 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
      */
     private JsonParser parser;
     private NewJFrame referencia;
-    private Musica bocina;
+    public Musica bocina;
+    private Reproductor reproductor;
     private String userLogged;
-    private ListaCancion canciones, alterna;
+    private ListaCancion canciones, playlist;
     private Cancion actual;
     private int stateReproductor;
     private boolean state;
@@ -44,7 +46,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     Para el stateReproductor los siguientes valores:
         - 0: Reproduccion por playlist (se utiliza lista canciones)
         - 1: Reproduccion por shuffle
-        - 2: Reproduccion por cualquier otro modo (se utiliza lista alterna)
+        - 2: Reproduccion por cualquier otro modo (se utiliza lista playlist)
     
      */
 
@@ -56,7 +58,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         parser = new JsonParser();
         userLogged = parser.parse(jsonUser).getAsJsonObject().get("nombre").getAsString();
         actual = null;
-        alterna = null;
+        playlist = new ListaCancion();
 
         JsonArray array = parser.parse(Conexion.postEncabezadoAnios()).getAsJsonArray();
         for (int pos = 0; pos < array.size(); pos++) {
@@ -104,12 +106,39 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jMenuItem14.addActionListener(this);
         jMenuItem15.addActionListener(this);
         jMenuItem16.addActionListener(this);
+        
+        reproductor = new Reproductor(this);
 
     }
     
     public void setLabelSong(){
         jLabel1.setText(actual.getArtista());
         jLabel6.setText(actual.getAlbum() + " - " + actual.getCancion());
+    }
+    
+    public class Reproductor extends Thread{
+        private Principal instancia;
+        private boolean pausa;
+        
+        public Reproductor(Principal instancia){
+            this.instancia = instancia;
+            this.pausa = false;
+        }
+        
+        @Override
+        public void run(){
+            while (true) {
+                if (!pausa) {
+                    if (instancia.bocina.player.getStatus() == BasicPlayer.STOPPED) {
+                        instancia.afterSong();
+                    }
+                }
+            }
+        }
+        
+        public void setEstado(boolean pause){
+            this.pausa = pause;
+        }
     }
 
     @Override
@@ -127,6 +156,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                 jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/play.jpg")));
                 try {
                     bocina.pausar();
+                    reproductor.setEstado(true);
                 } catch (Exception ex) {
 
                 }
@@ -136,23 +166,24 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                 try {
                     if (actual != null) {
                         bocina.continuar();
+                        reproductor.setEstado(false);
                     } else {
                         //bocina.Play();
                     }
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 state = true;
             }
             jButton2.repaint();
         } else if (e.getSource() == jButton3) {
             // Boton siguiente playlist           
-            beforeSong();
+            afterSong();
             setLabelSong();
         } else if (e.getSource() == jButton4) {
             // Boton anterior playlist           
             //reproducir
-            afterSong();
+            beforeSong();
             setLabelSong();
         } else if (e.getSource() == jButton5) {
             // Boton eliminar            
@@ -199,68 +230,76 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             stateReproductor = 2;           
             String artista = JOptionPane.showInputDialog(null, "Escribe el nombre del artista");
             if (!artista.equals("")) {
-                alterna = new Gson().fromJson(Conexion.postSongsByArtist(artista), ListaCancion.class);
+                
                 try{
-                    actual = alterna.getCanciones().get(0);
+                    playlist = new Gson().fromJson(Conexion.postSongsByArtist(artista, userLogged), ListaCancion.class);
+                    actual = playlist.getCanciones().get(0);
+                    reproducir();
+                    setLabelSong();
                 }catch(Exception ex){
-                    
+                    System.out.println(ex.toString());
                 }
-                reproducir();
-                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem10) {
             // reproduccion por album
             stateReproductor = 2;
             String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre del album");
             if (!cancion.equals("")) {
-                alterna = new Gson().fromJson(Conexion.postSongsByAlbum(cancion), ListaCancion.class);
                 try{
-                    actual = alterna.getCanciones().get(0);
+                    playlist = new Gson().fromJson(Conexion.postSongsByAlbum(cancion, userLogged), ListaCancion.class);
+                    actual = playlist.getCanciones().get(0);
+                    reproducir();
+                    setLabelSong();
                 }catch(Exception ex){
-                    
+                    System.out.println(ex.toString());
                 }
-                reproducir();
-                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem11) {
             // reproduccion por genero
             stateReproductor = 2;
             String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre del genero");
             if (!cancion.equals("")) {
-                alterna = new Gson().fromJson(Conexion.postSongsByGender(cancion), ListaCancion.class);
                 try{
-                    actual = alterna.getCanciones().get(0);
+                    playlist = new Gson().fromJson(Conexion.postSongsByGender(cancion, userLogged), ListaCancion.class);
+                    actual = playlist.getCanciones().get(0);
+                    reproducir();
+                    setLabelSong();
                 }catch(Exception ex){
-                    
+                    System.out.println(ex.toString());
                 }
-                reproducir();
-                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem12) {
             // reproduccion por a;o
             stateReproductor = 2;
             String cancion = JOptionPane.showInputDialog(null, "Escribe el anio");
             if (!cancion.equals("")) {
-                alterna = new Gson().fromJson(Conexion.postSongsByYear(cancion), ListaCancion.class);
                 try{
-                    actual = alterna.getCanciones().get(0);
+                    playlist = new Gson().fromJson(Conexion.postSongsByYear(cancion, userLogged), ListaCancion.class);
+                    actual = playlist.getCanciones().get(0);
+                    reproducir();
+                    setLabelSong();
                 }catch(Exception ex){
-                    
+                    System.out.println(ex.toString());
                 }
-                reproducir();
-                setLabelSong();
             }
         } else if (e.getSource() == jMenuItem13) {
             // reproduccion playlist
             stateReproductor = 0;
-            reproducir();
-            setLabelSong();
+            try{
+                actual = playlist.getCanciones().get(0);
+                reproducir();
+                setLabelSong();
+            }catch(Exception ex){
+                System.out.println(ex.toString());
+            }
         } else if (e.getSource() == jMenuItem14) {
             // reproduccion shuffle
             stateReproductor = 1;
-            actual = new Gson().fromJson(Conexion.postSongShuffle(), Cancion.class);
-            reproducir();
-            setLabelSong();
+            try{
+                actual = new Gson().fromJson(Conexion.postSongShuffle(), Cancion.class);
+                reproducir();
+                setLabelSong();
+            }catch(Exception ex){}
         } else if (e.getSource() == jMenuItem15) {
             // Cerrar sesion            
             Conexion.logout();
@@ -269,7 +308,11 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             this.referencia.limpiar();
         } else if (e.getSource() == jMenuItem16) {
             // Eliminar cuenta
-
+            Conexion.logout();
+            
+            this.hide();
+            this.referencia.show();
+            this.referencia.limpiar();
         }
     }
 
@@ -282,11 +325,13 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             bocina.AbrirArchivo(actual.getPath());
             bocina.Play();
             state = true;
+            setLabelSong();
+            if (reproductor.getState() == Thread.State.NEW)
+                reproductor.start();
             jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/pause.jpg")));
             jButton2.repaint();
-            setLabelSong();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, ex.toString());
+            //JOptionPane.showMessageDialog(this, ex.toString());
         }
     }
 
@@ -294,34 +339,36 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         switch (stateReproductor) {
             case 0:
                 try {
-                    actual = new Gson().fromJson(Conexion.postAfterSong(userLogged), Cancion.class);
-                    bocina.AbrirArchivo(actual.getPath());
-                    bocina.Play();
+                    int indice = playlist.getCanciones().indexOf(actual);
+                    if (indice < playlist.getCanciones().size() - 1) {
+                        actual = playlist.getCanciones().get(indice + 1);
+                    } else {
+                        actual = playlist.getCanciones().get(0);
+                    }
+                    reproducir();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 break;
             case 1:
                 try {
                     actual = new Gson().fromJson(Conexion.postSongShuffle(), Cancion.class);
-                    bocina.AbrirArchivo(actual.getPath());
-                    bocina.Play();
+                    reproducir();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 break;
             case 2:
                 try {
-                    int indice = alterna.getCanciones().indexOf(actual);
-                    if (indice < alterna.getCanciones().size() - 1) {
-                        actual = alterna.getCanciones().get(indice + 1);
+                    int indice = playlist.getCanciones().indexOf(actual);
+                    if (indice < playlist.getCanciones().size() - 1) {
+                        actual = playlist.getCanciones().get(indice + 1);
                     } else {
-                        actual = alterna.getCanciones().get(0);
+                        actual = playlist.getCanciones().get(0);
                     }
-                    bocina.AbrirArchivo(actual.getPath());
-                    bocina.Play();
+                    reproducir();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 break;
         }
@@ -332,27 +379,30 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         switch (stateReproductor) {
             case 0:
                 try {
-                    actual = new Gson().fromJson(Conexion.postAfterSong(userLogged), Cancion.class);
-                    bocina.AbrirArchivo(actual.getPath());
-                    bocina.Play();
+                    int indice = playlist.getCanciones().indexOf(actual);
+                    if (indice > 0) {
+                        actual = playlist.getCanciones().get(indice - 1);
+                    } else {
+                        actual = playlist.getCanciones().get(playlist.getCanciones().size() - 1);
+                    }
+                    reproducir();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 break;
             case 1:
 
             case 2:
                 try {
-                    int indice = alterna.getCanciones().indexOf(actual);
+                    int indice = playlist.getCanciones().indexOf(actual);
                     if (indice > 0) {
-                        actual = alterna.getCanciones().get(indice - 1);
+                        actual = playlist.getCanciones().get(indice - 1);
                     } else {
-                        actual = alterna.getCanciones().get(alterna.getCanciones().size() - 1);
+                        actual = playlist.getCanciones().get(playlist.getCanciones().size() - 1);
                     }
-                    bocina.AbrirArchivo(actual.getPath());
-                    bocina.Play();
+                    reproducir();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, ex.toString());
+                    //JOptionPane.showMessageDialog(this, ex.toString());
                 }
                 break;
         }
@@ -686,11 +736,16 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         int index = jTable1.getSelectedRow();
         //anadir a cola
-        Conexion.postAddCola(userLogged, String.valueOf(canciones.getCanciones().get(index).getAnio()),
-                canciones.getCanciones().get(index).getGenero(),
-                canciones.getCanciones().get(index).getArtista(),
-                canciones.getCanciones().get(index).getAlbum(),
-                canciones.getCanciones().get(index).getCancion());
+        try{
+            String cancion = Conexion.postAddCola(userLogged, String.valueOf(canciones.getCanciones().get(index).getAnio()),
+                                                                                canciones.getCanciones().get(index).getGenero(),
+                                                                                canciones.getCanciones().get(index).getArtista(),
+                                                                                canciones.getCanciones().get(index).getAlbum(),
+                                                                                canciones.getCanciones().get(index).getCancion());
+            playlist.getCanciones().add(new Gson().fromJson(cancion, Cancion.class));
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
     // Reproducir
@@ -706,12 +761,9 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                     canciones.getCanciones().get(index).getAlbum(),
                     canciones.getCanciones().get(index).getCancion()), Cancion.class);
 
-            bocina.AbrirArchivo(actual.getPath());
-            bocina.Play();
-            state = true;
-            jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/pause.jpg")));
+            reproducir();
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, ex.toString());
+            //JOptionPane.showMessageDialog(this, ex.toString());
         }
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 

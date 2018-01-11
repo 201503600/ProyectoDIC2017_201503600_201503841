@@ -1,5 +1,257 @@
 digraph matriz{
-	rankdir = TB;
-	node [shape = record, width = 25];
-	Matriz[shape = record,label="{{{--- Matriz ---}|{Romantica}|{rock}|{(15)rap}|{(24)soundtrack}|{(12)other}|{rap}|{(20)alternative}|{(17)rock}|{(13)pop}|{(7)hip-hop}|{rock/pop}|{(189)dubstep}|{world}|{rap & hip-hop}}|{{1973}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{1973 - (17)rock}|{0}|{0}|{0}|{0}|{0}|{0}}|{{1980}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{1980 - (17)rock}|{0}|{0}|{0}|{0}|{0}|{0}}|{{1992}|{0}|{0}|{0}|{0}|{0}|{0}|{1992 - (20)alternative}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{1993}|{0}|{0}|{0}|{0}|{1993 - (12)other}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{1995}|{0}|{0}|{0}|{0}|{1995 - (12)other}|{1995 - rap}|{1995 - (20)alternative}|{1995 - (17)rock}|{1995 - (13)pop}|{1995 - (7)hip-hop}|{0}|{0}|{1995 - world}|{0}}|{{1997}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{1997 - (17)rock}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2001}|{0}|{0}|{0}|{0}|{2001 - (12)other}|{0}|{2001 - (20)alternative}|{2001 - (17)rock}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2002}|{0}|{0}|{0}|{0}|{0}|{2002 - rap}|{0}|{0}|{0}|{0}|{2002 - rock/pop}|{0}|{0}|{0}}|{{2003}|{0}|{0}|{0}|{0}|{0}|{2003 - rap}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2004}|{0}|{0}|{0}|{0}|{2004 - (12)other}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2005}|{0}|{0}|{0}|{0}|{2005 - (12)other}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2006}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{2006 - rap & hip-hop}}|{{2007}|{0}|{0}|{0}|{0}|{0}|{2007 - rap}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2008}|{0}|{0}|{0}|{0}|{0}|{2008 - rap}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2009}|{0}|{0}|{0}|{0}|{2009 - (12)other}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2010}|{0}|{0}|{0}|{0}|{0}|{2010 - rap}|{2010 - (20)alternative}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2011}|{2011 - Romantica}|{2011 - rock}|{0}|{0}|{0}|{2011 - rap}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2012}|{0}|{0}|{0}|{2012 - (24)soundtrack}|{2012 - (12)other}|{2012 - rap}|{0}|{0}|{0}|{0}|{0}|{2012 - (189)dubstep}|{0}|{0}}|{{2013}|{0}|{0}|{2013 - (15)rap}|{0}|{0}|{2013 - rap}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}|{{2015}|{0}|{0}|{0}|{0}|{2015 - (12)other}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}|{0}}}"]; 
+	rankdir=UD;
+	node[shape=box];
+	{
+		rank=min;
+		m[label = "Matriz Dispersa"];
+		nodo14[label="Romantica", rankdir = LR];
+		nodo13[label="rock", rankdir = LR];
+		nodo12[label="(15)rap", rankdir = LR];
+		nodo11[label="(24)soundtrack", rankdir = LR];
+		nodo10[label="(12)other", rankdir = LR];
+		nodo9[label="rap", rankdir = LR];
+		nodo8[label="(20)alternative", rankdir = LR];
+		nodo7[label="(17)rock", rankdir = LR];
+		nodo6[label="(13)pop", rankdir = LR];
+		nodo5[label="(7)hip-hop", rankdir = LR];
+		nodo4[label="rock/pop", rankdir = LR];
+		nodo3[label="(189)dubstep", rankdir = LR];
+		nodo2[label="world", rankdir = LR];
+		nodo1[label="rap & hip-hop", rankdir = LR];
+	}
+	{
+		rank=same;
+		nodo30[label="1973"];
+		nodo22[label="1973 - (17)rock"];
+		}{
+		rank=same;
+		nodo45[label="1980"];
+		nodo37[label="1980 - (17)rock"];
+		}{
+		rank=same;
+		nodo60[label="1992"];
+		nodo53[label="1992 - (20)alternative"];
+		}{
+		rank=same;
+		nodo75[label="1993"];
+		nodo70[label="1993 - (12)other"];
+		}{
+		rank=same;
+		nodo90[label="1995"];
+		nodo85[label="1995 - (12)other"];
+		nodo84[label="1995 - rap"];
+		nodo83[label="1995 - (20)alternative"];
+		nodo82[label="1995 - (17)rock"];
+		nodo81[label="1995 - (13)pop"];
+		nodo80[label="1995 - (7)hip-hop"];
+		nodo77[label="1995 - world"];
+		}{
+		rank=same;
+		nodo105[label="1997"];
+		nodo97[label="1997 - (17)rock"];
+		}{
+		rank=same;
+		nodo120[label="2001"];
+		nodo115[label="2001 - (12)other"];
+		nodo113[label="2001 - (20)alternative"];
+		nodo112[label="2001 - (17)rock"];
+		}{
+		rank=same;
+		nodo135[label="2002"];
+		nodo129[label="2002 - rap"];
+		nodo124[label="2002 - rock/pop"];
+		}{
+		rank=same;
+		nodo150[label="2003"];
+		nodo144[label="2003 - rap"];
+		}{
+		rank=same;
+		nodo165[label="2004"];
+		nodo160[label="2004 - (12)other"];
+		}{
+		rank=same;
+		nodo180[label="2005"];
+		nodo175[label="2005 - (12)other"];
+		}{
+		rank=same;
+		nodo195[label="2006"];
+		nodo181[label="2006 - rap & hip-hop"];
+	}
+	{
+		rank=same;
+		nodo210[label="2007"];
+		nodo204[label="2007 - rap"];
+		}{
+		rank=same;
+		nodo225[label="2008"];
+		nodo219[label="2008 - rap"];
+		}{
+		rank=same;
+		nodo240[label="2009"];
+		nodo235[label="2009 - (12)other"];
+		}{
+		rank=same;
+		nodo255[label="2010"];
+		nodo249[label="2010 - rap"];
+		nodo248[label="2010 - (20)alternative"];
+		}{
+		rank=same;
+		nodo270[label="2011"];
+		nodo269[label="2011 - Romantica"];
+		nodo268[label="2011 - rock"];
+		nodo264[label="2011 - rap"];
+		}{
+		rank=same;
+		nodo285[label="2012"];
+		nodo281[label="2012 - (24)soundtrack"];
+		nodo280[label="2012 - (12)other"];
+		nodo279[label="2012 - rap"];
+		nodo273[label="2012 - (189)dubstep"];
+		}{
+		rank=same;
+		nodo300[label="2013"];
+		nodo297[label="2013 - (15)rap"];
+		nodo294[label="2013 - rap"];
+		}{
+		rank=max;
+		nodo315[label="2015"];
+		nodo310[label="2015 - (12)other"];
+		}m->nodo14->nodo13->nodo12->nodo11->nodo10->nodo9->nodo8->nodo7->nodo6->nodo5->nodo4->nodo3->nodo2->nodo1->nodo2->nodo3->nodo4->nodo5->nodo6->nodo7->nodo8->nodo9->nodo10->nodo11->nodo12->nodo13->nodo14;
+	m->nodo30;
+	nodo30->nodo45 [rankdir=UD];
+	nodo45->nodo30;
+	nodo45->nodo60 [rankdir=UD];
+	nodo60->nodo45;
+	nodo60->nodo75 [rankdir=UD];
+	nodo75->nodo60;
+	nodo75->nodo90 [rankdir=UD];
+	nodo90->nodo75;
+	nodo90->nodo105 [rankdir=UD];
+	nodo105->nodo90;
+	nodo105->nodo120 [rankdir=UD];
+	nodo120->nodo105;
+	nodo120->nodo135 [rankdir=UD];
+	nodo135->nodo120;
+	nodo135->nodo150 [rankdir=UD];
+	nodo150->nodo135;
+	nodo150->nodo165 [rankdir=UD];
+	nodo165->nodo150;
+	nodo165->nodo180 [rankdir=UD];
+	nodo180->nodo165;
+	nodo180->nodo195 [rankdir=UD];
+	nodo195->nodo180;
+	nodo195->nodo210 [rankdir=UD];
+	nodo210->nodo195;
+	nodo210->nodo225 [rankdir=UD];
+	nodo225->nodo210;
+	nodo225->nodo240 [rankdir=UD];
+	nodo240->nodo225;
+	nodo240->nodo255 [rankdir=UD];
+	nodo255->nodo240;
+	nodo255->nodo270 [rankdir=UD];
+	nodo270->nodo255;
+	nodo270->nodo285 [rankdir=UD];
+	nodo285->nodo270;
+	nodo285->nodo300 [rankdir=UD];
+	nodo300->nodo285;
+	nodo300->nodo315 [rankdir=UD];
+	nodo315->nodo300;
+	nodo14->nodo269;
+nodo269->nodo14;
+nodo13->nodo268;
+nodo268->nodo13;
+nodo12->nodo297;
+nodo297->nodo12;
+nodo11->nodo281;
+nodo281->nodo11;
+nodo10->nodo70->nodo85->nodo115->nodo160->nodo175->nodo235->nodo280->nodo310;
+nodo310->nodo280->nodo235->nodo175->nodo160->nodo115->nodo85->nodo70->nodo10;
+nodo9->nodo84->nodo129->nodo144->nodo204->nodo219->nodo249->nodo264->nodo279->nodo294;
+nodo294->nodo279->nodo264->nodo249->nodo219->nodo204->nodo144->nodo129->nodo84->nodo9;
+nodo8->nodo53->nodo83->nodo113->nodo248;
+nodo248->nodo113->nodo83->nodo53->nodo8;
+nodo7->nodo22->nodo37->nodo82->nodo97->nodo112;
+nodo112->nodo97->nodo82->nodo37->nodo22->nodo7;
+nodo6->nodo81;
+nodo81->nodo6;
+nodo5->nodo80;
+nodo80->nodo5;
+nodo4->nodo124;
+nodo124->nodo4;
+nodo3->nodo273;
+nodo273->nodo3;
+nodo2->nodo77;
+nodo77->nodo2;
+nodo1->nodo181;
+nodo181->nodo1;
+nodo45->nodo37[constraint=false];
+nodo37->nodo45[constraint=false];
+nodo60->nodo53[constraint=false];
+nodo53->nodo60[constraint=false];
+nodo75->nodo70[constraint=false];
+nodo70->nodo75[constraint=false];
+nodo90->nodo85[constraint=false];
+nodo85->nodo90[constraint=false];
+nodo85->nodo84[constraint=false];
+nodo84->nodo85[constraint=false];
+nodo84->nodo83[constraint=false];
+nodo83->nodo84[constraint=false];
+nodo83->nodo82[constraint=false];
+nodo82->nodo83[constraint=false];
+nodo82->nodo81[constraint=false];
+nodo81->nodo82[constraint=false];
+nodo81->nodo80[constraint=false];
+nodo80->nodo81[constraint=false];
+nodo80->nodo77[constraint=false];
+nodo77->nodo80[constraint=false];
+nodo105->nodo97[constraint=false];
+nodo97->nodo105[constraint=false];
+nodo120->nodo115[constraint=false];
+nodo115->nodo120[constraint=false];
+nodo115->nodo113[constraint=false];
+nodo113->nodo115[constraint=false];
+nodo113->nodo112[constraint=false];
+nodo112->nodo113[constraint=false];
+nodo135->nodo129[constraint=false];
+nodo129->nodo135[constraint=false];
+nodo129->nodo124[constraint=false];
+nodo124->nodo129[constraint=false];
+nodo150->nodo144[constraint=false];
+nodo144->nodo150[constraint=false];
+nodo165->nodo160[constraint=false];
+nodo160->nodo165[constraint=false];
+nodo180->nodo175[constraint=false];
+nodo175->nodo180[constraint=false];
+nodo195->nodo181[constraint=false];
+nodo181->nodo195[constraint=false];
+nodo210->nodo204[constraint=false];
+nodo204->nodo210[constraint=false];
+nodo225->nodo219[constraint=false];
+nodo219->nodo225[constraint=false];
+nodo240->nodo235[constraint=false];
+nodo235->nodo240[constraint=false];
+nodo255->nodo249[constraint=false];
+nodo249->nodo255[constraint=false];
+nodo249->nodo248[constraint=false];
+nodo248->nodo249[constraint=false];
+nodo270->nodo269[constraint=false];
+nodo269->nodo270[constraint=false];
+nodo269->nodo268[constraint=false];
+nodo268->nodo269[constraint=false];
+nodo268->nodo264[constraint=false];
+nodo264->nodo268[constraint=false];
+nodo285->nodo281[constraint=false];
+nodo281->nodo285[constraint=false];
+nodo281->nodo280[constraint=false];
+nodo280->nodo281[constraint=false];
+nodo280->nodo279[constraint=false];
+nodo279->nodo280[constraint=false];
+nodo279->nodo273[constraint=false];
+nodo273->nodo279[constraint=false];
+nodo300->nodo297[constraint=false];
+nodo297->nodo300[constraint=false];
+nodo297->nodo294[constraint=false];
+nodo294->nodo297[constraint=false];
+nodo315->nodo310[constraint=false];
+nodo310->nodo315[constraint=false];
 }

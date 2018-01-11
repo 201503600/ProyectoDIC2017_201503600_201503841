@@ -142,67 +142,84 @@ class ArbolArtista:
 
     def deleteArtista(self, nombre):
         if not self.isEmpty():
-            return self.delete(nombre, self.raiz)
-        return False
+            auxiliar = ArbolArtista()
+            self.raiz = self.delete(nombre, self.raiz.getPrimero(), auxiliar)
 
-    def delete(self, nombre, rama):
-        nodo = rama.getPrimero()
-        while nodo != None:
-            if nombre.lower() < nodo.getNombre().lower():
-                if rama.isHoja():
-                    return False
-                else:
-                    return self.delete(nombre, nodo.getIzquierda())
-            elif nombre.lower() == nodo.getNombre().lower():
-                if rama.isHoja():
-                    if self.raiz.getSize() == 1:
-                        self.raiz = None
-                    else:
-                        rama.deleteArtista(nombre)
-                        # Balancear el arbol
-                        rama = balanceo(rama)
-                    return True
-                else:
-                    if nodo.getIzquierda().getSize() >= nodo.getDerecha().getSize():
-                        auxiliar = nodo.getIzquierda().getPrimero()
-                        while auxiliar.getSiguiente() != None:
-                            auxiliar = auxiliar.getSiguiente()
-                            if auxiliar.getSiguiente() == None and auxiliar.getDerecha() != None:
-                                auxiliar = auxiliar.getDerecha().getPrimero()
-                        aux = NodoArtista(auxiliar.getArtista())
-                        aux.setArbolAlbum(auxiliar.getArbolAlbumes())
-                        auxiliar.setArtista(nodo.getArtista())
-                        auxiliar.setArbolAlbum(nodo.getArbolAlbumes())
-                        nodo.setArtista(aux.getArtista())
-                        nodo.setArbolAlbum(aux.getArbolAlbumes())
-                        return self.delete(nombre, nodo.getIzquierda())
-                    else:
-                        auxiliar = nodo.getDerecha().getPrimero()
-                        while auxiliar.getIzquierda() != None:
-                            auxiliar = auxiliar.getIzquierda().getPrimero()
-                        aux = NodoArtista(auxiliar.getArtista())
-                        aux.setArbolAlbum(auxiliar.getArbolAlbumes())
-                        auxiliar.setArtista(nodo.getArtista())
-                        auxiliar.setArbolAlbum(nodo.getArbolAlbumes())
-                        nodo.setArtista(aux.getArtista())
-                        nodo.setArbolAlbum(aux.getArbolAlbumes())
-                        return self.delete(nombre, nodo.getDerecha())
-            elif nodo.getSiguiente() == None:
-                if rama.isHoja():
-                    return False
-                else:
-                    return self.delete(nombre, nodo.getDerecha())
-            nodo = nodo.getSiguiente()
-        return False
+    def delete(self, nombre, nodo, arbolAux):
+        if nodo.getIzquierda() != None:
+            arbolAux = self.delete(nombre, nodo.getIzquierda().getPrimero(), arbolAux)
+        if nodo.getNombre() != nombre:
+            arbolAux.add(nodo.getNombre())
+            arbolAux.search(nodo.getNombre()).setAlbumes(nodo.getAlbumes())
+        if nodo.getSiguiente() != None:
+            arbolAux = self.delete(nombre, nodo.getSiguiente(), arbolAux)
+        elif nodo.getDerecha() != None:
+            arbolAux = self.delete(nombre, nodo.getDerecha().getPrimero(), arbolAux)
+        return arbolAux
 
-    def balanceo(self, rama):
-        if rama.getSize() == 1 and rama.getPadre() != None:
-            padre = rama.getPadre().getPrimero()
-            if rama == padre.getIzquierda():
-                if (rama.getSize() + padre.getDerecha().getSize() + 1) < 5:
-                    auxiliar = NodoArtista(padre.getNombre())
-                    auxiliar.setAlbumes(padre.getAlbumes())
-                    rama.add(auxiliar)
+    # def deleteArtista(self, nombre):
+    #     if not self.isEmpty():
+    #         return self.delete(nombre, self.raiz)
+    #     return False
+
+    # def delete(self, nombre, rama):
+    #     nodo = rama.getPrimero()
+    #     while nodo != None:
+    #         if nombre.lower() < nodo.getNombre().lower():
+    #             if rama.isHoja():
+    #                 return False
+    #             else:
+    #                 return self.delete(nombre, nodo.getIzquierda())
+    #         elif nombre.lower() == nodo.getNombre().lower():
+    #             if rama.isHoja():
+    #                 if self.raiz.getSize() == 1:
+    #                     self.raiz = None
+    #                 else:
+    #                     rama.deleteArtista(nombre)
+    #                     # Balancear el arbol
+    #                     rama = balanceo(rama)
+    #                 return True
+    #             else:
+    #                 if nodo.getIzquierda().getSize() >= nodo.getDerecha().getSize():
+    #                     auxiliar = nodo.getIzquierda().getPrimero()
+    #                     while auxiliar.getSiguiente() != None:
+    #                         auxiliar = auxiliar.getSiguiente()
+    #                         if auxiliar.getSiguiente() == None and auxiliar.getDerecha() != None:
+    #                             auxiliar = auxiliar.getDerecha().getPrimero()
+    #                     aux = NodoArtista(auxiliar.getArtista())
+    #                     aux.setArbolAlbum(auxiliar.getArbolAlbumes())
+    #                     auxiliar.setArtista(nodo.getArtista())
+    #                     auxiliar.setArbolAlbum(nodo.getArbolAlbumes())
+    #                     nodo.setArtista(aux.getArtista())
+    #                     nodo.setArbolAlbum(aux.getArbolAlbumes())
+    #                     return self.delete(nombre, nodo.getIzquierda())
+    #                 else:
+    #                     auxiliar = nodo.getDerecha().getPrimero()
+    #                     while auxiliar.getIzquierda() != None:
+    #                         auxiliar = auxiliar.getIzquierda().getPrimero()
+    #                     aux = NodoArtista(auxiliar.getArtista())
+    #                     aux.setArbolAlbum(auxiliar.getArbolAlbumes())
+    #                     auxiliar.setArtista(nodo.getArtista())
+    #                     auxiliar.setArbolAlbum(nodo.getArbolAlbumes())
+    #                     nodo.setArtista(aux.getArtista())
+    #                     nodo.setArbolAlbum(aux.getArbolAlbumes())
+    #                     return self.delete(nombre, nodo.getDerecha())
+    #         elif nodo.getSiguiente() == None:
+    #             if rama.isHoja():
+    #                 return False
+    #             else:
+    #                 return self.delete(nombre, nodo.getDerecha())
+    #         nodo = nodo.getSiguiente()
+    #     return False
+
+    # def balanceo(self, rama):
+    #     if rama.getSize() == 1 and rama.getPadre() != None:
+    #         padre = rama.getPadre().getPrimero()
+    #         if rama == padre.getIzquierda():
+    #             if (rama.getSize() + padre.getDerecha().getSize() + 1) < 5:
+    #                 auxiliar = NodoArtista(padre.getNombre())
+    #                 auxiliar.setAlbumes(padre.getAlbumes())
+    #                 rama.add(auxiliar)
                     
-        else:
-            return rama
+    #     else:
+    #         return rama
