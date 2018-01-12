@@ -22,7 +22,9 @@ class Matriz:
                     recorrerAux = recorrerAux.getSiguiente()
                 self.ultima = aux
 
-    def deleteDato(self, fila, columna):
+    def deleteDato(self, anio, genero):
+        fila = self.getIndexAnio(anio)
+        columna = self.getIndexGenero(genero)
         cabeza = self.ultima.getPrimero()
         while cabeza.getArriba() != None:
             cabeza = cabeza.getArriba()
@@ -30,6 +32,7 @@ class Matriz:
             cabeza = cabeza.getAbajo()
         for x in xrange(0, columna):
             cabeza = cabeza.getSiguiente()
+        print anio + ' / ' + genero
         cabeza.setDato(0)
         cabeza.setArtista(ArbolArtista())
 

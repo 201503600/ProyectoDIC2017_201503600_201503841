@@ -8,6 +8,7 @@ package spotifyedd_201503600_201503841;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
+import com.placeholder.PlaceHolder;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -17,6 +18,8 @@ import java.awt.event.MouseListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javazoom.jl.decoder.JavaLayerException;
@@ -26,7 +29,7 @@ import javazoom.jlgui.basicplayer.BasicPlayer;
  *
  * @author Suseth
  */
-public class Principal extends javax.swing.JFrame implements ActionListener {
+public class Principal extends javax.swing.JFrame implements ActionListener, ListSelectionListener {
 
     /**
      * Creates new form Principal
@@ -80,6 +83,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jScrollPane1.setBorder(null);
 
         jList1.setOpaque(false);
+        jList1.addListSelectionListener(this);
         jList1.setSelectedIndex(0);
 
         bocina = new Musica();
@@ -108,12 +112,38 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jMenuItem16.addActionListener(this);
         
         reproductor = new Reproductor(this);
+        
+        PlaceHolder holderUsername = new PlaceHolder(jTextField2, "Artista");
+        holderUsername = new PlaceHolder(jTextField3, "Album");
+        holderUsername = new PlaceHolder(jTextField4, "Cancion");
 
     }
     
     public void setLabelSong(){
         jLabel1.setText(actual.getArtista());
         jLabel6.setText(actual.getAlbum() + " - " + actual.getCancion());
+    }
+
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        //JOptionPane.showMessageDialog(this, jList1.getSelectedValue());
+        switch(jList1.getSelectedValue()){
+            case "Canción":
+                jTextField2.setEnabled(true);
+                jTextField3.setEnabled(true);
+                jTextField4.setEnabled(true);
+                break;
+            case "Artista":
+                jTextField2.setEnabled(true);
+                jTextField3.setEnabled(false);
+                jTextField4.setEnabled(false);
+                break;
+            case "Año y Genero":
+                jTextField2.setEnabled(false);
+                jTextField3.setEnabled(false);
+                jTextField4.setEnabled(false);
+                break;
+        }
     }
     
     public class Reproductor extends Thread{
@@ -149,6 +179,7 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             if (!search.equals("")){
                 canciones = new Gson().fromJson(Conexion.postSearch(search), ListaCancion.class);
                 jTable1.setModel(new ModeloTablaCancion(canciones));
+                jTable1.repaint();
             }
         } else if (e.getSource() == jButton2) {
             // Boton play - pause de reproductor
@@ -187,19 +218,40 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             setLabelSong();
         } else if (e.getSource() == jButton5) {
             // Boton eliminar            
+            String anio, genero, artista;
+            anio = jComboBox1.getSelectedItem().toString();
+            genero = jComboBox2.getSelectedItem().toString();
             switch (jList1.getSelectedIndex()) {
-                case 0:
-                    String cancion = JOptionPane.showInputDialog(null, "Escribe el nombre de la cancion");
+                case 2:
+                    String cancion = jTextField4.getText();
+                    String album = jTextField3.getText();
+                    artista = jTextField2.getText();
+                    try{
+                        Conexion.postDeleteSong(anio, genero, artista, album, cancion);
+                        canciones = new Gson().fromJson(Conexion.postListSongs(), ListaCancion.class);
+                        jTable1.setModel(new ModeloTablaCancion(canciones));
+                        jTable1.repaint();
+                    }catch(Exception ex){}
                     break;
                 case 1:
-                    String artista = JOptionPane.showInputDialog(null, "Escribe el nombre del artista");
+                    artista = jTextField2.getText();
+                    try{
+                        Conexion.postDeleteArtist(anio, genero, artista);
+                        canciones = new Gson().fromJson(Conexion.postListSongs(), ListaCancion.class);
+                        jTable1.setModel(new ModeloTablaCancion(canciones));
+                        jTable1.repaint();
+                    }catch(Exception ex){}
                     break;
-                case 2:
-                    String album = JOptionPane.showInputDialog(null, "Escribe el nombre del album");
-                    String anio = JOptionPane.showInputDialog(null, "Escribe el año del album");
-                    break;
-                case 3:
-                    String cola = JOptionPane.showInputDialog(null, "Escribe el nombre de la playlist");
+                case 0:
+                    try{
+                        Conexion.postDeleteNodoMatriz(anio, genero);
+                        canciones = new Gson().fromJson(Conexion.postListSongs(), ListaCancion.class);
+                        jComboBox1.removeItem(anio);
+                        jComboBox2.removeItem(genero);
+                        jTable1.setModel(new ModeloTablaCancion(canciones));
+                        jTable1.repaint();
+                    }catch(Exception ex){
+                    }
                     break;
             }
         } else if (e.getSource() == jMenuItem2) {
@@ -212,13 +264,13 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             // Reporte ABB            
             Conexion.postReportAlbums(jComboBox1.getSelectedItem().toString(),
                     jComboBox2.getSelectedItem().toString(),
-                    jTextField1.getText());
+                    jTextField2.getText());
         } else if (e.getSource() == jMenuItem5) {
             // Reporte Lista Canciones            
             Conexion.postReportListSongs(jComboBox1.getSelectedItem().toString(),
                     jComboBox2.getSelectedItem().toString(),
-                    jTextField1.getText(),
-                    JOptionPane.showInputDialog(this, "Ingrese el album a verificar"));
+                    jTextField2.getText(),
+                    jTextField3.getText());
         } else if (e.getSource() == jMenuItem6) {
             // Reporte Usuarios            
             Conexion.postReportUsers();
@@ -303,16 +355,16 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         } else if (e.getSource() == jMenuItem15) {
             // Cerrar sesion            
             Conexion.logout();
-            this.hide();
             this.referencia.show();
             this.referencia.limpiar();
+            this.dispose();
         } else if (e.getSource() == jMenuItem16) {
             // Eliminar cuenta
             Conexion.logout();
-            
-            this.hide();
+            Conexion.postDeleteUser(userLogged);
             this.referencia.show();
             this.referencia.limpiar();
+            this.dispose();
         }
     }
 
@@ -322,15 +374,17 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
                 actual = new Gson().fromJson(Conexion.postAfterSong(userLogged), Cancion.class);
             }
             //reproducir
+            System.out.println(actual.getPath());
             bocina.AbrirArchivo(actual.getPath());
             bocina.Play();
             state = true;
             setLabelSong();
             if (reproductor.getState() == Thread.State.NEW)
                 reproductor.start();
-            jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/pause.jpg")));
-            jButton2.repaint();
+            //jButton2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/pause.jpg")));
+            //jButton2.repaint();
         } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "No se pudo reproducir la cancion");
             //JOptionPane.showMessageDialog(this, ex.toString());
         }
     }
@@ -436,6 +490,13 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -539,12 +600,14 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
 
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SpotifyBlanco.JPG"))); // NOI18N
 
         jList1.setBackground(new java.awt.Color(0, 0, 0));
         jList1.setForeground(new java.awt.Color(255, 255, 255));
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Canción", "Artista", "Albúm" };
+            String[] strings = { "Año y Genero", "Artista", "Canción" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -561,27 +624,60 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Eliminar");
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Artista");
+
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Album");
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Cancion");
+
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(jButton5))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(10, 10, 10)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jTextField4)
+                                        .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel9)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel7)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton5)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -589,15 +685,29 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 370));
@@ -816,6 +926,9 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -845,8 +958,12 @@ public class Principal extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 
 }

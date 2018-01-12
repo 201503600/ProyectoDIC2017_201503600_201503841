@@ -46,12 +46,12 @@ public class NewJFrame extends javax.swing.JFrame implements ActionListener{
     
     public void login(String username, String pass){
         String jsonUser = Conexion.login(username, pass);
-            if (!jsonUser.equals("{}\n")){
-                
+            if (!jsonUser.equals("{}\n")){                
                 Principal llamar = new Principal(this, jsonUser);
                 llamar.show();
                 this.hide();
-            }
+            }else
+                JOptionPane.showMessageDialog(this, "Verifique sus credenciales");
     }
 
     private String pathArchivo = "";

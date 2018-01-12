@@ -1,4 +1,14 @@
 digraph arbolB{
 	node [shape = record, style=filled];
 	splines=line;
-	}
+	nodo220 [ label ="<C0>|<D0>Nombre Artista: coolio|<C1>|<D1>Nombre Artista: guajiros del puerto|<C2>|<D2>Nombre Artista: kurtis blow|<C3>" fillcolor="#58FAD0"]
+nodo220:C0->nodo293
+nodo220:C1->nodo320
+nodo220:C2->nodo319
+nodo220:C3->nodo319
+nodo220:C3->nodo218
+nodo293 [ label ="<C0>|<D0>Nombre Artista: asdf|<C1>|<D1>Nombre Artista: bob marley|<C2>|<D2>Nombre Artista: chris brown|<C3>" fillcolor="#58FAD0"]
+nodo320 [ label ="<C0>|<D0>Nombre Artista: eminem/kon artist|<C1>|<D1>Nombre Artista: fatboy slim|<C2>" fillcolor="#58FAD0"]
+nodo319 [ label ="<C0>|<D0>Nombre Artista: jet|<C1>|<D1>Nombre Artista: k'naan|<C2>|<D2>Nombre Artista: korn/limp bizkit|<C3>" fillcolor="#58FAD0"]
+nodo218 [ label ="<C0>|<D0>Nombre Artista: lmfao|<C1>|<D1>Nombre Artista: michael jackson|<C2>|<D2>Nombre Artista: run dmc|<C3>|<D3>Nombre Artista: snoop doggy dogg|<C4>" fillcolor="#58FAD0"]
+}

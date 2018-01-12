@@ -1,5 +1,45 @@
 digraph arbolABB{
 rankdir=TB;
 node [shape = record, style=filled, fillcolor=seashell2];
-Album1 [ label ="Mientes"];
+Album304 [ label ="<C0>|<C1>8 mile|<C2>"];
+Album305 [ label ="<C0>|<C1>road to recovery: withdrawal|<C2>"];
+Album307 [ label ="<C0>|<C1>a beautiful mind|<C2>"];
+Album308 [ label ="<C0>|<C1>before the relapse|<C2>"];
+Album309 [ label ="<C0>|<C1>curtain call: the hits|<C2>"];
+Album310 [ label ="<C0>|<C1>diss me, diss you|<C2>"];
+Album311 [ label ="<C0>|<C1>eminem is back|<C2>"];
+Album324 [ label ="double"];
+Album311:C0->Album324
+Album312 [ label ="<C0>|<C1>encore|<C2>"];
+Album313 [ label ="<C0>|<C1>forgetting marshall mathers|<C2>"];
+Album314 [ label ="<C0>|<C1>i am marshall|<C2>"];
+Album315 [ label ="<C0>|<C1>look at me now|<C2>"];
+Album322 [ label ="infinite"];
+Album315:C0->Album322
+Album316 [ label ="<C0>|<C1>off the wall|<C2>"];
+Album317 [ label ="relapse"];
+Album316:C2->Album317
+Album315:C2->Album316
+Album314:C2->Album315
+Album313:C2->Album314
+Album312:C2->Album313
+Album311:C2->Album312
+Album310:C2->Album311
+Album309:C2->Album310
+Album308:C2->Album309
+Album307:C2->Album308
+Album305:C0->Album307
+Album306 [ label ="<C0>|<C1>the marshall mathers lp|<C2>"];
+Album318 [ label ="<C0>|<C1>straight from the lab|<C2>"];
+Album319 [ label ="slim shady ep"];
+Album318:C0->Album319
+Album306:C0->Album318
+Album320 [ label ="<C0>|<C1>the underground collection|<C2>"];
+Album321 [ label ="<C0>|<C1>the singles boxset|<C2>"];
+Album323 [ label ="the marshall mathers lp 2"];
+Album321:C0->Album323
+Album320:C0->Album321
+Album306:C2->Album320
+Album305:C2->Album306
+Album304:C2->Album305
 }

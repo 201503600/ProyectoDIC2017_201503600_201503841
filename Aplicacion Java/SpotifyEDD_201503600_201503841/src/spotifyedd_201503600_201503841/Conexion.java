@@ -252,5 +252,46 @@ public class Conexion {
          String before = getString("verifyUserOAuth", formBody);
          return before;
      }
+     
+     public static String postDeleteUser(String username){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("username", username)
+                                        .build();
+         String before = getString("deleteUser", formBody);
+         return before;
+     }
+     
+     public static String postDeleteSong(String anio, String genero, 
+                                            String artista, String album, 
+                                            String cancion){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("anio", anio)
+                                        .add("genero", genero)
+                                        .add("artista", artista)
+                                        .add("album", album)
+                                        .add("cancion", cancion)
+                                        .build();
+         String before = getString("deleteSong", formBody);
+         return before;
+     }
+     
+     public static String postDeleteArtist(String anio, String genero, String artista){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("anio", anio)
+                                        .add("genero", genero)
+                                        .add("artista", artista)
+                                        .build();
+         String before = getString("deleteArtist", formBody);
+         return before;
+     }
+     
+     public static String postDeleteNodoMatriz(String anio, String genero){
+         RequestBody formBody = new FormEncodingBuilder()
+                                        .add("anio", anio)
+                                        .add("genero", genero)
+                                        .build();
+         String before = getString("deleteNodoMatriz", formBody);
+         return before;
+     }
     
 }

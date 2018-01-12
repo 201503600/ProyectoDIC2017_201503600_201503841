@@ -8,6 +8,7 @@ from MatrizDispersa import Matriz
 from ArbolBB import ArbolAlbum
 
 class CargaMasiva:
+    correlativo = 1
 
     def __init__(self):
         self.usuarios = ListaUsuarios()
@@ -69,6 +70,16 @@ class CargaMasiva:
                         nombreAlbum = album.find('nombre').text
                         gen = album.find('genero').text
                         anio = album.find('anio').text
+                        if anio == '':
+                            anio = 'None'
+                        if gen == '':
+                            gen = 'None'
+                        if nombreArtista == '':
+                            nombreArtista = 'artista' + CargaMasiva.correlativo
+                            CargaMasiva.correlativo += 1
+                        if nombreAlbum == '':
+                            nombreAlbum = 'album' + CargaMasiva.correlativo
+                            CargaMasiva.correlativo += 1
                         self.matriz.addArtista(anio, gen, nombreArtista)
                         self.matriz.getArtistas(anio, gen).search(nombreArtista).getAlbumes().add(nombreAlbum)
                         #listaCanciones = ListaCanciones()
@@ -78,9 +89,18 @@ class CargaMasiva:
                             for cancion in coleccionCancion:
                                 can = cancion.find('nombre').text
                                 path = cancion.find('path').text
-                                self.matriz.getArtistas(anio, gen).search(nombreArtista).getAlbumes().getAlbum(nombreAlbum).getCanciones().add(can, path)
+                                if can == '':
+                                    can = 'cancion' + CargaMasiva.correlativo
+                                    CargaMasiva.correlativo += 1
+                                try:
+                                    self.matriz.getArtistas(anio, gen).search(nombreArtista).getAlbumes().getAlbum(nombreAlbum).getCanciones().add(can, path)
+                                except:
+                                    print 'Error'
                                 #listaCanciones.add(can, path)
-                                self.datos.insert(can, nombreArtista, nombreAlbum, gen, anio, path)
+                                try:
+                                    self.datos.insert(can, nombreArtista, nombreAlbum, gen, anio, path)
+                                except:
+                                    print 'Error'
                         #abbAlbumes.add(nombreAlbum, listaCanciones)
                 #self.datos.insertar("", "", "", "", "")
                 #self.matriz.addArtista(anio, gen, nombreArtista, abbAlbumes)
@@ -155,14 +175,15 @@ class Buscador:
             self.roamBT(genero, anio, nodo.getDerecha().getPrimero(), nombre)
 
     def roamBBT(self, genero, anio, artista, nodo, nombre):
-        cancion = nodo.getCanciones().find(nombre)
-        if cancion != None:
-            print cancion.getNombre()
-            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
-        if nodo.getHijoIzq() != None:
-            self.roamBBT(genero, anio, artista, nodo.getHijoIzq(), nombre)
-        if nodo.getHijoDer() != None:
-            self.roamBBT(genero, anio, artista, nodo.getHijoDer(), nombre)
+        if nodo != None:
+            cancion = nodo.getCanciones().find(nombre)
+            if cancion != None:
+                print cancion.getNombre()
+                self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+            if nodo.getHijoIzq() != None:
+                self.roamBBT(genero, anio, artista, nodo.getHijoIzq(), nombre)
+            if nodo.getHijoDer() != None:
+                self.roamBBT(genero, anio, artista, nodo.getHijoDer(), nombre)
 
     def getByArtist(self, nombreArtista):
         self.canciones = ListaDato()
@@ -182,16 +203,17 @@ class Buscador:
             auxFila = auxFila.getAbajo()
 
     def roamABBArtista(self, genero, anio, artista, nodo):
-        cancion = nodo.getCanciones().head
-        while True:
-            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
-            cancion = cancion.getSiguiente()
-            if cancion == nodo.getCanciones().head:
-                break
-        if nodo.getHijoIzq() != None:
-            self.roamABBArtista(genero, anio, artista, nodo.getHijoIzq())
-        if nodo.getHijoDer() != None:
-            self.roamABBArtista(genero, anio, artista, nodo.getHijoDer())
+        if nodo != None:
+            cancion = nodo.getCanciones().head
+            while True:
+                self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+                cancion = cancion.getSiguiente()
+                if cancion == nodo.getCanciones().head:
+                    break
+            if nodo.getHijoIzq() != None:
+                self.roamABBArtista(genero, anio, artista, nodo.getHijoIzq())
+            if nodo.getHijoDer() != None:
+                self.roamABBArtista(genero, anio, artista, nodo.getHijoDer())
 
     def getByAlbum(self, nombreAlbum):
         self.canciones = ListaDato()
@@ -258,25 +280,27 @@ class Buscador:
                 aux = aux.getAbajo()
 
     def roamAB(self, genero, anio, nodo):
-        if nodo.getIzquierda() != None:
-            self.roamABA(genero, anio, nodo.getIzquierda().getPrimero())
-        self.roamABB(genero, anio, nodo.getNombre(), nodo.getAlbumes().getRaiz())
-        if nodo.getSiguiente() != None:
-            self.roamAB(genero, anio, nodo.getSiguiente())
-        elif nodo.getDerecha() != None:
-            self.roamAB(genero, anio, nodo.getDerecha().getPrimero())
+        if nodo != None:
+            if nodo.getIzquierda() != None:
+                self.roamAB(genero, anio, nodo.getIzquierda().getPrimero())
+            self.roamABB(genero, anio, nodo.getNombre(), nodo.getAlbumes().getRaiz())
+            if nodo.getSiguiente() != None:
+                self.roamAB(genero, anio, nodo.getSiguiente())
+            elif nodo.getDerecha() != None:
+                self.roamAB(genero, anio, nodo.getDerecha().getPrimero())
 
     def roamABB(self, genero, anio, artista, nodo):
-        cancion = nodo.getCanciones().head
-        while True:
-            self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
-            cancion = cancion.getSiguiente()
-            if cancion == nodo.getCanciones().head:
-                break
-        if nodo.getHijoIzq() != None:
-            self.roamABB(genero, anio, artista, nodo.getHijoIzq())
-        if nodo.getHijoDer() != None:
-            self.roamABB(genero, anio, artista, nodo.getHijoDer())
+        if nodo != None:
+            cancion = nodo.getCanciones().head
+            while True:
+                self.canciones.insert(cancion.getNombre(), artista, nodo.getNombre(), genero, anio, cancion.getPath())
+                cancion = cancion.getSiguiente()
+                if cancion == nodo.getCanciones().head:
+                    break
+            if nodo.getHijoIzq() != None:
+                self.roamABB(genero, anio, artista, nodo.getHijoIzq())
+            if nodo.getHijoDer() != None:
+                self.roamABB(genero, anio, artista, nodo.getHijoDer())
 
     def getCanciones(self):
         return self.canciones

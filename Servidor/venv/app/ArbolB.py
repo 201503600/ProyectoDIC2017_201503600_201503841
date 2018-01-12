@@ -142,8 +142,11 @@ class ArbolArtista:
 
     def deleteArtista(self, nombre):
         if not self.isEmpty():
-            auxiliar = ArbolArtista()
-            self.raiz = self.delete(nombre, self.raiz.getPrimero(), auxiliar)
+            if self.raiz.getSize() == 1 and self.raiz.isHoja():
+                self.raiz = None;
+            else:
+                auxiliar = ArbolArtista()
+                self.raiz = self.delete(nombre, self.raiz.getPrimero(), auxiliar)
 
     def delete(self, nombre, nodo, arbolAux):
         if nodo.getIzquierda() != None:

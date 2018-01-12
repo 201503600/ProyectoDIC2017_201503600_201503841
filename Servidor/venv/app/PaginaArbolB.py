@@ -20,7 +20,7 @@ class Pagina:
             self.primero.setAnterior(None)
             self.primero.setSiguiente(None)
             self.size += 1
-        else:
+        elif nuevo != None:
             aux = self.primero
             while True:
                 if nuevo.getNombre().lower() == aux.getNombre().lower():
@@ -81,22 +81,24 @@ class Pagina:
 
     def getGraphPagina(self):
         self.dot = ''
-        temp = 'nodo' + str(self.id) + ' [ label =\"'
-        tempRecorre = self.primero
-        i = 0
-        while i < self.size:
-            temp += '<C' + str(i) + '>|<D' + str(i) + '>Nombre Artista: ' + tempRecorre.getNombre() + '|'
-            if tempRecorre.getIzquierda() != None:
-                self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getIzquierda().id) + '\n'
-            tempRecorre = tempRecorre.getSiguiente()
-            i += 1
-        temp += '<C' + str(i) + '>\" fillcolor=\"#58FAD0\"]\n'
-        tempRecorre = self.primero
-        while tempRecorre.getSiguiente() != None:
-            tempRecorre = tempRecorre.getSiguiente()
-        if tempRecorre.getDerecha() != None:
-            self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getDerecha().id) + '\n'
+        if self.size > 0:
+            temp = 'nodo' + str(self.id) + ' [ label =\"'
+            tempRecorre = self.primero
+            i = 0
+            while i < self.size:
+                temp += '<C' + str(i) + '>|<D' + str(i) + '>Nombre Artista: ' + tempRecorre.getNombre() + '|'
+                if tempRecorre.getIzquierda() != None:
+                    self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getIzquierda().id) + '\n'
+                tempRecorre = tempRecorre.getSiguiente()
+                i += 1
+            temp += '<C' + str(i) + '>\" fillcolor=\"#58FAD0\"]\n'
+            tempRecorre = self.primero
+            while tempRecorre.getSiguiente() != None:
+                tempRecorre = tempRecorre.getSiguiente()
+                if tempRecorre.getDerecha() != None:
+                    self.dot += 'nodo' + str(self.id) + ':C' + str(i) + '->nodo' + str(tempRecorre.getDerecha().id) + '\n'
         temp += self.dot
+        print temp
         return temp
 
     def isHoja(self):

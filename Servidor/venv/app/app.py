@@ -282,5 +282,39 @@ def search():
     buscador.getByArtistAlbumSong(cadena)
     return jsonify(buscador.getCanciones())
 
+@app.route('/deleteUser', methods=['POST'])
+def deleteUser():
+    username = request.form['username']
+    carga.getUsuario().deleteUsuario(username)
+    return jsonify({})
+
+@app.route('/deleteSong', methods=['POST'])
+def deleteSong():
+    anio = request.form['anio']
+    genero = request.form['genero']
+    artista = request.form['artista']
+    album = request.form['album']
+    cancion = request.form['cancion']
+    carga.getMatriz().getArtistas(anio, genero).search(artista).getAlbumes().getAlbum(album).getCanciones().delete(cancion)
+    carga.getDatos().deleteSong(anio, genero, artista, album, cancion)
+    return jsonify({})
+
+@app.route('/deleteArtist', methods=['POST'])
+def deleteArtist():
+    anio = request.form['anio']
+    genero = request.form['genero']
+    artista = request.form['artista']
+    carga.getMatriz().getArtistas(anio, genero).deleteArtista(artista)
+    carga.getDatos().deleteArtist(anio, genero, artista)
+    return jsonify({})
+
+@app.route('/deleteNodoMatriz', methods=['POST'])
+def deleteNodoMa():
+    anio = request.form['anio']
+    genero = request.form['genero']
+    carga.getMatriz().deleteDato(anio, genero)
+    carga.getDatos().deleteAnioGenero(anio, genero)
+    return jsonify({})
+
 if __name__ == '__main__':
     app.run(debug=True)

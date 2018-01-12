@@ -65,11 +65,11 @@ class NodoAlbum:
         if self.izquierdo == None and self.derecho == None:
             etiqueta = 'Album' + str(self.id) + ' [ label =\"' + self.nombre + '\"];\n'
         else:
-            etiqueta = 'Album' + str(self.id) + ' [ label =\"<C0>|' + self.nombre + '<C1>\"];\n'
+            etiqueta = 'Album' + str(self.id) + ' [ label =\"<C0>|<C1>' + self.nombre + '|<C2>\"];\n'
         if self.izquierdo != None:
             etiqueta += self.izquierdo.getDotNodo() + 'Album' + str(self.id) + ':C0->Album' + str(self.izquierdo.id) + '\n'
         if self.derecho != None:
-            etiqueta += self.derecho.getDotNodo() + 'Album' + str(self.id) + ':C1->Album' + str(self.derecho.id) + '\n'
+            etiqueta += self.derecho.getDotNodo() + 'Album' + str(self.id) + ':C2->Album' + str(self.derecho.id) + '\n'
         return etiqueta
 
     def printAlbum(self, nodo):
