@@ -1,0 +1,4796 @@
+<archivo>
+    <usuarios>
+        <usuario>
+            <nombre>marco</nombre>
+            <pass>123</pass>
+        </usuario>
+        <usuario>
+            <nombre>jose</nombre>
+            <pass>1234</pass>
+        </usuario>
+        <usuario>
+            <nombre>elmer</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>vivian</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>zussette</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>renato</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>jose</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>rolando</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>matilde</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>david</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>mike</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>max</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>dean</nombre>
+            <pass>1232</pass>
+        </usuario>
+        <usuario>
+            <nombre>edgar</nombre>
+            <pass>1232</pass>
+        </usuario>
+    </usuarios>
+    <artistas>
+        <artista>
+            <nombre>lady gaga</nombre>
+            <albumes>
+                <album>
+                    <nombre>the fame</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>money honey</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Money Honey (with lyrics).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>paparazzi</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Paparazzi (with lyrics).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>paper gangsta</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Paper Gangsta (with lyrics).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>poker face</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Poker Face (with lyrics).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>summerboy</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Summerboy (with lyrics).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>the fame</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - The Fame (with lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the fame monster</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>monster</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - The Fame Monster - Monster.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>so happy i could die</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - The Fame Monster - So Happy I Could Die.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>speechless</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - The Fame Monster - Speechless.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>teeth</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Teeth (HQ).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>the edge of glory</nombre>
+                            <path>C:\cancionesEDD\Lady Gaga - The Edge Of Glory.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>alicia keys</nombre>
+            <albumes>
+                <album>
+                    <nombre>now! that's what i call a singer</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no one</nombre>
+                            <path>C:\cancionesEDD\Alicia Keys - No One.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>hadouken!</nombre>
+            <albumes>
+                <album>
+                    <nombre>for the masses</nombre>
+                    <genero>(131)indie</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>m.a.d</nombre>
+                            <path>C:\cancionesEDD\03-hadouken-m.a.d.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>fergie</nombre>
+            <albumes>
+                <album>
+                    <nombre>bravo black hits, volume 35</nombre>
+                    <genero>rap</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>m.i.l.f. $</nombre>
+                            <path>C:\cancionesEDD\Fergie - M.I.L.F. $ (Audio Original HQ).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>daddy yankee</nombre>
+            <albumes>
+                <album>
+                    <nombre>gasolina</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>machete</nombre>
+                            <path>C:\cancionesEDD\Daddy Yankee - Machete.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>barrio fino en directo</nombre>
+                    <genero>reggaeton</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rompe</nombre>
+                            <path>C:\cancionesEDD\Daddy Yankee - Rompe.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>los homerun-es</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>segurosqui (remix)</nombre>
+                            <path>C:\cancionesEDD\daddy yankee - seguroski.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>shaky shaky</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shaky shaky</nombre>
+                            <path>C:\cancionesEDD\Daddy Yankee - Shaky Shaky - Video Oficial.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>talento de barrio</nombre>
+                    <genero>reggaeton</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>somos de calle</nombre>
+                            <path>C:\cancionesEDD\Daddy Yankee - Somos De Calle.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>catupecu machu</nombre>
+            <albumes>
+                <album>
+                    <nombre>laberintos entre aristas y dialectos</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>magia veneno</nombre>
+                            <path>C:\cancionesEDD\04 - Catupecu Machu - Magia Veneno.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>b.o.b./rivers cuomo</nombre>
+            <albumes>
+                <album>
+                    <nombre>the adventures of bobby ray</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>magic</nombre>
+                            <path>C:\cancionesEDD\BoB_Ft_Rivers_Cuomo_-_Magic.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>skrillex &amp; damian "jr. gong" marley</nombre>
+            <albumes>
+                <album>
+                    <nombre>make it bun dem: after hours ep</nombre>
+                    <genero>(189)dubstep</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>make it bun dem</nombre>
+                            <path>C:\cancionesEDD\Skrillex &amp; Damian Jr. Gong Marley - Make It Bun Dem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>pitbull feat. afrojack</nombre>
+            <albumes>
+                <album>
+                    <nombre>maldito alcohol</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>maldito alcohol</nombre>
+                            <path>C:\cancionesEDD\Maldito Alcohol - Pitbull.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tlc</nombre>
+            <albumes>
+                <album>
+                    <nombre>unpretty</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no scrubs</nombre>
+                            <path>C:\cancionesEDD\TLC - No Scrubs.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nelly furtado</nombre>
+            <albumes>
+                <album>
+                    <nombre>loose</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>maneater</nombre>
+                            <path>C:\cancionesEDD\Nelly Furtado - Maneater.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>no hay igual</nombre>
+                            <path>C:\cancionesEDD\nelly_furtado_no_hay_igual__ft[1] _residente_calle_13_.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>say it right</nombre>
+                            <path>C:\cancionesEDD\Nelly Furtado - Say It Right.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jessie j</nombre>
+            <albumes>
+                <album>
+                    <nombre>bravo black hits, volume 25</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>nobody's perfect</nombre>
+                            <path>C:\cancionesEDD\nobody's perfect - jessie j.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>metallica</nombre>
+            <albumes>
+                <album>
+                    <nombre>master of puppets</nombre>
+                    <genero>(137)heavy metal</genero>
+                    <anio>1986</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>master of puppets</nombre>
+                            <path>C:\cancionesEDD\Metallica-Master Of Puppets (Lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>hardwired... to self-destruct</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>moth into flame</nombre>
+                            <path>C:\cancionesEDD\Metallica- Moth Into Flame (Official Music Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>metallica</nombre>
+                    <genero>rap</genero>
+                    <anio>1991</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>nothing else matters</nombre>
+                            <path>C:\cancionesEDD\Metallica - Nothing Else Matters [Official Music Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>one</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1988</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>one</nombre>
+                            <path>C:\cancionesEDD\Metallica - One (Studio Version).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>ride the lightning</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>1984</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ride the lightning</nombre>
+                            <path>C:\cancionesEDD\Metallica-Ride The Lightning.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>reload</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>1997</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the memory remains</nombre>
+                            <path>C:\cancionesEDD\Metallica - The Memory Remains [Official Music Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the videos: 1989-2004</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the unforgiven</nombre>
+                            <path>C:\cancionesEDD\Metallica - The Unforgiven (Video).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>wherever i may roam</nombre>
+                            <path>C:\cancionesEDD\Metallica - Wherever I May Roam (Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>metal up your ass</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>whiskey in the jar</nombre>
+                            <path>C:\cancionesEDD\Metallica whisky in the jar.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sean kingston</nombre>
+            <albumes>
+                <album>
+                    <nombre>absolute music 56</nombre>
+                    <genero>(16)reggae</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>me love</nombre>
+                            <path>C:\cancionesEDD\sean-kingston-melove-clean.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>g-eazy x bebe rexha</nombre>
+            <albumes>
+                <album>
+                    <nombre>nrj hit list 2016</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>me, myself &amp; i</nombre>
+                            <path>C:\cancionesEDD\G-Eazy, Bebe Rexha - Me, Myself &amp; I.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the black eyed peas</nombre>
+            <albumes>
+                <album>
+                    <nombre>radio 538 hitzone 52</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>meet me halfway</nombre>
+                            <path>C:\cancionesEDD\Meet me Halfway.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>monkey business</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>my humps</nombre>
+                            <path>C:\cancionesEDD\Black Eyed Peas - My Humps.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>pump it</nombre>
+                            <path>C:\cancionesEDD\The Black Eyed Peas - Pump It.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>radio 538 hitzone 53</nombre>
+                    <genero>rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rock that body</nombre>
+                            <path>C:\cancionesEDD\The Black Eyed Peas - Rock That Body.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the beginning</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the time (dirty bit)</nombre>
+                            <path>C:\cancionesEDD\BEP the time.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>now that's what i call music! 6</nombre>
+                    <genero>rap</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>where is the love</nombre>
+                            <path>C:\cancionesEDD\Black Eyed Peas - Where Is The Love-.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>will smith</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits '99 "wild wild west" platinum collection'99</nombre>
+                    <genero>rap/hip-hop</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>men in black</nombre>
+                            <path>C:\cancionesEDD\Will Smith - Men In Black.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>lost and found</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>switch</nombre>
+                            <path>C:\cancionesEDD\Will Smith - Switch.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>duffy</nombre>
+            <albumes>
+                <album>
+                    <nombre>rockferry</nombre>
+                    <genero>rock/pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>mercy</nombre>
+                            <path>C:\cancionesEDD\Duffy -  Mercy.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the police</nombre>
+            <albumes>
+                <album>
+                    <nombre>2007-09-14: amsterdam arena, amsterdam, the netherlands</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>message in a bottle</nombre>
+                            <path>C:\cancionesEDD\The Police - Message In A Bottle.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>swedish house mafia vs. tinie tempah</nombre>
+            <albumes>
+                <album>
+                    <nombre>disc-overy</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>miami 2 ibiza</nombre>
+                            <path>C:\cancionesEDD\miami2ibiza.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ricardo arjona</nombre>
+            <albumes>
+                <album>
+                    <nombre>santo pecado</nombre>
+                    <genero>(86)latin</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>minutos</nombre>
+                            <path>C:\cancionesEDD\04-ricardo arjona - minutos.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lil wayne feat. bruno mars</nombre>
+            <albumes>
+                <album>
+                    <nombre>tha carter iv</nombre>
+                    <genero>rap</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>mirror</nombre>
+                            <path>C:\cancionesEDD\Lil Wayne - Mirror ft. Bruno Mars.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>maroon 5</nombre>
+            <albumes>
+                <album>
+                    <nombre>hands all over</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>misery</nombre>
+                            <path>C:\cancionesEDD\Misery~Maroon5.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>never gonna leave this bed</nombre>
+                            <path>C:\cancionesEDD\Marron 5 - Never Gonna Leave This Bed.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>moves like jagger (the voice performance) [feat. christina aguilera] - single</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>moves like jagger</nombre>
+                            <path>C:\cancionesEDD\moves like jagger - maroon 5.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>songs about jane</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>must get out</nombre>
+                            <path>C:\cancionesEDD\Must Get Out - Maroon 5.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>secret</nombre>
+                            <path>C:\cancionesEDD\Secret - Maroon 5.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>she will be loved</nombre>
+                            <path>C:\cancionesEDD\Maroon Five - She Will Be Loved.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>shiver</nombre>
+                            <path>C:\cancionesEDD\Shiver - Maroon 5.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>sunday morning</nombre>
+                            <path>C:\cancionesEDD\Sunday Morning - Maroon 5.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>tangled</nombre>
+                            <path>C:\cancionesEDD\Tangled - Maroon 5.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>it won't be soon before long</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>not falling apart</nombre>
+                            <path>C:\cancionesEDD\Maroon 5 - Not Falling Apart.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>nothing lasts forever</nombre>
+                            <path>C:\cancionesEDD\Nothing last forever.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>wake up call</nombre>
+                            <path>C:\cancionesEDD\Marron 5 - Wake Up Call.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>2016 grammy nominees</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sugar</nombre>
+                            <path>C:\cancionesEDD\Sugar - Maroon 5 (Audio).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>die ultimative chart show: die erfolgreichsten hits 2014</nombre>
+                    <genero>rap</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>maps</nombre>
+                            <path>C:\cancionesEDD\Maroon 5 - Maps (Audio).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ne-yo</nombre>
+            <albumes>
+                <album>
+                    <nombre>het beste uit de qmusic top 500 van deze eeuw</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>miss independent</nombre>
+                            <path>C:\cancionesEDD\Ne-Yo - Miss Independence.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>afi</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, september 2006</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>miss murder</nombre>
+                            <path>C:\cancionesEDD\AFI - Miss Murder.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nicki minaj feat. drake</nombre>
+            <albumes>
+                <album>
+                    <nombre>pink friday</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>moment 4 life</nombre>
+                            <path>C:\cancionesEDD\nicki minaj ft. drake - moment 4 life.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>kanye west feat. jay-z, rick ross, nicki minaj &amp; bon iver</nombre>
+            <albumes>
+                <album>
+                    <nombre>my beautiful dark twisted fantasy</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>monster</nombre>
+                            <path>C:\cancionesEDD\Kanye West - Monster ft. Rick Ross, Nicki Minaj, Jay-Z &amp; Bon Iver.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>boston</nombre>
+            <albumes>
+                <album>
+                    <nombre>leather &amp; lace</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>more than a feeling</nombre>
+                            <path>C:\cancionesEDD\Boston-More Than A Feeling.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ludacris</nombre>
+            <albumes>
+                <album>
+                    <nombre>word of mouf</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>move bitch</nombre>
+                            <path>C:\cancionesEDD\Ludacris - Move Bitch.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>plastilina mosh</nombre>
+            <albumes>
+                <album>
+                    <nombre>aquamosh</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1998</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>mr. p. mosh</nombre>
+                            <path>C:\cancionesEDD\plastilina mosh - mr. p mosh.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>moderato</nombre>
+            <albumes>
+                <album>
+                    <nombre>contenido apasionado</nombre>
+                    <genero>pop/rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>muriendo lento ft. belinda</nombre>
+                            <path>C:\cancionesEDD\Belinda y moderato - Si tu no estas.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>queens of the stone age</nombre>
+            <albumes>
+                <album>
+                    <nombre>cmj new music monthly, volume 105: september 2002</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no one knows</nombre>
+                            <path>C:\cancionesEDD\Queens Of The Stone Age - No One Knows.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the knack</nombre>
+            <albumes>
+                <album>
+                    <nombre>rock times, volume 13: 1979-1980</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1992</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>my sharona</nombre>
+                            <path>C:\cancionesEDD\The Knack-My Sharona.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>black flag</nombre>
+            <albumes>
+                <album>
+                    <nombre>my war</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1984</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>my war</nombre>
+                            <path>C:\cancionesEDD\Black Flag - My War - Channel X Radio Station - GTA V Soundtrack.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>panda</nombre>
+            <albumes>
+                <album>
+                    <nombre>amantes sunt amentes</nombre>
+                    <genero>pandasux.com</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>narcisista por excelencia</nombre>
+                            <path>C:\cancionesEDD\panda - narcisista por excelencia.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sinik</nombre>
+            <albumes>
+                <album>
+                    <nombre>le toit du monde</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ni racaille / ni victime</nombre>
+                            <path>C:\cancionesEDD\08. Ni racaille  Ni victime.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>malacates trebol shop</nombre>
+            <albumes>
+                <album>
+                    <nombre>perdicion</nombre>
+                    <genero>(21)ska</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ni un centavo</nombre>
+                            <path>C:\cancionesEDD\Malacates Trebol Shop Ni un centavo.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>quisiera</nombre>
+                            <path>C:\cancionesEDD\Malacates Trebol Shop QUISIERA.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>paulina rubio</nombre>
+            <albumes>
+                <album>
+                    <nombre>superventas 2007</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ni una sola palabra</nombre>
+                            <path>C:\cancionesEDD\03 Ni una sola palabra.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jay z &amp; kanye west</nombre>
+            <albumes>
+                <album>
+                    <nombre>watch the throne</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>niggas in paris</nombre>
+                            <path>C:\cancionesEDD\jay z - niggas in paris.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>blackstreet feat. dr. dre</nombre>
+            <albumes>
+                <album>
+                    <nombre>one shot 1996</nombre>
+                    <genero>rap</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no diggity</nombre>
+                            <path>C:\cancionesEDD\Blackstreet - No Diggity ft. Dr. Dre, Queen Pen.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nikki clan</nombre>
+            <albumes>
+                <album>
+                    <nombre>nikki clan</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no me digas que no</nombre>
+                            <path>C:\cancionesEDD\Nikki Clan - No me digas que no.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>t.i. feat. iggy azalea</nombre>
+            <albumes>
+                <album>
+                    <nombre>essential r&amp;b 2015</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>no mediocre</nombre>
+                            <path>C:\cancionesEDD\T.I. - No Mediocre (Explicit) ft. Iggy Azalea.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>mary j. blige feat. eve</nombre>
+            <albumes>
+                <album>
+                    <nombre>love &amp; life</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>not today</nombre>
+                            <path>C:\cancionesEDD\Mary J. Blige - Not Today feat. Eve.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>b.o.b.</nombre>
+            <albumes>
+                <album>
+                    <nombre>the adventures of bobby ray</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>nothing on you f. bruno mars</nombre>
+                            <path>C:\cancionesEDD\nothing on you.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>naughty by nature</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: platinum series</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>o.p.p.</nombre>
+                            <path>C:\cancionesEDD\Old School Rap - Naughty By Nature - OPP.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jennifer lopez feat. pitbull</nombre>
+            <albumes>
+                <album>
+                    <nombre>dance again... the hits</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>on the floor</nombre>
+                            <path>C:\cancionesEDD\J. Lo Ft Pitbull - On The Floor (Www.FlowHoT.NeT).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lil jon &amp; the east side boyz feat. dj smurf &amp; ying yang twins</nombre>
+            <albumes>
+                <album>
+                    <nombre>reggaeton</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>one on one</nombre>
+                            <path>C:\cancionesEDD\La Factoria - Perdoname ft Eddy Lover.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>one direction</nombre>
+            <albumes>
+                <album>
+                    <nombre>now that's what i call music! 84</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>one way or another (teenage kicks)</nombre>
+                            <path>C:\cancionesEDD\One Direction - One Way Or Another.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rihanna</nombre>
+            <albumes>
+                <album>
+                    <nombre>future trance, vol. 54</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>only girl (in the world) (mixin marc &amp; tony svejda radio mix)</nombre>
+                            <path>C:\cancionesEDD\Rihanna - Only Girl In The World.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>good girl gone bad</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rehab</nombre>
+                            <path>C:\cancionesEDD\Rihanna - Rehab ft. Justin Timberlake.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>loud</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>s&amp;m</nombre>
+                            <path>C:\cancionesEDD\S&amp;M -Rihana.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>pop! justice: 100% solid pop music</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sos (rescue me)</nombre>
+                            <path>C:\cancionesEDD\Rihanna_SOS (Rescue Me).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>absolute 00's</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>umbrella</nombre>
+                            <path>C:\cancionesEDD\50 Cent ftJustin Timberlake - Ayo Technology.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the woman in black</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>what's my name</nombre>
+                            <path>C:\cancionesEDD\Rihana - Whats My Name.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>enya</nombre>
+            <albumes>
+                <album>
+                    <nombre>may it be</nombre>
+                    <genero>(10)new age</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>only time</nombre>
+                            <path>C:\cancionesEDD\Enya - Only Time Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>britney spears</nombre>
+            <albumes>
+                <album>
+                    <nombre>absolute 00's</nombre>
+                    <genero>rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>oops i did it again</nombre>
+                            <path>C:\cancionesEDD\Britney Spears - Oops!...I Did It Again (With Lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>in the zone</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>toxic</nombre>
+                            <path>C:\cancionesEDD\Britney Spears - Toxic.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>iguanamanga</nombre>
+            <albumes>
+                <album>
+                    <nombre>presente</nombre>
+                    <genero>(16)reggae</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>otro colchon, otra mujer</nombre>
+                            <path>C:\cancionesEDD\iguanamanga-otro_colchon_otra_mujer.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>madness</nombre>
+            <albumes>
+                <album>
+                    <nombre>mse</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>our house</nombre>
+                            <path>C:\cancionesEDD\Our House  -  Madness.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>50 cent</nombre>
+            <albumes>
+                <album>
+                    <nombre>get rich or die tryin' / the massacre</nombre>
+                    <genero>rap</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>p.i.m.p.</nombre>
+                            <path>C:\cancionesEDD\50 Cent P.I.M.P Dirty.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>patiently waiting</nombre>
+                            <path>C:\cancionesEDD\50 Cent - Patiently Waiting.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>shady murder (street king energy track #9)</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shady murder</nombre>
+                            <path>C:\cancionesEDD\50 Cent - Shady Murder.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>2pac</nombre>
+            <albumes>
+                <album>
+                    <nombre>regulate</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1994</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pain</nombre>
+                            <path>C:\cancionesEDD\2pac - loyal to the game - pain.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the rolling stones</nombre>
+            <albumes>
+                <album>
+                    <nombre>the rolling stones in mono</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>paint it, black</nombre>
+                            <path>C:\cancionesEDD\The Rolling Stones - Paint It Black.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>classic hits</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2000</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>satisfaction</nombre>
+                            <path>C:\cancionesEDD\Satisfaction-Rolling Stones.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>wisin y yandel feat yankee</nombre>
+            <albumes>
+                <album>
+                    <nombre>pal mundo</nombre>
+                    <genero>(86)latin</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>paleta</nombre>
+                            <path>C:\cancionesEDD\Wisin Y Yandel ft. Daddy Yankee - La Paleta.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>m.i.a.</nombre>
+            <albumes>
+                <album>
+                    <nombre>slumdog millionaire</nombre>
+                    <genero>english music audio</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>paper planes</nombre>
+                            <path>C:\cancionesEDD\11 - 50 Cent.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lmfao</nombre>
+            <albumes>
+                <album>
+                    <nombre>200% hits 2011, volume 2</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>party rock anthem</nombre>
+                            <path>C:\cancionesEDD\Lmfao Feat. Lauren Bennett &amp; Goon Rock - Party Rock Anthem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>sorry for party rocking</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sexy and i know it</nombre>
+                            <path>C:\cancionesEDD\i'm sexy and i know it.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>party rock</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>yes</nombre>
+                            <path>C:\cancionesEDD\Lmfao_-_Yes.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>paradiso girls feat. lil jon &amp; eve</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, july 2009</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>patron tequila</nombre>
+                            <path>C:\cancionesEDD\Patron Tequila- Paradiso Girls.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>maroon 5 feat. wiz khalifa</nombre>
+            <albumes>
+                <album>
+                    <nombre>now that's what i call music! usa</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>payphone</nombre>
+                            <path>C:\cancionesEDD\Maroon 5 - Payphone.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>white rabbits</nombre>
+            <albumes>
+                <album>
+                    <nombre>it's frightening</nombre>
+                    <genero>alternative &amp; punk</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>percussion gun</nombre>
+                            <path>C:\cancionesEDD\White Rabbits - Percussion Gun.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>disturbed</nombre>
+            <albumes>
+                <album>
+                    <nombre>indestructible</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>perfect insanity</nombre>
+                            <path>C:\cancionesEDD\07 - Disturbed - Perfect Insanity.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ivy queen</nombre>
+            <albumes>
+                <album>
+                    <nombre>el disco de reggaeton, volume 02</nombre>
+                    <genero>reggaeton</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>quiero saber</nombre>
+                            <path>C:\cancionesEDD\Ivy Queen - en la disco.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ca$his feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>the county hound ep</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pistol poppin'</nombre>
+                            <path>C:\cancionesEDD\Ca$his feat. Eminem - Pistol Poppin'(2).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the aquabats!</nombre>
+            <albumes>
+                <album>
+                    <nombre>myths, legends, and other amazing adventures, volume 2</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2000</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pizza day</nombre>
+                            <path>C:\cancionesEDD\The Aquabats - Pizza Day.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jonas brothers</nombre>
+            <albumes>
+                <album>
+                    <nombre>live</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pom poms</nombre>
+                            <path>C:\cancionesEDD\Jonas Brothers - Pom Poms.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>kidz bop</nombre>
+            <albumes>
+                <album>
+                    <nombre>kidz bop</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pon de replay</nombre>
+                            <path>C:\cancionesEDD\Rihanna - Pon de Replay (Internet Version).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>kumbia all starz</nombre>
+            <albumes>
+                <album>
+                    <nombre>planeta kumbia</nombre>
+                    <genero>reggaeton</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>por ti baby (feat. flex)</nombre>
+                            <path>C:\cancionesEDD\Kumbia All Starz Ft. Nigga - Por Ti Baby.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>linkin park</nombre>
+            <albumes>
+                <album>
+                    <nombre>underground 6.0</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>qwerty</nombre>
+                            <path>C:\cancionesEDD\Linkin Park - Qwerty.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>miranda!</nombre>
+            <albumes>
+                <album>
+                    <nombre>miran</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>prisionero</nombre>
+                            <path>C:\cancionesEDD\Miranda - Prisionero.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lana lane</nombre>
+            <albumes>
+                <album>
+                    <nombre>project shangri-la</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>project shangri-la</nombre>
+                            <path>C:\cancionesEDD\Pareidolia  Elena Siegman Call of Duty- Black Ops - Shangri-La Easter Egg song Kevin Sherwood.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nelly furtado feat. timbaland</nombre>
+            <albumes>
+                <album>
+                    <nombre>black summer party: best of, volume 4</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>promiscuous</nombre>
+                            <path>C:\cancionesEDD\Promiscuos Girl.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>buzz poets</nombre>
+            <albumes>
+                <album>
+                    <nombre>pittsburgh x files 1997</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>psycho</nombre>
+                            <path>C:\cancionesEDD\50 Cent (feat. Eminem)- Psycho Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>psycho circus</nombre>
+            <albumes>
+                <album>
+                    <nombre>unknown</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pulsate</nombre>
+                            <path>C:\cancionesEDD\PSY - HANGOVER feat. Snoop Dogg M-V.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>cafe tacvba</nombre>
+            <albumes>
+                <album>
+                    <nombre>caf</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>puntos cardinales</nombre>
+                            <path>C:\cancionesEDD\Cafe tacvba - Puntos cardinales.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>all saints</nombre>
+            <albumes>
+                <album>
+                    <nombre>r&amp;b lovesongs</nombre>
+                    <genero>rap</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>pure shores</nombre>
+                            <path>C:\cancionesEDD\All Saints - Pure Shores.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>salt 'n pepa</nombre>
+            <albumes>
+                <album>
+                    <nombre>hot tub time machine: original motion picture soundtrack</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>push it</nombre>
+                            <path>C:\cancionesEDD\Salt'n'Pepa - Push It.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>imagine dragons</nombre>
+            <albumes>
+                <album>
+                    <nombre>itunes session</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>radioactive</nombre>
+                            <path>C:\cancionesEDD\Imagine Dragons - Radioactive.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem feat. skam</nombre>
+            <albumes>
+                <album>
+                    <nombre>infinite</nombre>
+                    <genero>rap</genero>
+                    <anio>1996</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rare studio track 4 (threesixfive)</nombre>
+                            <path>C:\cancionesEDD\Eminem- 3-6-5.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>warren g</nombre>
+            <albumes>
+                <album>
+                    <nombre>regulate... g funk era</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1994</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>regulate</nombre>
+                            <path>C:\cancionesEDD\Warren G ft Nate Dogg- Regulate.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>this d.j.</nombre>
+                            <path>C:\cancionesEDD\Warren G - This Dj.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>amy winehouse</nombre>
+            <albumes>
+                <album>
+                    <nombre>back to black</nombre>
+                    <genero>(14)r&amp;b</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rehab</nombre>
+                            <path>C:\cancionesEDD\rehab - amy.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>you know i'm no good</nombre>
+                            <path>C:\cancionesEDD\You Know I'm No Good.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>fort minor feat. styles of beyond</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, september 2006</nombre>
+                    <genero>rap</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>remember the name</nombre>
+                            <path>C:\cancionesEDD\Fort Minor - Remember The Name.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem feat. jay-z</nombre>
+            <albumes>
+                <album>
+                    <nombre>don't call me marshall</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>renegades</nombre>
+                            <path>C:\cancionesEDD\Renegades- Eminem Feat. Jay Z With Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rage against the machine</nombre>
+            <albumes>
+                <album>
+                    <nombre>30 songs for a revolution</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>renegades of funk</nombre>
+                            <path>C:\cancionesEDD\Rage Against The Machine - Renegades Of Funk.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>obie trice feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>bottoms up</nombre>
+                    <genero>(www.flowhot.net)</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>richard</nombre>
+                            <path>C:\cancionesEDD\Obie Trice Ft Eminem - Richard (Www.FlowHoT.NeT).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>encore</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ricky ticky toc</nombre>
+                            <path>C:\cancionesEDD\Eminem - Ricky Ticky Toc.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>we as americans</nombre>
+                            <path>C:\cancionesEDD\Eminem - We As Americans [Lyrics On Screen].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>recovery</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ridaz</nombre>
+                            <path>C:\cancionesEDD\Eminem - Ridaz.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>straight from the vault, volume 1</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the apple</nombre>
+                            <path>C:\cancionesEDD\The Apple.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>wee wee</nombre>
+                            <path>C:\cancionesEDD\Eminem - Wee Wee (Www.HipHop809.Net).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>the marshall mathers lp 2</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>wicked ways</nombre>
+                            <path>C:\cancionesEDD\Eminem Wicked Ways Ken Kaniff Unedited Explicit Version.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>60 minutes of funk, volume iv: the mixtape</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>words are weapons</nombre>
+                            <path>C:\cancionesEDD\D12 - My Words Are Weapons.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>southpaw: music from and inspired by the motion picture</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>phenomenal</nombre>
+                            <path>C:\cancionesEDD\Eminem - Phenomenal (Legendado).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the pillows</nombre>
+            <albumes>
+                <album>
+                    <nombre>flcl</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ride on a shooting star</nombre>
+                            <path>C:\cancionesEDD\The Pillows - Ride On A Shooting Star (FLCL ending).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tribal ink</nombre>
+            <albumes>
+                <album>
+                    <nombre>surrounded by freaks</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>right behind you</nombre>
+                            <path>C:\cancionesEDD\06 Rigth behind you.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>to my face</nombre>
+                            <path>C:\cancionesEDD\02 To my Face.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>flo rida</nombre>
+            <albumes>
+                <album>
+                    <nombre>r.o.o.t.s.</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>right round (feat. kesha)</nombre>
+                            <path>C:\cancionesEDD\(degjo.com)FloRida-Right Round.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>katy perry</nombre>
+            <albumes>
+                <album>
+                    <nombre>prism</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>roar</nombre>
+                            <path>C:\cancionesEDD\Katy Perry Roar.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>this is how we do</nombre>
+                            <path>C:\cancionesEDD\Katy Perry - This Is How We Do (Official).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>het beste uit de mnm 1000</nombre>
+                    <genero>rap</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>teenage dream</nombre>
+                            <path>C:\cancionesEDD\Katy Perry - Teenage Dream.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>skrillex</nombre>
+            <albumes>
+                <album>
+                    <nombre>triple vinyl box set</nombre>
+                    <genero>(189)dubstep</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rock 'n' roll (will take you to the mountain)</nombre>
+                            <path>C:\cancionesEDD\Skrillex - Rock n Roll (Will Take You to the Mountain).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>scary monsters and nice sprites</nombre>
+                            <path>C:\cancionesEDD\SKRILLEX - Scary Monsters And Nice Sprites.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>far east movement feat. ryan tedder</nombre>
+            <albumes>
+                <album>
+                    <nombre>free wired</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rocketeer</nombre>
+                            <path>C:\cancionesEDD\Rocketeer.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tiziano ferro</nombre>
+            <albumes>
+                <album>
+                    <nombre>rojo relativo</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rojo relativo</nombre>
+                            <path>C:\cancionesEDD\tiziano ferro - rojo relativo (2002) - rojo relativo.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nicki minaj feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>pink friday</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>roman's revenge</nombre>
+                            <path>C:\cancionesEDD\Nicki Minaj Ft Eminem - Romans Revenge (Www.FlowHoT.NeT).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lorde</nombre>
+            <albumes>
+                <album>
+                    <nombre>no better</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>royals</nombre>
+                            <path>C:\cancionesEDD\LORDE - Royals.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>magic!</nombre>
+            <albumes>
+                <album>
+                    <nombre>pop party 14</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>rude</nombre>
+                            <path>C:\cancionesEDD\MAGIC! - Rude.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>beastie boys</nombre>
+            <albumes>
+                <album>
+                    <nombre>solid gold hits</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sabotage</nombre>
+                            <path>C:\cancionesEDD\Beastie Boys - Sabotage.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>awolnation</nombre>
+            <albumes>
+                <album>
+                    <nombre>sail</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sail (album version)</nombre>
+                            <path>C:\cancionesEDD\AWOLNATION- Sail.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>darude</nombre>
+            <albumes>
+                <album>
+                    <nombre>the very best of euphoric dance: breakdown</nombre>
+                    <genero>electronica</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sandstorm</nombre>
+                            <path>C:\cancionesEDD\Darude - Sandstorm.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>wisin feat. daddy yankee</nombre>
+            <albumes>
+                <album>
+                    <nombre>el sobreviviente</nombre>
+                    <genero>(16)reggae</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>saoco</nombre>
+                            <path>C:\cancionesEDD\Saoco - Wisin Ft Daddy Yankee.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>benny benassi</nombre>
+            <albumes>
+                <album>
+                    <nombre>firstclass: the finest in house 2008</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>satisfaction</nombre>
+                            <path>C:\cancionesEDD\BENNY BENASSI - Satisfaction [Original Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>bob marley &amp; the wailers</nombre>
+            <albumes>
+                <album>
+                    <nombre>everything's gonna be alright</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>satisfy my soul</nombre>
+                            <path>C:\cancionesEDD\Bob Marley - Satisfy My Soul.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>burn halo</nombre>
+            <albumes>
+                <album>
+                    <nombre>burn halo</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>save me</nombre>
+                            <path>C:\cancionesEDD\Burn Halo - Save Me [Album Version].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>michael franti &amp; spearhead</nombre>
+            <albumes>
+                <album>
+                    <nombre>all rebel rockers</nombre>
+                    <genero>(186)podcast</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>say hey (i love you)</nombre>
+                            <path>C:\cancionesEDD\michael franti ft. spearhead - say hey (i love you).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>short dawg feat. angelo</nombre>
+            <albumes>
+                <album>
+                    <nombre>8 oz ep</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>scandalous</nombre>
+                            <path>C:\cancionesEDD\Mis Teeq - Scandalous (GTA V Soundtrack).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>plan b</nombre>
+            <albumes>
+                <album>
+                    <nombre>pln</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>se te nota</nombre>
+                            <path>C:\cancionesEDD\PLAN  B- SE TE NOTA.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>calle 13</nombre>
+            <albumes>
+                <album>
+                    <nombre>calle 13</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>se vale to-to</nombre>
+                            <path>C:\cancionesEDD\Calle 13 - Se Vale To To.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>calle</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>suave</nombre>
+                            <path>C:\cancionesEDD\calle 13-Suave.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>tributo a la policia</nombre>
+                            <path>C:\cancionesEDD\Calle_13_-_Tributo_a_la_Policia.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem feat. slaughterhouse</nombre>
+            <albumes>
+                <album>
+                    <nombre>recovery</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>session one</nombre>
+                            <path>C:\cancionesEDD\Eminen - Session One.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the white stripes</nombre>
+            <albumes>
+                <album>
+                    <nombre>2003-04-20: orpheum, boston, ma, usa</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>seven nation army</nombre>
+                            <path>C:\cancionesEDD\Seven Nation Army (The Glitch Mob Dubstep Remix).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>elephant</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>seven nation army</nombre>
+                            <path>C:\cancionesEDD\The White Stripes - 'Seven Nation Army' .mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>kings of leon</nombre>
+            <albumes>
+                <album>
+                    <nombre>only by the night</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sex on fire</nombre>
+                            <path>C:\cancionesEDD\Sex on fire- Kings of leon (Lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>justin timberlake</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits</nombre>
+                    <genero>rap</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sexy back</nombre>
+                            <path>C:\cancionesEDD\Justin Timberlake - Sexy Back [Lyrics].mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>my love</nombre>
+                            <path>C:\cancionesEDD\Justin Timberlake   My Love main version.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ov7</nombre>
+            <albumes>
+                <album>
+                    <nombre>cd00</nombre>
+                    <genero>(86)latin</genero>
+                    <anio>2000</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shabadabada</nombre>
+                            <path>C:\cancionesEDD\Shabadabada OV7.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>taylor swift</nombre>
+            <albumes>
+                <album>
+                    <nombre>1989</nombre>
+                    <genero>(2)country</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shake it off</nombre>
+                            <path>C:\cancionesEDD\06 Shake It Off.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ed sheeran</nombre>
+            <albumes>
+                <album>
+                    <nombre>shape of you</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2017</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shape of you (album version)</nombre>
+                            <path>C:\cancionesEDD\Ed Sheeran - Shape of You [Official Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>2016 grammy nominees</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>thinking out loud</nombre>
+                            <path>C:\cancionesEDD\Ed Sheeran - Thinking Out Loud [Official Video].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>donna summer</nombre>
+            <albumes>
+                <album>
+                    <nombre>50 jahre bild - 50 jahre party</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>she works hard for the money</nombre>
+                            <path>C:\cancionesEDD\Donna Summers - She works hard for the money.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>avenged sevenfold</nombre>
+            <albumes>
+                <album>
+                    <nombre>the best of 2005-2013</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shepherd of fire</nombre>
+                            <path>C:\cancionesEDD\Avenged Sevenfold.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lmfao feat. lil jon</nombre>
+            <albumes>
+                <album>
+                    <nombre>party rock</nombre>
+                    <genero>rap/hip hop</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shots</nombre>
+                            <path>C:\cancionesEDD\Shots - Lmfao ft Lil Jon.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the ting tings</nombre>
+            <albumes>
+                <album>
+                    <nombre>we started nothing</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shut up and let me go</nombre>
+                            <path>C:\cancionesEDD\05  The Ting Things - Shut Up And Let Me Go.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>that's not my name</nombre>
+                            <path>C:\cancionesEDD\thats not my name.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>we walk</nombre>
+                            <path>C:\cancionesEDD\The Ting Tings - We Walk.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>we're not the same</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>we're not the same</nombre>
+                            <path>C:\cancionesEDD\were-not-the-same.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>big boi</nombre>
+            <albumes>
+                <album>
+                    <nombre>rough trade shops: counter culture 10</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>shutterbugg</nombre>
+                            <path>C:\cancionesEDD\Big Boi - Shutterbug.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>plan b feat. tony dize, zion &amp; lennox</nombre>
+            <albumes>
+                <album>
+                    <nombre>pina records present #1 xclusive urban remixes</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>si no le contesto</nombre>
+                            <path>C:\cancionesEDD\Plan B Ft Tony Dize &amp; Zion &amp; Lennox - Si No Le Contesto (Off.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tito 'el bambino' feat. de la ghetto, jowell &amp; randy</nombre>
+            <albumes>
+                <album>
+                    <nombre>top of the line: el internacional</nombre>
+                    <genero>reggaeton</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>siente el boom (remix)</nombre>
+                            <path>C:\cancionesEDD\tito el bambino - siente el boom-[www.youtube-para-mp3.com].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>earth, wind &amp; fire</nombre>
+            <albumes>
+                <album>
+                    <nombre>sing a song</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>1996</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sing a song</nombre>
+                            <path>C:\cancionesEDD\Earth, Wind &amp; Fire - Sing a Song.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>el tambor de la tribu</nombre>
+            <albumes>
+                <album>
+                    <nombre>afinando los cueros</nombre>
+                    <genero>pop/rock</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>skalavera</nombre>
+                            <path>C:\cancionesEDD\El Tambor de la Tribu - Skalavera.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>clyde carson</nombre>
+            <albumes>
+                <album>
+                    <nombre>s.t.s.a. (something to speak about)</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>slow down</nombre>
+                            <path>C:\cancionesEDD\Clyde Carson - Slow Down ft. The Team.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nirvana</nombre>
+            <albumes>
+                <album>
+                    <nombre>nevermind</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1991</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>smells like teen spirit</nombre>
+                            <path>C:\cancionesEDD\Nirvana - Smells Like Team Spirit.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>avril lavigne</nombre>
+            <albumes>
+                <album>
+                    <nombre>goodbye lullaby</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>smile</nombre>
+                            <path>C:\cancionesEDD\Avril Lavigne- Smile .mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>what the hell</nombre>
+                            <path>C:\cancionesEDD\02. What the Hell.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>michael jackson</nombre>
+            <albumes>
+                <album>
+                    <nombre>bad</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>smooth criminal</nombre>
+                            <path>C:\cancionesEDD\Michael Jackson - Smooth Criminal.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>best of the 90s</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>they don't care about us</nombre>
+                            <path>C:\cancionesEDD\Michael Jackson - They Dont Really Care About Us.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>thriller</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1982</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>thriller</nombre>
+                            <path>C:\cancionesEDD\Michael Jackson - Thriller.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>heal the world</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>1991</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>man in the mirror (album version)</nombre>
+                            <path>C:\cancionesEDD\Michael Jackson - Man In The Mirror.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dc talk</nombre>
+            <albumes>
+                <album>
+                    <nombre>jesus freak</nombre>
+                    <genero>(141)christian rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>so help me god</nombre>
+                            <path>C:\cancionesEDD\DC Talk - 01 - So Help Me God.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>hilary duff</nombre>
+            <albumes>
+                <album>
+                    <nombre>so yesterday</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>so yesterday</nombre>
+                            <path>C:\cancionesEDD\Hilary Duff - So Yesterday.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dr. dre</nombre>
+            <albumes>
+                <album>
+                    <nombre>2001: instrumentals</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>some l.a. niggaz</nombre>
+                            <path>C:\cancionesEDD\Dr. Dre - Some LA Niggas.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>2001</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the watcher</nombre>
+                            <path>C:\cancionesEDD\Dr.Dre - The Watcher.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>gotye feat. kimbra</nombre>
+            <albumes>
+                <album>
+                    <nombre>het beste uit de mnm 1000</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2012</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>somebody that i used to know</nombre>
+                            <path>C:\cancionesEDD\Gotye - Somebody That I Used To Know feat Kimbra.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rockwell</nombre>
+            <albumes>
+                <album>
+                    <nombre>stemmen fra 80'erne</nombre>
+                    <genero>rap</genero>
+                    <anio>1996</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>somebody's watching me</nombre>
+                            <path>C:\cancionesEDD\Rockwell - Somebody's Watching Me.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sugar ray</nombre>
+            <albumes>
+                <album>
+                    <nombre>the ultimate hit collection: the hits</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>someday</nombre>
+                            <path>C:\cancionesEDD\sugar ray - someday (lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>herb alpert &amp; the tijuana brass</nombre>
+            <albumes>
+                <album>
+                    <nombre>definitive hits</nombre>
+                    <genero>(98)easy listening</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>spanish flea</nombre>
+                            <path>C:\cancionesEDD\Herb Alpert &amp; the Tijuana Brass - Spanish Flea.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tech n9ne feat. eminem &amp; krizz kaliko</nombre>
+            <albumes>
+                <album>
+                    <nombre>special effects</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>speedom (worldwide choppers 2)</nombre>
+                            <path>C:\cancionesEDD\Tech N9ne - Speedom (WWC2) (feat. Eminem &amp; Krizz Kaliko).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lady gaga feat. space cowboy &amp; flo rida</nombre>
+            <albumes>
+                <album>
+                    <nombre>the fame</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>starstruck</nombre>
+                            <path>C:\cancionesEDD\Lady GaGa - Starstruck (with lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>n-trance</nombre>
+            <albumes>
+                <album>
+                    <nombre>electronic pleasure 2</nombre>
+                    <genero>electronica</genero>
+                    <anio>1996</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stayin' alive</nombre>
+                            <path>C:\cancionesEDD\N-Trance - Stayin' Alive.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>gym class heroes feat. adam levine</nombre>
+            <albumes>
+                <album>
+                    <nombre>stereo hearts</nombre>
+                    <genero>hip hop</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stereo hearts</nombre>
+                            <path>C:\cancionesEDD\Gym Class Heroes Ft. Adam Levine - Stereo Hearts.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dr. dre feat. snoop dogg</nombre>
+            <albumes>
+                <album>
+                    <nombre>hip hop mtv2</nombre>
+                    <genero>rap e hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>still dre</nombre>
+                            <path>C:\cancionesEDD\Dr. Dre feat. Snoop Dogg - Still Dre (Lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sum 41</nombre>
+            <albumes>
+                <album>
+                    <nombre>best rock fm</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>still waiting</nombre>
+                            <path>C:\cancionesEDD\Sum 41 - Still Waiting [HQ].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>underclass hero / fat lip / we're all to blame</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>we're all to blame</nombre>
+                            <path>C:\cancionesEDD\Were All to Blame - Sum 41 with Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jim johnston</nombre>
+            <albumes>
+                <album>
+                    <nombre>wwf: the music, volume 3</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1998</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stone cold steve austin</nombre>
+                            <path>C:\cancionesEDD\Stone Cold Steve Austin Theme Song.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>onerepublic</nombre>
+            <albumes>
+                <album>
+                    <nombre>cities 97 sampler, volume 20</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stop and stare</nombre>
+                            <path>C:\cancionesEDD\One Republic - Stop and Stare.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>n.w.a</nombre>
+            <albumes>
+                <album>
+                    <nombre>straight outta compton: music from the motion picture</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>straight outta compton</nombre>
+                            <path>C:\cancionesEDD\N.W.a - Straight Outta Compton.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nas &amp; damian marley</nombre>
+            <albumes>
+                <album>
+                    <nombre>distant relatives</nombre>
+                    <genero>(7)hip-hop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>strong will continue</nombre>
+                            <path>C:\cancionesEDD\Nas Damien Marley - Strong Will Continue.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>proxy</nombre>
+            <albumes>
+                <album>
+                    <nombre>this key</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>stronger</nombre>
+                            <path>C:\cancionesEDD\Kanye West - Stronger.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dire straits</nombre>
+            <albumes>
+                <album>
+                    <nombre>rotterdam 1978</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1994</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sultans of swing</nombre>
+                            <path>C:\cancionesEDD\Dire Straits - Sultans Of Swing.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>inna</nombre>
+            <albumes>
+                <album>
+                    <nombre>i am the club rocker</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>sun is up</nombre>
+                            <path>C:\cancionesEDD\sun is up - inna.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>nicki minaj</nombre>
+            <albumes>
+                <album>
+                    <nombre>pink friday</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>super bass</nombre>
+                            <path>C:\cancionesEDD\super bass.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>muse</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hits</nombre>
+                    <genero>rap</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>supermassive black hole</nombre>
+                            <path>C:\cancionesEDD\Muse - Supermassive Black Hole (Original Music Video) 3D Full HD 1080p.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>supremacy</nombre>
+                            <path>C:\cancionesEDD\Muse-Supremacy.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>undisclosed desires</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>undisclosed desires</nombre>
+                            <path>C:\cancionesEDD\Muse - Undisclosed Desires.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>uprising</nombre>
+                    <genero>rap</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>uprising</nombre>
+                            <path>C:\cancionesEDD\Muse - Uprising.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem/cashis/jay-z</nombre>
+            <albumes>
+                <album>
+                    <nombre>ef</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>syllables</nombre>
+                            <path>C:\cancionesEDD\Eminem Feat Dr Dre Jay Z  50 Cent - Syllables HD.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>megadeth</nombre>
+            <albumes>
+                <album>
+                    <nombre>classic rock</nombre>
+                    <genero>rap</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>symphony of destruction</nombre>
+                            <path>C:\cancionesEDD\Megadeth - Symphony of Destruction (Studio Version).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ac/dc</nombre>
+            <albumes>
+                <album>
+                    <nombre>t.n.t.</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1975</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>t.n.t.</nombre>
+                            <path>C:\cancionesEDD\TNT ACDC.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+                <album>
+                    <nombre>back in black</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>you shook me all night long</nombre>
+                            <path>C:\cancionesEDD\07 You Shook Me All Night Long.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem/royce da 5'9''</nombre>
+            <albumes>
+                <album>
+                    <nombre>hell: the sequel</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>take from me</nombre>
+                            <path>C:\cancionesEDD\Eminem Feat. Royce Da 5'9 - Take From Me ((www.EvolucionMusic.Com)).mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>the reunion</nombre>
+                            <path>C:\cancionesEDD\the reunion - eminem.mp3</path>
+                        </cancion>
+                        <cancion>
+                            <nombre>welcome 2 hell</nombre>
+                            <path>C:\cancionesEDD\welcome 2 hell - eminem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the donnas</nombre>
+            <albumes>
+                <album>
+                    <nombre>the edge</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>take it off</nombre>
+                            <path>C:\cancionesEDD\The Donnas- Take It Off.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>franz ferdinand</nombre>
+            <albumes>
+                <album>
+                    <nombre>crossing all over! volume 17</nombre>
+                    <genero>world</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>take me out</nombre>
+                            <path>C:\cancionesEDD\Franz Ferdinand - Take Me Out.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jason derulo feat. 2 chainz</nombre>
+            <albumes>
+                <album>
+                    <nombre>nrj music awards 15th edition</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>talk dirty</nombre>
+                            <path>C:\cancionesEDD\Jason Derulo -  Talk Dirty Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>massive attack</nombre>
+            <albumes>
+                <album>
+                    <nombre>mezzanine</nombre>
+                    <genero>(156)dub</genero>
+                    <anio>1998</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>teardrop</nombre>
+                            <path>C:\cancionesEDD\Massive Attack - Teardrop.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>p. diddy/cristina aguilera</nombre>
+            <albumes>
+                <album>
+                    <nombre>mundo</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tell me</nombre>
+                            <path>C:\cancionesEDD\Diddy - Tell Me Featuring Christina Aguilera VIDEO.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>mims</nombre>
+            <albumes>
+                <album>
+                    <nombre>best of black '07</nombre>
+                    <genero>rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>this is why i'm hot</nombre>
+                            <path>C:\cancionesEDD\Mims - This is why im hot!.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lil wayne</nombre>
+            <albumes>
+                <album>
+                    <nombre>cash money: 10 years of bling vol. 1</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tha block is hot</nombre>
+                            <path>C:\cancionesEDD\Lil' Wayne Feat. B.G. &amp; Juvenile - Tha Block Is Hot (HQ - Dirty).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>t.i. feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>no mercy</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>that's all she wrote</nombre>
+                            <path>C:\cancionesEDD\That's All She Wrote.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>snoop dogg/r. kelly</nombre>
+            <albumes>
+                <album>
+                    <nombre>the blue carpet treatment</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>that's that</nombre>
+                            <path>C:\cancionesEDD\Snoop Dogg feat R Kelly - That's That.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>paramore</nombre>
+            <albumes>
+                <album>
+                    <nombre>that's what you get</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>that's what you get</nombre>
+                            <path>C:\cancionesEDD\Paramore - That's what you Get.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>bloodhound gang</nombre>
+            <albumes>
+                <album>
+                    <nombre>hooray for boobies</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the bad touch</nombre>
+                            <path>C:\cancionesEDD\bloodhound gang - the bad touch (discovery channel).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rock mafia</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, january 2011</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the big bang</nombre>
+                            <path>C:\cancionesEDD\The Big Bang - Rock Mafia.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>kurtis blow</nombre>
+            <albumes>
+                <album>
+                    <nombre>old school rap party</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the breaks</nombre>
+                            <path>C:\cancionesEDD\Kurtis Blow - The Breaks.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>greg kihn band</nombre>
+            <albumes>
+                <album>
+                    <nombre>you can still rock in america: 1980's radio</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the breakup song</nombre>
+                            <path>C:\cancionesEDD\Greg Kihn Band - The Breakup Song (They Don't Write 'Em).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>europe</nombre>
+            <albumes>
+                <album>
+                    <nombre>europe</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the final countdown</nombre>
+                            <path>C:\cancionesEDD\The Final Countdown - Europe.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the asteroids galaxy tour</nombre>
+            <albumes>
+                <album>
+                    <nombre>fruit</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the golden age</nombre>
+                            <path>C:\cancionesEDD\06-the_asteroids_galaxy_tour-the_golden_age.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>gary clark jr.</nombre>
+            <albumes>
+                <album>
+                    <nombre>live / north america 2016</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2017</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the healing</nombre>
+                            <path>C:\cancionesEDD\Gary Clark Jr - The Healing Live (Official Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>selena gomez</nombre>
+            <albumes>
+                <album>
+                    <nombre>pop party 14</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the heart wants what it wants</nombre>
+                            <path>C:\cancionesEDD\Selena Gomez - The Heart Wants What It Wants Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the weeknd feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>beauty behind the madness</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the hills</nombre>
+                            <path>C:\cancionesEDD\The Weeknd - The Hills ft. Eminem (Lyrics on screen)HQ.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>las ketchup</nombre>
+            <albumes>
+                <album>
+                    <nombre>damn! best of 2002</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the ketchup song (original spanish version)</nombre>
+                            <path>C:\cancionesEDD\Las Ketchup - The Ketchup Song (Asereje) (Spanish Version) (Official Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dr. dre feat. king tee</nombre>
+            <albumes>
+                <album>
+                    <nombre>detoxification</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the kush</nombre>
+                            <path>C:\cancionesEDD\Dr.Dre  Kush.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>grandmaster flash &amp; the furious five feat. melle-mel and duke bootee</nombre>
+            <albumes>
+                <album>
+                    <nombre>vh1: i love the 80s</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the message</nombre>
+                            <path>C:\cancionesEDD\grand master flash and the furious five - grandmaster flash - the message.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>insane clown posse</nombre>
+            <albumes>
+                <album>
+                    <nombre>the great milenko</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1997</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the neden game</nombre>
+                            <path>C:\cancionesEDD\ICP Insane Clown Posse - Dating Game.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>hoobastank</nombre>
+            <albumes>
+                <album>
+                    <nombre>the reason</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the reason</nombre>
+                            <path>C:\cancionesEDD\hoobastank_the reason.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dj delirium</nombre>
+            <albumes>
+                <album>
+                    <nombre>earthquake iii</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the rythm's on time</nombre>
+                            <path>C:\cancionesEDD\Sir Mix A Lot Baby Got Back Best Quality.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>men without hats</nombre>
+            <albumes>
+                <album>
+                    <nombre>greatest hats</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1996</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the safety dance</nombre>
+                            <path>C:\cancionesEDD\Men Without Hats - The Safety Dance.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>favored nations</nombre>
+            <albumes>
+                <album>
+                    <nombre>the music of grand theft auto v</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the set up</nombre>
+                            <path>C:\cancionesEDD\Favored Nations - The Setup - Radio GTA 5 Full Song.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>atomic kitten</nombre>
+            <albumes>
+                <album>
+                    <nombre>barbie girls</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the tide is high</nombre>
+                            <path>C:\cancionesEDD\Atomic Kitten - The Tide Is High (Get The Feeling).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ariana grande feat. mac miller</nombre>
+            <albumes>
+                <album>
+                    <nombre>dance party 2013</nombre>
+                    <genero>(3)dance</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the way</nombre>
+                            <path>C:\cancionesEDD\Ariana Grande - The Way ft. Mac Miller.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>timbaland feat. d.o.e. &amp; keri hilson</nombre>
+            <albumes>
+                <album>
+                    <nombre>now that's what i call music! 68</nombre>
+                    <genero>rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the way i are</nombre>
+                            <path>C:\cancionesEDD\Timbaland - The Way I Are ft. Keri Hilson, D.O.E., Sebastian.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>red hot chili peppers</nombre>
+            <albumes>
+                <album>
+                    <nombre>best music for travellers</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>the zephyr song</nombre>
+                            <path>C:\cancionesEDD\The_zephyr_song.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>b.o.b feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>epic: every play is crucial</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>things get worse</nombre>
+                            <path>C:\cancionesEDD\Things get worse - Eminem Bob.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>macklemore&amp; ryan lewis feat.wanz</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, january 2013</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>thrift shop</nombre>
+                            <path>C:\cancionesEDD\MACKLEMORE  RYAN LEWIS - THRIFT SHOP FEAT WANZ.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>killswitch engage</nombre>
+            <albumes>
+                <album>
+                    <nombre>wwe: wreckless intent</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>this fire burns</nombre>
+                            <path>C:\cancionesEDD\WWE Theme Songs-CM Punk.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>eminem feat. yelawolf &amp; gangsta boo</nombre>
+            <albumes>
+                <album>
+                    <nombre>marshall's law</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>throitup</nombre>
+                            <path>C:\cancionesEDD\Yelawolf - Throw It Up ft. Gangsta Boo &amp; Eminem.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rich boy feat. polow da don</nombre>
+            <albumes>
+                <album>
+                    <nombre>throw some d's</nombre>
+                    <genero>international(pops)</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>throw some d's (lp version)</nombre>
+                            <path>C:\cancionesEDD\Rich Boy-Throw Some D's.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>2pac feat. anthony hamilton</nombre>
+            <albumes>
+                <album>
+                    <nombre>kiss presents: hot joints</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2003</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>thugz mansion</nombre>
+                            <path>C:\cancionesEDD\Thugz Mansion.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>wavegroup sound</nombre>
+            <albumes>
+                <album>
+                    <nombre>guitar hero</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>thunder kiss '65</nombre>
+                            <path>C:\cancionesEDD\White Zombie - Thunder Kiss '65.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>viento en contra</nombre>
+            <albumes>
+                <album>
+                    <nombre>asd</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tiembla el suelo</nombre>
+                            <path>C:\cancionesEDD\viento en contra - tiembla el suelo.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the black keys</nombre>
+            <albumes>
+                <album>
+                    <nombre>brothers</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tighten up</nombre>
+                            <path>C:\cancionesEDD\tighten up by the black keys.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ke$ha</nombre>
+            <albumes>
+                <album>
+                    <nombre>het beste uit de qmusic top 500 van de 00's</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tik tok</nombre>
+                            <path>C:\cancionesEDD\Ke$ha - TiK ToK.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>denzel curry</nombre>
+            <albumes>
+                <album>
+                    <nombre>32 zel / planet shrooms</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>ultimate</nombre>
+                            <path>C:\cancionesEDD\Denzel Curry-  Ultimate.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>fabiola roudha</nombre>
+            <albumes>
+                <album>
+                    <nombre>fabiola roudha</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>time to love (t2l)</nombre>
+                            <path>C:\cancionesEDD\Fabiola Roudha, Time to Love T2L.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>la cripta</nombre>
+            <albumes>
+                <album>
+                    <nombre>cuentos de la cripta</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tite se murio</nombre>
+                            <path>C:\cancionesEDD\los cuentos de la cripta tite se murio.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>fall out boy</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, may 2015</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>uma thurman</nombre>
+                            <path>C:\cancionesEDD\Fall Out Boy - Uma Thurman.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dvbbs</nombre>
+            <albumes>
+                <album>
+                    <nombre>nrj music awards 15th edition</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tsunami</nombre>
+                            <path>C:\cancionesEDD\DVBBS &amp; Borgeous - TSUNAMI (Original Mix).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>rihanna feat. jay-z</nombre>
+            <albumes>
+                <album>
+                    <nombre>best of black '07</nombre>
+                    <genero>rap</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>umbrella</nombre>
+                            <path>C:\cancionesEDD\Rihanna - Umbrella Lyrics.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dj snake &amp; lil jon</nombre>
+            <albumes>
+                <album>
+                    <nombre>ultimate fitness</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>turn down for what</nombre>
+                            <path>C:\cancionesEDD\DJ Snake &amp;amp; Lil Jon - Turn Down for What.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>y.g.</nombre>
+            <albumes>
+                <album>
+                    <nombre>hot this week 15</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>twist my fingaz</nombre>
+                            <path>C:\cancionesEDD\YG - Twist My Fingaz.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ludovico einaudi</nombre>
+            <albumes>
+                <album>
+                    <nombre>intouchables</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>una mattina</nombre>
+                            <path>C:\cancionesEDD\Ludovico Einaudi - Una Mattina.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>queen</nombre>
+            <albumes>
+                <album>
+                    <nombre>1986-08-09: electric magic: knebworth park, knebworth, uk</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>under pressure</nombre>
+                            <path>C:\cancionesEDD\Queen - Under Pressure.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>poison</nombre>
+            <albumes>
+                <album>
+                    <nombre>unskinny bop</nombre>
+                    <genero>(9)metal</genero>
+                    <anio>1990</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>unskinny bop</nombre>
+                            <path>C:\cancionesEDD\Poison - Unskinny Bop.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>helmet</nombre>
+            <albumes>
+                <album>
+                    <nombre>unsung</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1992</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>unsung</nombre>
+                            <path>C:\cancionesEDD\Helmet - Unsung.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the veronicas</nombre>
+            <albumes>
+                <album>
+                    <nombre>hook me up</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>untouched</nombre>
+                            <path>C:\cancionesEDD\untouched.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>mark ronson feat. bruno mars</nombre>
+            <albumes>
+                <album>
+                    <nombre>2016 grammy nominees</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2016</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>uptown funk</nombre>
+                            <path>C:\cancionesEDD\Mark Ronson feat. Bruno Mars - Uptown Funk (Audio).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>cafe tacuba</nombre>
+            <albumes>
+                <album>
+                    <nombre>sino</nombre>
+                    <genero>spanish rock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>vamonos</nombre>
+                            <path>C:\cancionesEDD\Cafe Tacuba - Vamonos.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>don omar</nombre>
+            <albumes>
+                <album>
+                    <nombre>virtual diva</nombre>
+                    <genero>(86)latin</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>virtual diva</nombre>
+                            <path>C:\cancionesEDD\Don Omar - Virtual Diva Lyrics (in Spanish).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>asdf</nombre>
+            <albumes>
+                <album>
+                    <nombre>wwe</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>voices</nombre>
+                            <path>C:\cancionesEDD\Voices - Randy Orton WWE.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>jimi hendrix</nombre>
+            <albumes>
+                <album>
+                    <nombre>hits of the world 1970/1971</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1988</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>voodoo chile</nombre>
+                            <path>C:\cancionesEDD\Jimi Hendrix - Voodoo Child.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>erick rubin</nombre>
+            <albumes>
+                <album>
+                    <nombre>aqui y ahora</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>vuela conmigo</nombre>
+                            <path>C:\cancionesEDD\Vuela conmigo.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>avicii</nombre>
+            <albumes>
+                <album>
+                    <nombre>hit mania 2015</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>waiting for love</nombre>
+                            <path>C:\cancionesEDD\Avicii - Waiting For Love.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>run dmc</nombre>
+            <albumes>
+                <album>
+                    <nombre>raising hell</nombre>
+                    <genero>(12)other</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>walk this way</nombre>
+                            <path>C:\cancionesEDD\run dmc and areosmith - walk this way.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>ocean wisdom</nombre>
+            <albumes>
+                <album>
+                    <nombre>splittin' the racket</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>walkin'</nombre>
+                            <path>C:\cancionesEDD\Ocean Wisdom - Walkin'  Prod. Dirty Dike  (Official Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>chris brown</nombre>
+            <albumes>
+                <album>
+                    <nombre>now that's what i call music! 26</nombre>
+                    <genero>soul and r&amp;b</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>wall to wall</nombre>
+                            <path>C:\cancionesEDD\Chris Brown - Wall to Wall Lyrics [Read descriptionn].mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>treyarch sound</nombre>
+            <albumes>
+                <album>
+                    <nombre>mob of the dead soundtrack</nombre>
+                    <genero>rap</genero>
+                    <anio>2013</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>we all fall down</nombre>
+                            <path>C:\cancionesEDD\Die Rise Easter Egg song We All Fall Down - Call of Duty- Black Ops 2 Kevin Sherwood.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>havana brown/pitbull</nombre>
+            <albumes>
+                <album>
+                    <nombre>asd</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>we run the night</nombre>
+                            <path>C:\cancionesEDD\Havana Brown - We Run The Night Explicit ft Pitbull.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>trick-trick feat. eminem</nombre>
+            <albumes>
+                <album>
+                    <nombre>the people vs.</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>welcome 2 detroit</nombre>
+                            <path>C:\cancionesEDD\Trick Trick ft. Eminem  - Welcome 2 Detriot City (uncensored with lyrics).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>damian marley</nombre>
+            <albumes>
+                <album>
+                    <nombre>welcome to jamrock</nombre>
+                    <genero>(16)reggae</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>welcome to jamrock</nombre>
+                            <path>C:\cancionesEDD\Damian Marley - Welcome to Jamrock.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>guns n' roses</nombre>
+            <albumes>
+                <album>
+                    <nombre>appetite for destruction</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>1987</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>welcome to the jungle</nombre>
+                            <path>C:\cancionesEDD\Guns N Roses - Welcome To The Jungle.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>pet shop boys</nombre>
+            <albumes>
+                <album>
+                    <nombre>20 years on mtv: 1985</nombre>
+                    <genero>rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>west end girls</nombre>
+                            <path>C:\cancionesEDD\Pet Shop Boys - West End Girls (GTA V Soundtrack).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>j.cole</nombre>
+            <albumes>
+                <album>
+                    <nombre>best of 2015 playlist</nombre>
+                    <genero>rap</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>wet dreamz</nombre>
+                            <path>C:\cancionesEDD\J. Cole - Wet Dreamz.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>t.i.</nombre>
+            <albumes>
+                <album>
+                    <nombre>atlantic records: the time capsule</nombre>
+                    <genero>(37)sound clip</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>whatever you like</nombre>
+                            <path>C:\cancionesEDD\whatever you like.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>maximum the hormone</nombre>
+            <albumes>
+                <album>
+                    <nombre>bu-ikikaesu</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>what's up, people?!</nombre>
+                            <path>C:\cancionesEDD\Death Note - 10 - What's up, people!.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>pussycat dolls</nombre>
+            <albumes>
+                <album>
+                    <nombre>black summer party: best of, volume 6</nombre>
+                    <genero>rap</genero>
+                    <anio>2009</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>when i grow up</nombre>
+                            <path>C:\cancionesEDD\The Pussycat Dolls - When I Grow Up.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dmx</nombre>
+            <albumes>
+                <album>
+                    <nombre>the best of dmx</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>where the hood at?</nombre>
+                            <path>C:\cancionesEDD\DMX Where the Hood At Uncensored.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>devo</nombre>
+            <albumes>
+                <album>
+                    <nombre>hit me with your 80's box</nombre>
+                    <genero>rap</genero>
+                    <anio>2002</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>whip it</nombre>
+                            <path>C:\cancionesEDD\whip it devo.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>flaminia</nombre>
+            <albumes>
+                <album>
+                    <nombre>flaminia</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>whisper</nombre>
+                            <path>C:\cancionesEDD\FLAMINIA WHISPER.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>"weird al" yankovic</nombre>
+            <albumes>
+                <album>
+                    <nombre>straight outta lynwood</nombre>
+                    <genero>(57)comedy</genero>
+                    <anio>2006</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>white &amp; nerdy</nombre>
+                            <path>C:\cancionesEDD\Weird Al Yankovic - White &amp; Nerdy.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>billy idol</nombre>
+            <albumes>
+                <album>
+                    <nombre>dead or alive: new wave hits of the 80's</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1998</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>white wedding</nombre>
+                            <path>C:\cancionesEDD\Billy Idol - White wedding.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>baha men</nombre>
+            <albumes>
+                <album>
+                    <nombre>as</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>who let the dogs out</nombre>
+                            <path>C:\cancionesEDD\Baha men-Who let the dogs out.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>selena gomez &amp; the scene</nombre>
+            <albumes>
+                <album>
+                    <nombre>who says</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2011</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>who says</nombre>
+                            <path>C:\cancionesEDD\Selena Gomez - Who Says.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>led zeppelin</nombre>
+            <albumes>
+                <album>
+                    <nombre>whole lotta love</nombre>
+                    <genero>(0)blues</genero>
+                    <anio>1997</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>whole lotta love (edit)</nombre>
+                            <path>C:\cancionesEDD\Led Zeppelin - Whole Lotta Love 1997.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>david guetta feat. rihanna</nombre>
+            <albumes>
+                <album>
+                    <nombre>promo only: mainstream radio, january 2011</nombre>
+                    <genero>(12)other</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>who's that chick?</nombre>
+                            <path>C:\cancionesEDD\guetta-whos that chick.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>will smith feat. dru hill &amp; kool moe dee</nombre>
+            <albumes>
+                <album>
+                    <nombre>wild wild west</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1999</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>wild wild west (radio version)</nombre>
+                            <path>C:\cancionesEDD\Will Smith - Wild Wild West.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>blur</nombre>
+            <albumes>
+                <album>
+                    <nombre>blur</nombre>
+                    <genero>(40)alternrock</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>woo hoo</nombre>
+                            <path>C:\cancionesEDD\Blur - Woo Hoo .mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>tinie tempah/eric turner</nombre>
+            <albumes>
+                <album>
+                    <nombre>disc-overy</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>written in the stars</nombre>
+                            <path>C:\cancionesEDD\Tinie_Tempah_ft__Eric_Turner___Written_in_the_Stars__Official_Audio.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>usher</nombre>
+            <albumes>
+                <album>
+                    <nombre>black total 2005</nombre>
+                    <genero>rap &amp; hip-hop</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>yeah</nombre>
+                            <path>C:\cancionesEDD\Usher - Yeah! ft. Lil Jon, Ludacris.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>coldplay</nombre>
+            <albumes>
+                <album>
+                    <nombre>best of you</nombre>
+                    <genero>(20)alternative</genero>
+                    <anio>1995</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>yellow</nombre>
+                            <path>C:\cancionesEDD\Coldplay - Yellow.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>juanes</nombre>
+            <albumes>
+                <album>
+                    <nombre>p.a.r.c.e.</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>2010</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>yerbatero</nombre>
+                            <path>C:\cancionesEDD\yerbatero - juanes.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>molotov</nombre>
+            <albumes>
+                <album>
+                    <nombre>eternamiente</nombre>
+                    <genero>(86)latin</genero>
+                    <anio>2007</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>yo fo</nombre>
+                            <path>C:\cancionesEDD\Molotov - Yofo.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>egypt central</nombre>
+            <albumes>
+                <album>
+                    <nombre>egypt central</nombre>
+                    <genero>(24)soundtrack</genero>
+                    <anio>2008</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>you make me sick</nombre>
+                            <path>C:\cancionesEDD\Smackdown vs. RAW 2009 - 10. Egypt Central - You Make Me Sick.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>regina spektor</nombre>
+            <albumes>
+                <album>
+                    <nombre>orange is the new black: music from the original series</nombre>
+                    <genero>rap</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>you've got time</nombre>
+                            <path>C:\cancionesEDD\Regina Spektor   You've Got Time lyrics video ( Orange Is The New Black ).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>the cranberries</nombre>
+            <albumes>
+                <album>
+                    <nombre>no need to argue</nombre>
+                    <genero>(13)pop</genero>
+                    <anio>1994</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>zombie</nombre>
+                            <path>C:\cancionesEDD\The Cranberries - Zombie.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>2pac feat. g-unit</nombre>
+            <albumes>
+                <album>
+                    <nombre>loyal to the game</nombre>
+                    <genero>(15)rap</genero>
+                    <anio>2004</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>loyal to the game</nombre>
+                            <path>C:\cancionesEDD\2pac - Loyal to the Game Feat. G-Unit.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>lilly wood &amp; the prick and robin schulz</nombre>
+            <albumes>
+                <album>
+                    <nombre>absolute music 77</nombre>
+                    <genero>rap</genero>
+                    <anio>2014</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>prayer in c (robin schulz radio edit)</nombre>
+                            <path>C:\cancionesEDD\Lilly Wood &amp;amp; The Prick and Robin Schulz - Prayer In C (Robin Schulz Remix) (1).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>sean paul</nombre>
+            <albumes>
+                <album>
+                    <nombre>the trinity</nombre>
+                    <genero>(16)reggae</genero>
+                    <anio>2005</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>temperature</nombre>
+                            <path>C:\cancionesEDD\Sean Paul - Temperature.mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>system of a down</nombre>
+            <albumes>
+                <album>
+                    <nombre>toxicity</nombre>
+                    <genero>(17)rock</genero>
+                    <anio>2001</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>toxicity</nombre>
+                            <path>C:\cancionesEDD\System of  a Down - Toxicity HQ (HD).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+        <artista>
+            <nombre>dimitri vegas, like mike &amp; martin garrix</nombre>
+            <albumes>
+                <album>
+                    <nombre>ministry of sound: running trax 2015</nombre>
+                    <genero>electronica</genero>
+                    <anio>2015</anio>
+                    <canciones>
+                        <cancion>
+                            <nombre>tremor</nombre>
+                            <path>C:\cancionesEDD\Dimitri Vegas, Martin Garrix, Like Mike - Tremor (Official Music Video).mp3</path>
+                        </cancion>
+                    </canciones>
+                </album>
+            </albumes>
+        </artista>
+    </artistas>
+</archivo>
